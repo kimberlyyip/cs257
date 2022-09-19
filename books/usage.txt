@@ -1,14 +1,19 @@
-Name 
+NAME
 	books.py 
-Synopsis
-	books.py [-a | -b| -r | --help]<search string>
-Description
+SYNOPSIS
+	python3 books.py authors...
+	python3 books.py books...
+	python3 books.py range...
+	python3 books.py help...
+DESCRIPTION
 	The following options are available:
 
-	-a Prints a list of the authors books. 
+	authors Prints a list of the authors books. 
+		-t sorts alphabetically by title
+		-y sorts by publication year
 
-	-b Prints a list of books whose titles contain <search string>
+	books Prints a list of books whose titles contain <search string>
 
-	-r Prints an inclusive list of books published between years a and b.
+	range Prints an inclusive list of books published between years a and b.
 
-	--help Prints the usage/help statement if the the user's command-line syntax is invalid. 
+	help Prints the usage/help statement if the the user's command-line syntax is invalid. 
