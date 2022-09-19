@@ -1,0 +1,14 @@
+Name 
+	books.py 
+Synopsis
+	books.py [-a | -b| -r | --help]<search string>
+Description
+	The following options are available:
+
+	-a Prints a list of the authors books. 
+
+	-b Prints a list of books whose titles contain <search string>
+
+	-r Prints an inclusive list of books published between years a and b.
+
+	--help Prints the usage/help statement if the the user's command-line syntax is invalid. 
