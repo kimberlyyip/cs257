@@ -1,9 +1,10 @@
+
 NAME
 	books.py 
 SYNOPSIS
 	python3 books.py authors...
 	python3 books.py books...
-	python3 books.py range...
+	python3 books.py range<start year>[,<end year>]...
 	python3 books.py help...
 DESCRIPTION
 	The following options are available:
@@ -14,6 +15,6 @@ DESCRIPTION
 
 	books Prints a list of books whose titles contain <search string>
 
-	range Prints an inclusive list of books published between years a and b.
+	range <start year>[,<end year>] Prints an inclusive list of books published between years a and b.
 
 	help Prints the usage/help statement if the the user's command-line syntax is invalid. 
