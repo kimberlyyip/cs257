@@ -38,6 +38,16 @@ class BooksDataSourceTester(unittest.TestCase):
 	authors = self.data_source.books("morRRinSoN")
 	self.assertTrue(len(authors) == 1)
 	self.assertTrue(authors[0] == Author('Toni')) 
+	
+    def search_one_year(self):
+	titles = self.data_source.books("2010")
+	self.assertTrue(len(titles) == 1)
+	self.assertTrue(titles[0] == titles('All Clear')) 
+	
+    def search_year_range(self):
+	titles = self.data_source.books("1963"."1974")
+	self.assertTrue(len(titles) == 2)
+	self.assertTrue(titles[0] == titles('The Spy Who Came in From the Cold', "Tinker, Tailor, Soldier, Spy")) 
 
 
 if __name__ == '__main__':
