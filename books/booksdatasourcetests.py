@@ -20,9 +20,19 @@ class BooksDataSourceTester(unittest.TestCase):
         self.assertTrue(authors[0] == Author('Pratchett', 'Terry'))
 
     def search_author_two_lastname(self):
-	auhtors = self.data_source.authors('Grenville Wodehouse')
+	authors = self.data_source.authors('Grenville Wodehouse')
 	self.assertTrue(len(authors) == 1)
-	self.assertTrue(authors[0] == Author('Grenville Wodehouse', 'Pelham') 
+	self.assertTrue(authors[0] == Author('Grenville Wodehouse', 'Pelham')
+
+    def search_author_special_character(self):
+	authors = self.data_source.authors('García Márquez')
+	self.assertTrue(len(authors) == 1)
+	self.assertTrue(authors[0] == Author('García Márquez', 'Gabriel') 
+
+    def search_author_lastname_DNE(self):
+	authors = self.data_source.authors('Yip')
+	self.assertTrue(len(authors) == 1)
+	self.assertTrue(authors[0] == Author('')) 
 
 if __name__ == '__main__':
     unittest.main()
