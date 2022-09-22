@@ -34,6 +34,12 @@ class BooksDataSourceTester(unittest.TestCase):
 	self.assertTrue(len(authors) == 1)
 	self.assertTrue(authors[0] == Author('')) 
 
+    def search_case_insensitive(self):
+	authors = self.data_source.books("morRRinSoN")
+	self.assertTrue(len(authors) == 1)
+	self.assertTrue(authors[0] == Author('Toni')) 
+
+
 if __name__ == '__main__':
     unittest.main()
 
