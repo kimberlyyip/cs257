@@ -74,6 +74,11 @@ class BooksDataSourceTester(unittest.TestCase):
         self.assertTrue(titles[4] == Book('Pride and Prejudice'))
         self.assertTrue(titles[5] == Book('Sense and Sensibility'))
         self.assertTrue(titles[6] == Book('\"The Life and Opinions of Tristram Shandy, Gentleman\"'))
+	
+    def search_title_numbers(self):
+        titles = self.data_source.books('1Q84')
+        self.assertTrue(len(titles) == 1)
+        self.assertTrue(titles[0] == Book('1Q84'))
 
     def sort_author(self):
 	authors_list = self.data_source.authors()
