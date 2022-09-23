@@ -28,11 +28,17 @@ class BooksDataSourceTester(unittest.TestCase):
 	authors = self.data_source.authors('García Márquez')
 	self.assertTrue(len(authors) == 1)
 	self.assertTrue(authors[0] == Author('García Márquez', 'Gabriel'))
+  
+    def search_author_multiple_lastname(self):
+	authors = self.data_source.authors('Brontë')
+	self.assertTrue(len(authors) == 3)
+	self.assertTrue(authors[0] == Author('Brontë', 'Ann'))
+	self.assertTrue(authors[1] == Author('Brontë', 'Charolette'))
+	self.assertTrue(authors[2] == Author('Brontë', 'Emily'))
 
     def search_author_lastname_DNE(self):
 	authors = self.data_source.authors('Yip')
-	self.assertTrue(len(authors) == 1)
-	self.assertTrue(authors[0] == Author('')) 
+	self.assertTrue(len(authors) == 0)
 
     def search_case_insensitive(self):
 	authors = self.data_source.authors("morRRiSoN")
