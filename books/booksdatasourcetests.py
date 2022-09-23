@@ -60,9 +60,20 @@ class BooksDataSourceTester(unittest.TestCase):
 	self.assertTrue(len(titles) == 0)
 
     def search_title_special_char(self):
-	titles = self.data_source.books('"There, There"')
+	titles = self.data_source.books('\"There, There"\')
 	self.assertTrue(len(titles) == 1)
-	self.assertTrue(titles[0] == Book('"There, There"'))
+	self.assertTrue(titles[0] == Book('\"There, There"\'))
+
+    def search_title_multiple(self):
+	titles = self.data_source.books('and')
+	self.assertTrue(len(books) == 7)
+        self.assertTrue(titles[0] == Book('And Then There Were None'))
+        self.assertTrue(titles[1] == Book('Boys and Sex'))
+        self.assertTrue(titles[2] == Book('Girls and Sex'))
+        self.assertTrue(titles[3] == Book('Hard-Boiled Wonderland and the End of the World'))
+        self.assertTrue(titles[4] == Book('Pride and Prejudice'))
+        self.assertTrue(titles[5] == Book('Sense and Sensibility'))
+        self.assertTrue(titles[6] == Book('\"The Life and Opinions of Tristram Shandy, Gentleman\"'))
 
     def sort_author(self):
 	authors_list = self.data_source.authors()
