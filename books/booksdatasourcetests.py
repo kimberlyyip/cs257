@@ -56,7 +56,7 @@ class BooksDataSourceTester(unittest.TestCase):
     def search_title_special_char(self):
 	titles = self.data_source.books('"There, There"')
 	self.assertTrue(len(titles) == 1)
-	self.assertTrue(titles[0] == Book('"There, There"')
+	self.assertTrue(titles[0] == Book('"There, There"'))
 
     def sort_author(self):
 	authors_list = self.data_source.authors()
