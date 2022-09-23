@@ -60,11 +60,11 @@ class BooksDataSourceTester(unittest.TestCase):
 
     def sort_author(self):
 	authors_list = self.data_source.authors()
-	self.assertTrue(len(authors) == 4))
-	self.assertTrue(authors[0] == Author('Austen', 'Jane'))
-	self.assertTrue(authors[1] == Author('Brontë', 'Ann')) 
-	self.assertTrue(authors[2] == Author('Brontë', 'Charlotte')) 
-	self.assertTrue(authors[3] == Author('Brontë', 'Emily'))
+	self.assertTrue(len(authors_list) == 4))
+	self.assertTrue(authors_list[0] == Author('Austen', 'Jane'))
+	self.assertTrue(authors_list[1] == Author('Brontë', 'Ann')) 
+	self.assertTrue(authors_list[2] == Author('Brontë', 'Charlotte')) 
+	self.assertTrue(authors_list[3] == Author('Brontë', 'Emily'))
 
 
 
