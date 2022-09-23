@@ -36,10 +36,6 @@ class BooksDataSourceTester(unittest.TestCase):
 	self.assertTrue(authors[1] == Author('Brontë', 'Charolette'))
 	self.assertTrue(authors[2] == Author('Brontë', 'Emily'))
 
-    def search_author_lastname_DNE(self):
-	authors = self.data_source.authors('Yip')
-	self.assertTrue(len(authors) == 0)
-
     def search_case_insensitive(self):
 	authors = self.data_source.authors("morRRiSoN")
 	self.assertTrue(len(authors) == 1)
@@ -55,9 +51,6 @@ class BooksDataSourceTester(unittest.TestCase):
 	self.assertTrue(len(titles) == 2)
 	self.assertTrue(titles[0] == Book('Great Expectations', 'Silas Marner')) 
 	
-    def search_year_DNE(self):
-	titles = self.data_source.books_between_years(1234)
-	self.assertTrue(len(titles) == 0)
 
     def search_title_special_char(self):
 	titles = self.data_source.books('\"There, There"\')
@@ -94,3 +87,15 @@ class BooksDataSourceTester(unittest.TestCase):
 if __name__ == '__main__':
     unittest.main()
 
+'''
+Tests we wanted to implement: 
+    def search_year_DNE(self):
+	titles = self.data_source.books_between_years(1234)
+	self.assertTrue(len(titles) == 0)
+	
+    def search_author_lastname_DNE(self):
+	authors = self.data_source.authors('Yip')
+	self.assertTrue(len(authors) == 0)
+
+
+'''
