@@ -54,9 +54,9 @@ class BooksDataSourceTester(unittest.TestCase):
 	self.assertTrue(titles[0] == Book('Great Expectations', 'Silas Marner')) 
 	
     def search_title_special_char(self):
-	titles = self.data_source.books('\"There, There"\')
+	titles = self.data_source.books('\"There, There\"')
 	self.assertTrue(len(titles) == 1)
-	self.assertTrue(titles[0] == Book('\"There, There"\'))
+	self.assertTrue(titles[0] == Book('\"There, There\"'))
 
     def search_title_multiple(self):
 	titles = self.data_source.books('and')
@@ -99,7 +99,16 @@ class BooksDataSourceTester(unittest.TestCase):
 	self.assertTrue(title_list[2] == Book('Emma')) 
 	self.assertTrue(title_list[3] == Book('Jane Eyre'))
 
-
+'''
+Jeff's Example with csv file
+def test_all_books(self):
+        tiny_data_source = BooksDataSource('tinybooks.csv')
+        books = tiny_data_source.books()
+        self.assertTrue(len(books) == 3)
+        self.assertTrue(books[0].title == 'Emma')
+        self.assertTrue(books[1].title == 'Neverwhere')
+        self.assertTrue(books[2].title == 'Omoo')
+'''
 
 if __name__ == '__main__':
     unittest.main()
