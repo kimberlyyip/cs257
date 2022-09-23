@@ -19,46 +19,46 @@ class BooksDataSourceTester(unittest.TestCase):
         self.assertTrue(len(authors) == 1)
         self.assertTrue(authors[0] == Author('Pratchett', 'Terry'))
 
-    def search_author_two_lastname(self):
+    def test_search_author_two_lastname(self):
         authors = self.data_source.authors('Grenville Wodehouse')
         self.assertTrue(len(authors) == 1)
         self.assertTrue(authors[0] == Author('Grenville Wodehouse', 'Pelham'))
 
-    def search_author_special_character(self):
+    def test_search_author_special_character(self):
         authors = self.data_source.authors('García Márquez')
         self.assertTrue(len(authors) == 1)
         self.assertTrue(authors[0] == Author('García Márquez', 'Gabriel'))
   
-    def search_author_multiple_lastname(self):
+    def test_search_author_multiple_lastname(self):
         authors = self.data_source.authors('Brontë')
         self.assertTrue(len(authors) == 3)
         self.assertTrue(authors[0] == Author('Brontë', 'Ann'))
         self.assertTrue(authors[1] == Author('Brontë', 'Charolette'))
         self.assertTrue(authors[2] == Author('Brontë', 'Emily'))
 	
-    def search_year_begginning(self):
+    def test_search_year_begginning(self):
         titles = self.data_source.books_between_years(2020, None)
         self.assertTrue(len(titles) == 2)
         self.assertTrue(titles[0] == Book('Boys and Sex')) 
         self.assertTrue(titles[1] == Book('The Invisible Life of Addie LaRue')) 
 	
-    def search_year_end(self):
+    def test_search_year_end(self):
         titles = self.data_source.books_between_years(None, 1813)
         self.assertTrue(len(titles) == 2)
         self.assertTrue(titles[0] == Book('Pride and Prejudice')) 
         self.assertTrue(titles[1] == Book('Sense and Sensibility')) 
 	
-    def search_year_range(self):
+    def test_search_year_range(self):
         titles = self.data_source.books_between_years(1860, 1861)
         self.assertTrue(len(titles) == 2)
         self.assertTrue(titles[0] == Book('Great Expectations', 'Silas Marner')) 
 	
-    def search_title_special_char(self):
+    def test_search_title_special_char(self):
         titles = self.data_source.books('\"There, There\"')
         self.assertTrue(len(titles) == 1)
         self.assertTrue(titles[0] == Book('\"There, There\"'))
 
-    def search_title_multiple(self):
+    def test_search_title_multiple(self):
         titles = self.data_source.books('and')
         self.assertTrue(len(books) == 7)
         self.assertTrue(titles[0] == Book('And Then There Were None'))
@@ -69,12 +69,12 @@ class BooksDataSourceTester(unittest.TestCase):
         self.assertTrue(titles[5] == Book('Sense and Sensibility'))
         self.assertTrue(titles[6] == Book('\"The Life and Opinions of Tristram Shandy, Gentleman\"'))
 
-    def search_title_numbers(self):
+    def test_search_title_numbers(self):
         titles = self.data_source.books('1Q84')
         self.assertTrue(len(titles) == 1)
         self.assertTrue(titles[0] == Book('1Q84'))
 
-    def sort_author(self):
+    def test_sort_author(self):
         authors_list = self.data_source.authors()
         self.assertTrue(len(authors_list) == 4)
         self.assertTrue(authors_list[0] == Author('Austen', 'Jane'))
@@ -82,7 +82,7 @@ class BooksDataSourceTester(unittest.TestCase):
         self.assertTrue(authors_list[2] == Author('Brontë', 'Charlotte')) 
         self.assertTrue(authors_list[3] == Author('Brontë', 'Emily'))
 			
-    def sort_title(self):
+    def test_sort_title(self):
         title_list = self.data_source.books()
         self.assertTrue(len(title_list) == 4)
         self.assertTrue(title_list[0] == Book('All Clear'))
@@ -91,7 +91,7 @@ class BooksDataSourceTester(unittest.TestCase):
         self.assertTrue(title_list[3] == Book('Blackout'))
 
 #assuming that it sorts from past to present
-    def sort_year(self):
+    def test_sort_year(self):
         title_list = self.data_source.books_between_years()
         self.assertTrue(len(title_list) == 4)
         self.assertTrue(title_list[0] == Book('Pride and Prejudice'))
@@ -115,15 +115,15 @@ if __name__ == '__main__':
 
 '''
 Tests we wanted to implement: 
-    def search_year_DNE(self):
+    def test_search_year_DNE(self):
 	titles = self.data_source.books_between_years(1234)
 	self.assertTrue(len(titles) == 0)
 	
-    def search_author_lastname_DNE(self):
+    def test_search_author_lastname_DNE(self):
 	authors = self.data_source.authors('Yip')
 	self.assertTrue(len(authors) == 0)
 
-    def search_case_insensitive(self):
+    def test_search_case_insensitive(self):
 	authors = self.data_source.authors("morRRiSoN")
 	self.assertTrue(len(authors) == 1)
 	self.assertTrue(authors[0] == Author('Morrison','Toni')) 
