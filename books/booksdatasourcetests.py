@@ -35,24 +35,36 @@ class BooksDataSourceTester(unittest.TestCase):
 	self.assertTrue(authors[0] == Author('')) 
 
     def search_case_insensitive(self):
-	authors = self.data_source.books("morRRinSoN")
+	authors = self.data_source.authors("morRRiSoN")
 	self.assertTrue(len(authors) == 1)
-	self.assertTrue(authors[0] == Author('Toni')) 
+	self.assertTrue(authors[0] == Author('Morrison','Toni')) 
 	
     def search_one_year(self):
-	titles = self.data_source.books("2010")
-	self.assertTrue(len(Book) == 1)
+	titles = self.data_source.books_between_years(2010, 2010)
+	self.assertTrue(len(titles) == 1)
 	self.assertTrue(titles[0] == Book('All Clear')) 
 	
     def search_year_range(self):
-	titles = self.data_source.books_between_years("1963"."1974")
-	self.assertTrue(len(Book) == 2)
-	self.assertTrue(titles[0] == Book('The Spy Who Came in From the Cold', "Tinker, Tailor, Soldier, Spy")) 
+	titles = self.data_source.books_between_years(1860, 1861)
+	self.assertTrue(len(titles) == 2)
+	self.assertTrue(titles[0] == Book('Great Expectations', 'Silas Marner')) 
 	
     def search_year_DNE(self):
-	titles = self.data_source.books_between_years("1234")
-	self.assertTrue(len(Book) == 1)
-	self.assertTrue(titles[0] == Book("")) 
+	titles = self.data_source.books_between_years(1234)
+	self.assertTrue(len(titles) == 0)
+
+    def search_title_special_char(self):
+	titles = self.data_source.books('"There, There"')
+	self.assertTrue(len(titles) == 1)
+	self.assertTrue(titles[0] == Book('"There, There"')
+
+    def sort_author(self):
+	authors_list = self.data_source.authors()
+	self.assertTrue(len(authors) == 4)
+	self.assertTrue(authors[0] == Author('Austen', 'Jane')  
+	self.assertTrue(authors[1] == Author('Brontë', 'Ann') 
+	self.assertTrue(authors[2] == Author('Brontë', 'Charlotte') 
+	self.assertTrue(authors[3] == Author('Brontë', 'Emily')
 
 
 
