@@ -76,7 +76,7 @@ class BooksDataSourceTester(unittest.TestCase):
 
     def sort_author(self):
         authors_list = self.data_source.authors()
-        self.assertTrue(len(authors_list) == 4))
+        self.assertTrue(len(authors_list) == 4)
         self.assertTrue(authors_list[0] == Author('Austen', 'Jane'))
         self.assertTrue(authors_list[1] == Author('Brontë', 'Ann')) 
         self.assertTrue(authors_list[2] == Author('Brontë', 'Charlotte')) 
@@ -84,7 +84,7 @@ class BooksDataSourceTester(unittest.TestCase):
 			
     def sort_title(self):
         title_list = self.data_source.books()
-        self.assertTrue(len(title_list) == 4))
+        self.assertTrue(len(title_list) == 4)
         self.assertTrue(title_list[0] == Book('All Clear'))
         self.assertTrue(title_list[1] == Book('And Then There Were None')) 
         self.assertTrue(title_list[2] == Book('Beloved')) 
@@ -93,7 +93,7 @@ class BooksDataSourceTester(unittest.TestCase):
 #assuming that it sorts from past to present
     def sort_year(self):
         title_list = self.data_source.books_between_years()
-        self.assertTrue(len(title_list) == 4))
+        self.assertTrue(len(title_list) == 4)
         self.assertTrue(title_list[0] == Book('Pride and Prejudice'))
         self.assertTrue(title_list[1] == Book('Sense and Sensibility')) 
         self.assertTrue(title_list[2] == Book('Emma')) 
