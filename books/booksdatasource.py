@@ -5,6 +5,7 @@
 
     For use in the "books" assignment at the beginning of Carleton's
     CS 257 Software Design class, Fall 2022.
+    Authors: Sydney Nguyen and Kimberly Yip
 '''
 
 import csv
@@ -57,6 +58,11 @@ class BooksDataSource:
             returns all of the Author objects. In either case, the returned list is sorted
             by surname, breaking ties using given name (e.g. Ann Brontë comes before Charlotte Brontë).
         '''
+
+        if (search_text == None):
+           pass
+        else:
+           #sorted(books1.csv)
         return []
 
     def books(self, search_text=None, sort_by='title'):
