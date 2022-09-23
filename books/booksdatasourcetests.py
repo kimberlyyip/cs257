@@ -41,17 +41,23 @@ class BooksDataSourceTester(unittest.TestCase):
 	self.assertTrue(len(authors) == 1)
 	self.assertTrue(authors[0] == Author('Morrison','Toni')) 
 	
-    def search_one_year(self):
-	titles = self.data_source.books_between_years(2010, 2010)
-	self.assertTrue(len(titles) == 1)
-	self.assertTrue(titles[0] == Book('All Clear')) 
+    def search_year_begginning(self):
+	titles = self.data_source.books_between_years(2020, None)
+	self.assertTrue(len(titles) == 2)
+	self.assertTrue(titles[0] == Book('Boys and Sex')) 
+	self.assertTrue(titles[1] == Book('The Invisible Life of Addie LaRue')) 
+	
+    def search_year_end(self):
+	titles = self.data_source.books_between_years(None, 1813)
+	self.assertTrue(len(titles) == 2)
+	self.assertTrue(titles[0] == Book('Pride and Prejudice')) 
+	self.assertTrue(titles[1] == Book('Sense and Sensibility')) 
 	
     def search_year_range(self):
 	titles = self.data_source.books_between_years(1860, 1861)
 	self.assertTrue(len(titles) == 2)
 	self.assertTrue(titles[0] == Book('Great Expectations', 'Silas Marner')) 
 	
-
     def search_title_special_char(self):
 	titles = self.data_source.books('\"There, There"\')
 	self.assertTrue(len(titles) == 1)
@@ -80,7 +86,23 @@ class BooksDataSourceTester(unittest.TestCase):
 	self.assertTrue(authors_list[1] == Author('Brontë', 'Ann')) 
 	self.assertTrue(authors_list[2] == Author('Brontë', 'Charlotte')) 
 	self.assertTrue(authors_list[3] == Author('Brontë', 'Emily'))
+			
+    def sort_title(self):
+	title_list = self.data_source.books()
+	self.assertTrue(len(title_list) == 4))
+	self.assertTrue(title_list[0] == Book('All Clear'))
+	self.assertTrue(title_list[1] == Book('And Then There Were None')) 
+	self.assertTrue(title_list[2] == Book('Beloved')) 
+	self.assertTrue(title_list[3] == Book('Blackout'))
 
+#assuming that it sorts from past to present
+    def sort_year(self):
+	title_list = self.data_source.books_between_years()
+	self.assertTrue(len(title_list) == 4))
+	self.assertTrue(title_list[0] == Book('Pride and Prejudice'))
+	self.assertTrue(title_list[1] == Book('Sense and Sensibility')) 
+	self.assertTrue(title_list[2] == Book('Emma')) 
+	self.assertTrue(title_list[3] == Book('Jane Eyre'))
 
 
 
