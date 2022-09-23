@@ -35,11 +35,6 @@ class BooksDataSourceTester(unittest.TestCase):
 	self.assertTrue(authors[0] == Author('Brontë', 'Ann'))
 	self.assertTrue(authors[1] == Author('Brontë', 'Charolette'))
 	self.assertTrue(authors[2] == Author('Brontë', 'Emily'))
-
-    def search_case_insensitive(self):
-	authors = self.data_source.authors("morRRiSoN")
-	self.assertTrue(len(authors) == 1)
-	self.assertTrue(authors[0] == Author('Morrison','Toni')) 
 	
     def search_year_begginning(self):
 	titles = self.data_source.books_between_years(2020, None)
@@ -118,6 +113,11 @@ Tests we wanted to implement:
     def search_author_lastname_DNE(self):
 	authors = self.data_source.authors('Yip')
 	self.assertTrue(len(authors) == 0)
+
+    def search_case_insensitive(self):
+	authors = self.data_source.authors("morRRiSoN")
+	self.assertTrue(len(authors) == 1)
+	self.assertTrue(authors[0] == Author('Morrison','Toni')) 
 
 
 '''
