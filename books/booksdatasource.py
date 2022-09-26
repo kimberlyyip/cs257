@@ -67,14 +67,23 @@ class BooksDataSource:
         f = open("books.csv", "r")
         search_text = search_text.upper()
         author_list = []
-        if (search_text == None):
+        lines = f.readline()
+        if search_text == None:
            author_list = sorted(books1.csv)
         else:
-           while(line.next() != NULL)
-              if(line.upper == search_text)
-                 author = Author(
-                
-        return []
+           for line in lines：
+              line = line.split(",")
+              if line[2].upper == search_text:
+                 author_param = line[2].split(" ")
+                 date = author_param[2].strip("(",")")
+                 date = date.split("-")
+                 books = [line[0]]
+                 if Author(author_param[1]) in author_list:
+                    Author(author_param[1]).books.add(book)
+                 else: 
+                    author = Author(author_param[1], author_param[0], date[0], date[1], books) 
+                    author_list.add(author)
+        return author_list
 
     def books(self, search_text=None, sort_by='title'):
         ''' Returns a list of all the Book objects in this data source whose
