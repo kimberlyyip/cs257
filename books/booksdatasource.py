@@ -9,6 +9,7 @@
 '''
 
 import csv
+import books1.csv
 
 class Author:
     def __init__(self, surname='', given_name='', birth_year=None, death_year=None, books=[]):
@@ -63,11 +64,16 @@ class BooksDataSource:
             returns all of the Author objects. In either case, the returned list is sorted
             by surname, breaking ties using given name (e.g. Ann Brontë comes before Charlotte Brontë).
         '''
-
+        f = open("books.csv", "r")
+        search_text = search_text.upper()
+        author_list = []
         if (search_text == None):
-           pass
+           author_list = sorted(books1.csv)
         else:
-           #sorted(books1.csv)
+           while(line.next() != NULL)
+              if(line.upper == search_text)
+                 author = Author(
+                
         return []
 
     def books(self, search_text=None, sort_by='title'):
