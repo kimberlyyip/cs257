@@ -60,7 +60,7 @@ class BooksDataSourceTester(unittest.TestCase):
 
     def test_search_title_multiple(self):
         titles = self.data_source.books('and')
-        self.assertTrue(len(books) == 7)
+        self.assertTrue(len(titles) == 7)
         self.assertTrue(titles[0] == Book('And Then There Were None'))
         self.assertTrue(titles[1] == Book('Boys and Sex'))
         self.assertTrue(titles[2] == Book('Girls and Sex'))
