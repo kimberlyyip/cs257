@@ -9,6 +9,7 @@
 '''
 
 import csv
+#import pandas as pandasForSortingCSV
 
 class Author:
     def __init__(self, surname='', given_name='', birth_year=None, death_year=None, books=[]):
@@ -67,18 +68,19 @@ class BooksDataSource:
            reader = csv.reader(books_file)
            author_list = []
            if search_text == None:
-              author_list = sort_values("author_lastname", "books")
+              author_list = sorted(books_file, key = lambda row:(row["author_lastname"],row["books"]), reverse = False)
+              #author_list = books_file.sort_values(["author_lastname", "books"], axis=0, ascending=[True], inplace=True)
            else:
              for item in reader:
                 author_param = item[2].split(" ")
                 if author_param[1] == search_text:
-                   date = item[3].strip("(",")").split("-")
+                   date = author_param[2].strip("(").strip(")").split("-")
                    if Author(author_param[1]) in author_list:
-                      Author(author_param[1]).books.add(item[0])
+                      Author(author_param[1]).books.append(item[0])
                    else:
                      books = [item[0]]
                      author = Author(author_param[1], author_param[0], date[0], date[1], books) 
-                     author_list.add(author)
+                     author_list.append(author)
         return author_list
 
     def books(self, search_text=None, sort_by='title'):
