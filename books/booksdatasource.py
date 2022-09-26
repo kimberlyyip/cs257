@@ -9,7 +9,6 @@
 '''
 
 import csv
-import books1.csv
 
 class Author:
     def __init__(self, surname='', given_name='', birth_year=None, death_year=None, books=[]):
@@ -64,25 +63,22 @@ class BooksDataSource:
             returns all of the Author objects. In either case, the returned list is sorted
             by surname, breaking ties using given name (e.g. Ann Brontë comes before Charlotte Brontë).
         '''
-        f = open("books.csv", "r")
-        search_text = search_text.upper()
-        author_list = []
-        lines = f.readline()
-        if search_text == None:
-           author_list = sorted(books1.csv)
-        else:
-           for line in lines：
-              line = line.split(",")
-              if line[2].upper == search_text:
-                 author_param = line[2].split(" ")
-                 date = author_param[2].strip("(",")")
-                 date = date.split("-")
-                 books = [line[0]]
-                 if Author(author_param[1]) in author_list:
-                    Author(author_param[1]).books.add(book)
-                 else: 
-                    author = Author(author_param[1], author_param[0], date[0], date[1], books) 
-                    author_list.add(author)
+        with open ('books1.csv', mode = "r") as books_file:
+           reader = csv.reader(books_file)
+           author_list = []
+           if search_text == None:
+              author_list = sort_values("author_lastname", "books")
+           else:
+             for item in reader:
+                author_param = item[2].split(" ")
+                if author_param[1] == search_text:
+                   date = item[3].strip("(",")").split("-")
+                   if Author(author_param[1]) in author_list:
+                      Author(author_param[1]).books.add(item[0])
+                   else:
+                     books = [item[0]]
+                     author = Author(author_param[1], author_param[0], date[0], date[1], books) 
+                     author_list.add(author)
         return author_list
 
     def books(self, search_text=None, sort_by='title'):
