@@ -56,6 +56,28 @@ class BooksDataSource:
             suitable instance variables for the BooksDataSource object containing
             a collection of Author objects and a collection of Book objects.
         '''
+        self.authors = []
+        self.books = []
+        with open (books_csv_file_name, mode = 'r') as books_file:
+           reader = csv.reader(books_file)
+           for line in reader:
+              book = Book(line[0], int(line[1]), [])
+              if book not in self.books:
+                 self.books.append(book)
+              for names in line[2].split(" and "):
+                names = names.split(" ")
+                author_first = names[0]
+                author_last = " ".join(names[1:-1])
+                years = names[-1].strip("()\n").split("-")
+                birth_year = int(years[0])
+                death_year = int(years[1]) if years[1] != "" else None
+                author = Author(author_last, author_first, birth_year, death_year, [book, ])
+                book.authors.append(author)
+                if author not in self.authors:
+                   self.authors.append(author)
+                elif author in self.author:
+                   author.books.append(book)
+
         pass
 
     def authors(self, search_text=None):
@@ -64,11 +86,11 @@ class BooksDataSource:
             returns all of the Author objects. In either case, the returned list is sorted
             by surname, breaking ties using given name (e.g. Ann Brontë comes before Charlotte Brontë).
         '''
-        with open ('books1.csv', mode = "r") as books_file:
+        '''with open ('books1.csv', mode = "r") as books_file:
            reader = csv.reader(books_file)
            author_list = []
            if search_text == None:
-              author_list = sorted(books_file, key = lambda row:(row["author_lastname"],row["books"]), reverse = False)
+              author_list = sorted(books_file, key = lambda row:(row[2],row[0]), reverse = False)
               #author_list = books_file.sort_values(["author_lastname", "books"], axis=0, ascending=[True], inplace=True)
            else:
              for item in reader:
@@ -82,6 +104,7 @@ class BooksDataSource:
                      author = Author(author_param[1], author_param[0], date[0], date[1], books) 
                      author_list.append(author)
         return author_list
+        '''
 
     def books(self, search_text=None, sort_by='title'):
         ''' Returns a list of all the Book objects in this data source whose
