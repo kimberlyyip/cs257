@@ -1,0 +1,13 @@
+test_unique_author 0
+test_search_author_two_lastname 0
+test_search_author_special_character 0
+test_search_autor_multiple_lastname 0 
+test_search_year_beginning 
+test_search_year_end
+test_search_year_range
+test_search_title_special_char
+test_search_title_multiple
+test_search_title_numbers 0
+test_sort_author 0
+test_sort_title ~0
+test_sort_year
