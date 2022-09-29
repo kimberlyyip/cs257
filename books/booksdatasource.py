@@ -19,9 +19,16 @@ class Author:
         self.books = books
 
     def __eq__(self, other):
-        ''' For simplicity, we're going to assume that no two authors have the same name. '''
+        ''' For simplicity, we're going to assume that no two authors have the same name.'''
         return self.surname == other.surname and self.given_name == other.given_name
-
+    
+    def __lt__(self, other):
+        if self.surname < other.surname:
+            return True
+        if self.surname == other.surname and self.given_name < other.given_name:
+            return True
+        return False
+        
     # For sorting authors, you could add a "def __lt__(self, other)" method
     # to go along with __eq__ to enable you to use the built-in "sorted" function
     # to sort a list of Author objects.
@@ -55,28 +62,17 @@ class BooksDataSource:
             suitable instance variables for the BooksDataSource object containing
             a collection of Author objects and a collection of Book objects.
         '''
-        self.author_list = []
-        self.book_list = []
-        with open (books_csv_file_name, mode = 'r') as books_file:
-           reader = csv.reader(books_file)
-           for line in reader:
-              book = Book(line[0], int(line[1]), [])
-              if book not in self.book_list:
-                 self.book_list.append(book)
-              for names in line[2].split(" and "):
-                names = names.split(" ")
-                author_first = names[0]
-                author_last = " ".join(names[1:-1])
-                years = names[-1].strip("()\n").split("-")
-                birth_year = int(years[0])
-                death_year = int(years[1]) if years[1] != "" else None
-                author = Author(author_last, author_first, birth_year, death_year, [book, ])
-                book.authors.append(author)
-                if author not in self.author_list:
-                   self.author_list.append(author)
-                elif author in self.author_list:
-                   author.books.append(book)
-        pass
+        self.authors_list = []
+        with open("authors2.csv") as input_file:
+            reader = csv.reader(input_file)
+            for column in reader:
+                assert len(column) == 5
+                given_name = column[2]
+                surname = column[1]
+                birth_year = column[3]
+                death_year = column[4]
+                if Author(surname, given_name) not in self.authors_list:
+                    self.authors_list.append(Author(surname, given_name, birth_year, death_year))
 
     def authors(self, search_text=None):
         ''' Returns a list of all the Author objects in this data source whose names contain
@@ -86,12 +82,13 @@ class BooksDataSource:
         '''
         author_sorted = []
         if search_text == None:
-            pass
+            author_sorted = self.authors_list
+            return sorted(author_sorted)
         else:
-            for i in range(len(self.author_list)):
-                if self.author_list[i] == search_text:
-                    author_sorted.append(self.author_list[i])
-            return author_sorted
+            for item in self.authors_list:
+                if item == Author(search_text) and item not in author_sorted:
+                    author_sorted.append(item)
+            return sorted(author_sorted)
 
     def books(self, search_text=None, sort_by='title'):
         ''' Returns a list of all the Book objects in this data source whose
