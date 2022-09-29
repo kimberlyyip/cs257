@@ -63,16 +63,42 @@ class BooksDataSource:
             a collection of Author objects and a collection of Book objects.
         '''
         self.authors_list = []
-        with open("authors2.csv") as input_file:
+        self.book_list = []
+        with open(books_csv_file_name) as input_file:
             reader = csv.reader(input_file)
             for column in reader:
-                assert len(column) == 5
-                given_name = column[2]
-                surname = column[1]
-                birth_year = column[3]
-                death_year = column[4]
-                if Author(surname, given_name) not in self.authors_list:
-                    self.authors_list.append(Author(surname, given_name, birth_year, death_year))
+                assert len(column) == 3
+                book = Book(column[0], column[1], [])
+                if book not in self.book_list:
+                    self.book_list.append(book)
+                for author_param in column[2].split(" and "):
+                    author_param = author_param.split(" ")
+                    given_name = author_param[0]
+                    if len(author_param) > 3:
+                        surname = author_param[1] + " " + author_param[2]
+                        life = author_param[3]
+                        life = life.strip("(").strip(")").split("-")
+                        birth_year = life[0]
+                        if len(life) < 2:
+                            death_year = None
+                        else:
+                            death_year = life[1]
+                    else: 
+                        surname = author_param[1]
+                        life = author_param[2]
+                        life = life.strip("(").strip(")").split("-")
+                        birth_year = life[0]
+                        if len(life) < 2:
+                            death_year = None
+                        else:
+                            death_year = life[1]
+                    author = Author(surname, given_name, birth_year, death_year, [book, ])
+                    book.authors.append(author)
+                    if Author(author.surname, author.given_name) not in self.authors_list:
+                        self.authors_list.append(author)
+                    else:
+                        author.books.append(book)
+                    
 
     def authors(self, search_text=None):
         ''' Returns a list of all the Author objects in this data source whose names contain
@@ -85,8 +111,9 @@ class BooksDataSource:
             author_sorted = self.authors_list
             return sorted(author_sorted)
         else:
+            search_text = search_text.lower()
             for item in self.authors_list:
-                if item == Author(search_text) and item not in author_sorted:
+                if item.surname.lower() == search_text and item not in author_sorted:
                     author_sorted.append(item)
             return sorted(author_sorted)
 
@@ -102,7 +129,17 @@ class BooksDataSource:
                 default -- same as 'title' (that is, if sort_by is anything other than 'year'
                             or 'title', just do the same thing you would do for 'title')
         '''
-        return []
+        book_sorted = []
+        if search_text == None:
+            book_sorted = self.book_list
+            return sorted(book_sorted)
+        else:
+            search_text = ''.join(filter(str.isalnum, search_text))
+            for item in self.book_list:
+                search = ''.join(filter(str.isalnum, item.title))
+                if search.lower() == search_text.lower() and item not in book_sorted:
+                    book_sorted.append(item)
+            return sorted(book_sorted)
 
     def books_between_years(self, start_year=None, end_year=None):
         ''' Returns a list of all the Book objects in this data source whose publication
