@@ -46,6 +46,11 @@ class Book:
             no two books have the same title, so "same title" is the same
             thing as "same book". '''
         return self.title == other.title
+    
+    def __lt__(self, other):
+        if self.title.strip('"') < other.title.strip('"'):
+            return True
+        return False
 
 class BooksDataSource:
     def __init__(self, books_csv_file_name):
@@ -137,7 +142,7 @@ class BooksDataSource:
             search_text = ''.join(filter(str.isalnum, search_text))
             for item in self.book_list:
                 search = ''.join(filter(str.isalnum, item.title))
-                if search.lower() == search_text.lower() and item not in book_sorted:
+                if search_text.lower() in search.lower() and item not in book_sorted:
                     book_sorted.append(item)
             return sorted(book_sorted)
 
