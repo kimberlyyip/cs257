@@ -14,7 +14,7 @@ import booksdatasource
 def main():
   books_file = open('books1.csv')
   file = booksdatasource.BooksDataSource(books_file)
-  if(len(sys.argv) == 1) 
+  if(len(sys.argv) == 1):
     output = file.books()
   elif("-h" or "--help" in sys.argv):
      usage = open('usage.txt')
@@ -28,14 +28,14 @@ def main():
         output = file.authors(sys.argv[2],sys.argv[3])
     else:
       raise SyntaxError("Amount of inputs can not be handled")
- elif(sys.argv[2] == "books"):
+  elif(sys.argv[2] == "books"):
     if len(sys.argv) == 2:
       output = file.books()
     elif len(sys.argv) == 3:
       output = file.books(sys.argv[3])
     else:
       raise SyntaxError("Amount of inputs can not be handled")
- elif(sys.argv[2] == "range"):
+  elif(sys.argv[2] == "range"):
     if len(sys.argv) == 3:
       output = file.books_between_years()
     elif len(sys.argv) == 4:
