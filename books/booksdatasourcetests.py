@@ -75,10 +75,15 @@ class BooksDataSourceTester(unittest.TestCase):
 			
     def test_sort_title(self):
         title_list = self.data_source.books()
-        self.assertTrue(title_list[0] == Book('All Clear'))
-        self.assertTrue(title_list[1] == Book('And Then There Were None')) 
-        self.assertTrue(title_list[2] == Book('Beloved')) 
-        self.assertTrue(title_list[3] == Book('Blackout'))
+        #testing if titles in quotes were properly sorted
+        # for i in range(len(title_list)):
+        #     print("tester: ", title_list[i].title)
+        self.assertTrue(title_list[0] == Book('1Q84'))
+        self.assertTrue(title_list[1] == Book('A Wild Sheep Chase'))
+        self.assertTrue(title_list[2] == Book('All Clear'))
+        self.assertTrue(title_list[3] == Book('And Then There Were None')) 
+        self.assertTrue(title_list[4] == Book('Beloved')) 
+        self.assertTrue(title_list[5] == Book('Blackout'))
 
 #assuming that it sorts from past to present
     def test_sort_year(self):
