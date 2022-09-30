@@ -13,7 +13,7 @@ import booksdatasource
 
 def main():
   file = booksdatasource.BooksDataSource('books1.csv')
-  if(len(sys.argv) == 1):
+  if(len(sys.argv) == 2):
     output = file.books()
   elif("-h" or "--help" in sys.argv):
      usage = open('usage.txt')
