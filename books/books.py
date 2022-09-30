@@ -43,6 +43,6 @@ def main():
     else:
       raise SyntaxError("Amount of inputs can not be handled")     
   for item in output:
-    print(item)
+    print(item.title)
     
 main()
