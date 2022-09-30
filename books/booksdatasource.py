@@ -73,7 +73,7 @@ class BooksDataSource:
             reader = csv.reader(input_file)
             for column in reader:
                 assert len(column) == 3
-                book = Book(column[0], column[1], [])
+                book = Book(column[0], int(column[1]), [])
                 if book not in self.book_list:
                     self.book_list.append(book)
                 for author_param in column[2].split(" and "):
@@ -145,7 +145,12 @@ class BooksDataSource:
                 if search_text.lower() in search.lower() and item not in book_sorted:
                     book_sorted.append(item)
             return sorted(book_sorted)
-
+    
+    # def sort_year(self):
+    #     books_sorted = []
+    #     for i = 0; i < self.size(); i++:
+            
+            
     def books_between_years(self, start_year=None, end_year=None):
         ''' Returns a list of all the Book objects in this data source whose publication
             years are between start_year and end_year, inclusive. The list is sorted
@@ -157,8 +162,20 @@ class BooksDataSource:
             during start_year should be included. If both are None, then all books
             should be included.
         '''
-        return []
-
-#if __name__ == '__main__':
-    #test code
-    #BooksDataSource('books1.csv').authors('Brontë')
+        book_sorted = []
+        if start_year == None and end_year == None:
+            book_sorted = self.book_list
+            return sorted(book_sorted, key = lambda book: book.publication_year)
+        else:
+            for item in self.book_list:
+                if end_year == None:
+                    if int(start_year) <= item.publication_year and item not in book_sorted:
+                        book_sorted.append(item)
+                elif start_year == None:
+                    if int(end_year) >= item.publication_year and item not in book_sorted:
+                        book_sorted.append(item)
+                else:
+                    if int(start_year) <= item.publication_year and int(end_year) >= item.publication_year:
+                        if item not in book_sorted:
+                            book_sorted.append(item)
+            return sorted(book_sorted, key = lambda book: book.publication_year)
