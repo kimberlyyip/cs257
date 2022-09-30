@@ -19,28 +19,28 @@ def main():
      usage = open('usage.txt')
      print(usage.read())
      usage.close()
-  elif(sys.argv[2] == "authors"):
+  elif(sys.argv[1] == "authors"):
     if len(sys.argv) == 2:
       output = file.authors()
     elif len(sys.argv) == 3:
-      if(sys.argv[3] == '-t'):
+      if(sys.argv[2] == '-t'):
         output = file.authors(sys.argv[2],sys.argv[3])
     else:
       raise SyntaxError("Amount of inputs can not be handled")
-  elif(sys.argv[2] == "books"):
+  elif(sys.argv[1] == "books"):
     if len(sys.argv) == 2:
       output = file.books()
     elif len(sys.argv) == 3:
-      output = file.books(sys.argv[3])
+      output = file.books(sys.argv[2])
     else:
       raise SyntaxError("Amount of inputs can not be handled")
-  elif(sys.argv[2] == "range"):
+  elif(sys.argv[1] == "range"):
     if len(sys.argv) == 3:
       output = file.books_between_years()
     elif len(sys.argv) == 4:
-      output = file.books_between_years(sys.argv[3])
+      output = file.books_between_years(sys.argv[2])
     elif len(sys.arv) == 5:
-      output = file.books_between_years(sys.argv[3],sys.argv[4])
+      output = file.books_between_years(sys.argv[2],sys.argv[3])
     else:
       raise SyntaxError("Amount of inputs can not be handled")     
     print(output)
