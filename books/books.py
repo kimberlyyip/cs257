@@ -14,7 +14,7 @@ import booksdatasource
 def main():
   file = booksdatasource.BooksDataSource('books1.csv')
 
-  if("-h" or "--help" in sys.argv):
+  if("-h" in sys.argv or "--help" in sys.argv):
      usage = open('usage.txt')
      print(usage.read())
      usage.close()
