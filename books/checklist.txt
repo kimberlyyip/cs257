@@ -1,13 +1,6 @@
-test_unique_author 0
-test_search_author_two_lastname 0
-test_search_author_special_character 0
-test_search_autor_multiple_lastname 0 
-test_search_year_beginning 
-test_search_year_end
-test_search_year_range
-test_search_title_special_char
-test_search_title_multiple
-test_search_title_numbers 0
-test_sort_author 0
-test_sort_title ~0
-test_sort_year
+Notes (aka things to consider and change)
+- How should it be mandated when searching for a range of years that the user inputs start_year = none and end_year=[a num]
+-- this presents problems when the user should not interact with the None parameter and with the way we have written our usage statement
+- Another issue is looking up an author by their first and last name
+-- currently have not fixed this problem and you can only currently look up authors by their last name
+- How do we handle it when an author or book or publication year does not exist
