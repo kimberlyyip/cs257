@@ -22,8 +22,7 @@ def main():
     if len(sys.argv) == 2:
       output = file.authors()
     elif len(sys.argv) == 3:
-      if(sys.argv[2] == '-t'):
-        output = file.authors(sys.argv[2],sys.argv[3])
+      output  = file.authors(sys.argv[2])
     else:
       raise SyntaxError("Amount of inputs can not be handled")
   elif(sys.argv[1] == "books"):
