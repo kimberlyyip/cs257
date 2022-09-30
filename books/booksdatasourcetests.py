@@ -39,17 +39,20 @@ class BooksDataSourceTester(unittest.TestCase):
 	
     def test_search_year_end(self):
         titles = self.data_source.books_between_years(None, 1813)
-        self.assertTrue(titles[0] == Book('Pride and Prejudice')) 
-        self.assertTrue(titles[1] == Book('Sense and Sensibility')) 
+        self.assertTrue(titles[0] == Book('The Life and Opinions of Tristram Shandy, Gentleman'))
+        self.assertTrue(titles[1] == Book('Pride and Prejudice')) 
+        self.assertTrue(titles[2] == Book('Sense and Sensibility')) 
 	
     def test_search_year_range(self):
-        titles = self.data_source.books_between_years(1860, 1861)
-        self.assertTrue(titles[0] == Book('Great Expectations', 'Silas Marner')) 
+        titles = self.data_source.books_between_years(1813, 1847)
+        self.assertTrue(titles[0] == Book('Pride and Prejudice'))
+        self.assertTrue(titles[1] == Book('Sense and Sensibility')) 
+        self.assertTrue(titles[2] == Book('Emma')) 
+        self.assertTrue(titles[3] == Book('Jane Eyre')) 
 	
     def test_search_title_special_char(self):
         titles = self.data_source.books('\"There, There\"')
-        print("test: ", titles[0].title)
-        self.assertTrue(titles[0] == Book('\"There, There\"'))
+        self.assertTrue(titles[0] == Book('There, There'))
 
     def test_search_title_multiple(self):
         titles = self.data_source.books('and')
@@ -59,7 +62,7 @@ class BooksDataSourceTester(unittest.TestCase):
         self.assertTrue(titles[3] == Book('Hard-Boiled Wonderland and the End of the World'))
         self.assertTrue(titles[4] == Book('Pride and Prejudice'))
         self.assertTrue(titles[5] == Book('Sense and Sensibility'))
-        self.assertTrue(titles[6] == Book('\"The Life and Opinions of Tristram Shandy, Gentleman\"'))
+        self.assertTrue(titles[6] == Book('The Life and Opinions of Tristram Shandy, Gentleman'))
 
     def test_search_title_numbers(self):
         titles = self.data_source.books('1Q84')
@@ -75,9 +78,6 @@ class BooksDataSourceTester(unittest.TestCase):
 			
     def test_sort_title(self):
         title_list = self.data_source.books()
-        #testing if titles in quotes were properly sorted
-        # for i in range(len(title_list)):
-        #     print("tester: ", title_list[i].title)
         self.assertTrue(title_list[0] == Book('1Q84'))
         self.assertTrue(title_list[1] == Book('A Wild Sheep Chase'))
         self.assertTrue(title_list[2] == Book('All Clear'))
@@ -88,10 +88,11 @@ class BooksDataSourceTester(unittest.TestCase):
 #assuming that it sorts from past to present
     def test_sort_year(self):
         title_list = self.data_source.books_between_years()
-        self.assertTrue(title_list[0] == Book('Pride and Prejudice'))
-        self.assertTrue(title_list[1] == Book('Sense and Sensibility')) 
-        self.assertTrue(title_list[2] == Book('Emma')) 
-        self.assertTrue(title_list[3] == Book('Jane Eyre'))
+        self.assertTrue(title_list[0] == Book('The Life and Opinions of Tristram Shandy, Gentleman'))
+        self.assertTrue(title_list[1] == Book('Pride and Prejudice'))
+        self.assertTrue(title_list[2] == Book('Sense and Sensibility')) 
+        self.assertTrue(title_list[3] == Book('Emma')) 
+        self.assertTrue(title_list[4] == Book('Jane Eyre'))
 
 '''
 Jeff's Example with csv file
