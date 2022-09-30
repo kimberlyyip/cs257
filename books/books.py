@@ -20,10 +20,10 @@ def main():
      usage.close()
   elif(sys.argv[1] == "authors"):
     if len(sys.argv) == 2:
-      output = file.authors()
+      output = file.books()
     elif len(sys.argv) == 3:
       if(sys.argv[2] == '-t'):
-        output = file.authors(sys.argv[2],sys.argv[3])
+        output = file.books(sys.argv[2],sys.argv[3])
     else:
       raise SyntaxError("Amount of inputs can not be handled")
   elif(sys.argv[1] == "books"):
@@ -42,6 +42,7 @@ def main():
       output = file.books_between_years(sys.argv[2],sys.argv[3])
     else:
       raise SyntaxError("Amount of inputs can not be handled")     
-  print(output)
+  for item in output:
+    print(item)
     
 main()
