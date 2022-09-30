@@ -20,10 +20,10 @@ def main():
      usage.close()
   elif(sys.argv[1] == "authors"):
     if len(sys.argv) == 2:
-      output = file.books()
+      output = file.author()
     elif len(sys.argv) == 3:
       if(sys.argv[2] == '-t'):
-        output = file.books(sys.argv[2],sys.argv[3])
+        output = file.author(sys.argv[2],sys.argv[3])
     else:
       raise SyntaxError("Amount of inputs can not be handled")
   elif(sys.argv[1] == "books"):
@@ -43,6 +43,6 @@ def main():
     else:
       raise SyntaxError("Amount of inputs can not be handled")     
   for item in output:
-    print(item.title)
+    print(item.book)
     
 main()
