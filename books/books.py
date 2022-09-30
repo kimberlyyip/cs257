@@ -42,6 +42,6 @@ def main():
       output = file.books_between_years(sys.argv[2],sys.argv[3])
     else:
       raise SyntaxError("Amount of inputs can not be handled")     
-    print(output)
+  print(output)
     
 main()
