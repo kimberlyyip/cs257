@@ -13,7 +13,7 @@ import booksdatasource
 
 def main():
   file = booksdatasource.BooksDataSource('books1.csv')
-
+  output = ''
   if("-h" in sys.argv or "--help" in sys.argv):
      usage = open('usage.txt')
      print(usage.read())
