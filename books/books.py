@@ -12,15 +12,14 @@ import sys
 import booksdatasource
 
 def main():
-  books_file = open('books1.csv')
-  file = booksdatasource.BooksDataSource(books_file)
+  file = booksdatasource.BooksDataSource('books1.csv')
   if(len(sys.argv) == 1):
     output = file.books()
   elif("-h" or "--help" in sys.argv):
      usage = open('usage.txt')
      print(usage.read())
      usage.close()
-  elif(sys.argv[2] == "author"):
+  elif(sys.argv[2] == "authors"):
     if len(sys.argv) == 2:
       output = file.authors()
     elif len(sys.argv) == 3:
