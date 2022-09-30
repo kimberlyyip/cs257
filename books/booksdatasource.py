@@ -102,7 +102,8 @@ class BooksDataSource:
                     if Author(author.surname, author.given_name) not in self.authors_list:
                         self.authors_list.append(author)
                     else:
-                        author.books.append(book)
+                        index = self.authors_list.index(author)
+                        self.authors_list[index].books.append(book)
                     
 
     def authors(self, search_text=None):
