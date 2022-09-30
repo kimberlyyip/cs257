@@ -11,6 +11,15 @@ import csv
 import sys
 import booksdatasource
 
+def print_authors(output):
+  for item in output:
+    for book in item.books:
+      print(book.title)
+
+def print_books(output):
+  for item in output:
+    print(item.title)
+
 def main():
   file = booksdatasource.BooksDataSource('books1.csv')
   output = ''
@@ -21,28 +30,45 @@ def main():
   elif(sys.argv[1] == "authors"):
     if len(sys.argv) == 2:
       output = file.authors()
+      print_authors(output)
     elif len(sys.argv) == 3:
-      output  = file.authors(sys.argv[2])
+      output = file.authors(sys.argv[2])
+      print_authors(output)
+    elif len(sys.argv) == 4:
+      if sys.argv[3] == '-t':
+        output = file.authors(sys.argv[2])
+        print_authors(output)
+      elif sys.argv[3] == '-y':
+        output = file.authors(sys.argv[2])
+        for item in output:
+          year_sorted = sorted(item.books, key = lambda book: book.publication_year)
+          for book in year_sorted:
+            print(book.title)
     else:
       raise SyntaxError("Amount of inputs can not be handled")
   elif(sys.argv[1] == "books"):
     if len(sys.argv) == 2:
       output = file.books()
+      print_books(output)
     elif len(sys.argv) == 3:
       output = file.books(sys.argv[2])
+      print_books(output)
     else:
       raise SyntaxError("Amount of inputs can not be handled")
   elif(sys.argv[1] == "range"):
-    if len(sys.argv) == 3:
+    if len(sys.argv) == 2:
       output = file.books_between_years()
-    elif len(sys.argv) == 4:
+      print_books(output)
+    elif len(sys.argv) == 3:
       output = file.books_between_years(sys.argv[2])
-    elif len(sys.arv) == 5:
+      print_books(output)
+    elif len(sys.arv) == 4:
       output = file.books_between_years(sys.argv[2],sys.argv[3])
+      print_books(output)
     else:
       raise SyntaxError("Amount of inputs can not be handled")     
-  for item in output:
-    for book in item.books:
-      print(book.title)
+  # for item in output:
+  #   for book in item.books:
+  #     print(book.title)
     
 main()
