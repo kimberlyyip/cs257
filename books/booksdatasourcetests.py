@@ -94,34 +94,5 @@ class BooksDataSourceTester(unittest.TestCase):
         self.assertTrue(title_list[3] == Book('Emma')) 
         self.assertTrue(title_list[4] == Book('Jane Eyre'))
 
-'''
-Jeff's Example with csv file
-def test_all_books(self):
-        tiny_data_source = BooksDataSource('tinybooks.csv')
-        books = tiny_data_source.books()
-        self.assertTrue(len(books) == 3)
-        self.assertTrue(books[0].title == 'Emma')
-        self.assertTrue(books[1].title == 'Neverwhere')
-        self.assertTrue(books[2].title == 'Omoo')
-'''
-
 if __name__ == '__main__':
     unittest.main()
-
-'''
-Tests we wanted to implement: 
-    def test_search_year_DNE(self):
-	titles = self.data_source.books_between_years(1234)
-	self.assertTrue(len(titles) == 0)
-	
-    def test_search_author_lastname_DNE(self):
-	authors = self.data_source.authors('Yip')
-	self.assertTrue(len(authors) == 0)
-
-    def test_search_case_insensitive(self):
-	authors = self.data_source.authors("morRRiSoN")
-	self.assertTrue(len(authors) == 1)
-	self.assertTrue(authors[0] == Author('Morrison','Toni')) 
-
-
-'''
