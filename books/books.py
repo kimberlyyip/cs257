@@ -11,16 +11,6 @@ import csv
 import sys
 import booksdatasource
 
-def print_authors(output):
-  for item in output:
-    print()
-    for book in item.books:
-      print(book.title)
-
-def print_books(output):
-  for item in output:
-    print(item.title)
-
 def main():
   file = booksdatasource.BooksDataSource('books1.csv')
   output = ''
@@ -31,40 +21,48 @@ def main():
   elif(sys.argv[1] == "authors"):
     if len(sys.argv) == 2:
       output = file.authors()
-      print_authors(output)
+      for item in output:
+        item.print_authors()
     elif len(sys.argv) == 3:
       output = file.authors(sys.argv[2])
-      print_authors(output)
+      for item in output:
+        item.print_authors()
     elif len(sys.argv) == 4:
       if sys.argv[3] == '-t':
         output = file.authors(sys.argv[2])
-        print_authors(output)
+        for item in output:
+          item.print_authors()
       elif sys.argv[3] == '-y':
         output = file.authors(sys.argv[2])
         for item in output:
           year_sorted = sorted(item.books, key = lambda book: book.publication_year)
-          print_books(year_sorted)
+          year_sorted.print_books()
     else:
       raise SyntaxError("Amount of inputs can not be handled")
   elif(sys.argv[1] == "books"):
     if len(sys.argv) == 2:
       output = file.books()
-      print_books(output)
+      for item in output:
+        item.print_books()
     elif len(sys.argv) == 3:
       output = file.books(sys.argv[2])
-      print_books(output)
+      for item in output:
+        item.print_books()
     else:
       raise SyntaxError("Amount of inputs can not be handled")
   elif(sys.argv[1] == "range"):
     if len(sys.argv) == 2:
       output = file.books_between_years()
-      print_books(output)
+      for item in output:
+        item.print_books()
     elif len(sys.argv) == 3:
       output = file.books_between_years(sys.argv[2])
-      print_books(output)
+      for item in output:
+        item.print_books()
     elif len(sys.argv) == 4:
       output = file.books_between_years(sys.argv[2],sys.argv[3])
-      print_books(output)
+      for item in output:
+        item.print_books()
     else:
       raise SyntaxError("Amount of inputs can not be handled")     
   # for item in output:
