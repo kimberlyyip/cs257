@@ -22,6 +22,11 @@ class Author:
         ''' For simplicity, we're going to assume that no two authors have the same name.'''
         return self.surname == other.surname and self.given_name == other.given_name
     
+    '''For sorting authors, you could add a "def __lt__(self, other)" method
+    to go along with __eq__ to enable you to use the built-in "sorted" function
+    to sort a list of Author objects.
+    '''
+
     def __lt__(self, other):
         if self.surname < other.surname:
             return True
@@ -34,9 +39,6 @@ class Author:
         for book in self.books:
             print("\t" + book.title + " " + str(book.publication_year))
         
-    # For sorting authors, you could add a "def __lt__(self, other)" method
-    # to go along with __eq__ to enable you to use the built-in "sorted" function
-    # to sort a list of Author objects.
 
 class Book:
     def __init__(self, title='', publication_year=None, authors=[]):
@@ -75,19 +77,21 @@ class BooksDataSource:
             suitable instance variables for the BooksDataSource object containing
             a collection of Author objects and a collection of Book objects.
         '''
+        # All authors and books objects for instance of classes
         self.authors_list = []
         self.book_list = []
+
         with open(books_csv_file_name) as input_file:
             reader = csv.reader(input_file)
             for column in reader:
                 assert len(column) == 3
-                book = Book(column[0], int(column[1]), [])
+                book = Book(column[0], int(column[1]), []) # creates a book object
                 if book not in self.book_list:
-                    self.book_list.append(book)
-                for author_param in column[2].split(" and "):
-                    author_param = author_param.split(" ")
+                    self.book_list.append(book) 
+                for author_param in column[2].split(" and "): # if more than one author exists per book, separates the two authors
+                    author_param = author_param.split(" ") # separates the author's first and last name
                     given_name = author_param[0]
-                    if len(author_param) > 3:
+                    if len(author_param) > 3: # if the author has two last names
                         surname = author_param[1] + " " + author_param[2]
                         life = author_param[3]
                         life = life.strip("(").strip(")").split("-")
@@ -96,7 +100,7 @@ class BooksDataSource:
                             death_year = None
                         else:
                             death_year = life[1]
-                    else: 
+                    else: # if the author only has one last name
                         surname = author_param[1]
                         life = author_param[2]
                         life = life.strip("(").strip(")").split("-")
@@ -105,12 +109,12 @@ class BooksDataSource:
                             death_year = None
                         else:
                             death_year = life[1]
-                    author = Author(surname, given_name, birth_year, death_year, [book, ])
-                    book.authors.append(author)
-                    if Author(author.surname, author.given_name) not in self.authors_list:
+                    author = Author(surname, given_name, birth_year, death_year, [book, ]) # creates an author object 
+                    book.authors.append(author) # adds the author to the corresponding book
+                    if Author(author.surname, author.given_name) not in self.authors_list: # checks if author is already in global list
                         self.authors_list.append(author)
-                    else:
-                        index = self.authors_list.index(author)
+                    else: # adds book to author object if author already in global list
+                        index = self.authors_list.index(author) 
                         self.authors_list[index].books.append(book)
                     
 
@@ -121,16 +125,15 @@ class BooksDataSource:
             by surname, breaking ties using given name (e.g. Ann Brontë comes before Charlotte Brontë).
         '''
         author_sorted = []
-        if search_text == None:
+        if search_text == None: # if there is no specified parameter, returns a sorted list of all authors and their books
             author_sorted = self.authors_list
-            return sorted(author_sorted)
-        else:
+        else: # if a specified parameter exists, returns a sorted list of all related authors and their books 
             search_text = search_text.lower()
             for author in self.authors_list:
                 author_full = author.given_name.lower() + " " + author.surname.lower()
                 if search_text in author_full and author not in author_sorted:
                     author_sorted.append(author)
-            return sorted(author_sorted)
+        return sorted(author_sorted)
 
     def books(self, search_text=None, sort_by='title'):
         ''' Returns a list of all the Book objects in this data source whose
@@ -145,20 +148,15 @@ class BooksDataSource:
                             or 'title', just do the same thing you would do for 'title')
         '''
         book_sorted = []
-        if search_text == None:
+        if search_text == None: # if there is no specified parameter, returns a sorted list of all books
             book_sorted = self.book_list
-            return sorted(book_sorted)
-        else:
-            search_text = ''.join(filter(str.isalnum, search_text))
-            for item in self.book_list:
-                search = ''.join(filter(str.isalnum, item.title))
+        else: # if a specified parameter exists, returns a sorted list of all related books
+            search_text = ''.join(filter(str.isalnum, search_text)) # strips the search_string of all punctuation
+            for item in self.book_list: 
+                search = ''.join(filter(str.isalnum, item.title)) # strips the related books of all punctuation for comparison
                 if search_text.lower() in search.lower() and item not in book_sorted:
                     book_sorted.append(item)
-            return sorted(book_sorted)
-    
-    # def sort_year(self):
-    #     books_sorted = []
-    #     for i = 0; i < self.size(); i++:
+        return sorted(book_sorted)
             
             
     def books_between_years(self, start_year=None, end_year=None):
@@ -173,19 +171,18 @@ class BooksDataSource:
             should be included.
         '''
         book_sorted = []
-        if start_year == None and end_year == None:
+        if start_year == None and end_year == None: # if there is no specified parameter, returns a sorted list of all books
             book_sorted = self.book_list
-            return sorted(book_sorted, key = lambda book: book.publication_year)
-        else:
+        else: # if a specified parameter exists, returns a sorted list of all related books
             for item in self.book_list:
                 if end_year == None:
                     if int(start_year) <= item.publication_year and item not in book_sorted:
                         book_sorted.append(item)
-                elif start_year == None:
+                elif start_year == None: 
                     if int(end_year) >= item.publication_year and item not in book_sorted:
                         book_sorted.append(item)
-                else:
+                else: # if start_year and end_year are specified
                     if int(start_year) <= item.publication_year and int(end_year) >= item.publication_year:
                         if item not in book_sorted:
                             book_sorted.append(item)
-            return sorted(book_sorted, key = lambda book: book.publication_year)
+        return sorted(book_sorted, key = lambda book: book.publication_year)
