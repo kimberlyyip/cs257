@@ -5,6 +5,7 @@
     CS 257 Software Design class, Fall 2022.
     
     Authors: Kimberly Yip and Sydney Nguyen
+    Revised by: Sydney Nguyen and Kimberly Yip
 '''
 
 import csv 
