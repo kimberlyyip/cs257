@@ -12,10 +12,10 @@ DESCRIPTION
 	authors Prints a list of the authors books. 
 
 	books Prints a list of books whose titles contain <search string>
-		-t sorts alphabetically by title
+		-t sorts alphabetically by title (DEFAULT)
 		-y sorts by publication year
 
 	range <start year>[,<end year>] Prints an inclusive list of books published between years a and b.
-		When one value is inpputed it is assumed to be a start year 
+		Start Year (DEFAULT)
 
 	help Prints the usage/help statement if the the user's command-line syntax is invalid. 
