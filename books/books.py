@@ -27,16 +27,6 @@ def main():
       output = file.authors(sys.argv[2])
       for item in output:
         item.print_authors()
-    elif len(sys.argv) == 4:
-      if sys.argv[3] == '-t':
-        output = file.authors(sys.argv[2])
-        for item in output:
-          item.print_authors()
-      elif sys.argv[3] == '-y':
-        output = file.authors(sys.argv[2])
-        for item in output:
-          year_sorted = sorted(item.books, key = lambda book: book.publication_year)
-          year_sorted.print_books()
     else:
       raise SyntaxError("Amount of inputs can not be handled")
   elif(sys.argv[1] == "books" or sys.argv[1] == "-b"):
@@ -48,6 +38,16 @@ def main():
       output = file.books(sys.argv[2])
       for item in output:
         item.print_books()
+    elif len(sys.argv) == 4:
+      if sys.argv[3] == '-t':
+        output = file.authors(sys.argv[2])
+      for item in output:
+        item.print_authors()
+    elif sys.argv[3] == '-y':
+        output = file.authors(sys.argv[2])
+        for item in output:
+          year_sorted = sorted(item.books, key = lambda book: book.publication_year)
+          year_sorted.print_books()
     else:
       raise SyntaxError("Amount of inputs can not be handled")
   elif(sys.argv[1] == "range" or sys.argv[1] == "-r"):
