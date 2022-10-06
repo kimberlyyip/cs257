@@ -6,6 +6,7 @@
     For use in the "books" assignment at the beginning of Carleton's
     CS 257 Software Design class, Fall 2022.
     Authors: Sydney Nguyen and Kimberly Yip
+    Revised by: Sydney Nguyen and Kimberly Yip
 '''
 
 import csv
