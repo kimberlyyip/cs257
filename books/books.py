@@ -41,9 +41,9 @@ def main():
     elif len(sys.argv) == 4:
       if sys.argv[3] == '-t':
         output = file.books(sys.argv[2])
-      for item in output:
-        item.print_books()
-    elif sys.argv[3] == '-y':
+        for item in output:
+          item.print_books()
+      elif sys.argv[3] == '-y':
         output = file.books(sys.argv[2])
         for item in output:
           year_sorted = sorted(item.books, key = lambda book: book.publication_year)
