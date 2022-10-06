@@ -117,17 +117,20 @@ class BooksDataSource:
             author_sorted = self.authors_list
             return sorted(author_sorted)
         else:
-            search_text = search_text.lower().split()
-            search_first = search_text[0]
-            search_last = search_text [1:]
-            for authors in self.authors_list:
-                if search_first in authors.given_name.lower() and " ".join(search_last) in authors.surname.lower():
-                    if authors not in author_sorted:
-                        author_sorted.append(authors)
-                elif search_first in authors.given_name.lower() and authors not in author_sorted:
-                    author_sorted.append(authors)
-                elif " ".join(search_last) in authors.surname.lower() and authors not in author_sorted:
-                    author_sorted.append(authors)
+            search_text = search_text.lower()
+            for author in self.authors_list:
+                author_full = author.given_name.lower + author.surname.lower()
+                if search_text in author_full and author not in author_sorted:
+                    author_sorted.append(author)
+                # if search_one in author.given_name.lower() and " ".join(search_two) in author.surname.lower():
+                #     if author not in author_sorted:
+                #         author_sorted.append(author)
+                # elif " ".join(search_two) in author.surname.lower() and search_one not in author.given_name.lower():
+                #     if author not in author_sorted:
+                #      author_sorted.append(author)
+                # elif search_one in author.given_name.lower() and " ".join(search_two) not in author.surname.lower():
+                #     if author not in author_sorted:
+                #         author_sorted.append(author)
             return sorted(author_sorted)
 
     def books(self, search_text=None, sort_by='title'):
