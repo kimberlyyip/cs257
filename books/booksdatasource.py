@@ -119,11 +119,11 @@ class BooksDataSource:
         else:
             search_text = search_text.lower().split()
             search_first = search_text[0]
-            search_last = search_text[1:]
-            for item in self.authors_list:
-                if search_first in item.given_name.lower() or search_last in item.surname.lower():
-                    if item not in author_sorted:
-                        author_sorted.append(item)
+            search_last = search_text [1:]
+            for author in self.authors_list:
+                if search_first in author.given_name.lower() or " ".join(search_last) in author.surname.lower():
+                    if author not in author_sorted:
+                        author_sorted.append(author)
             return sorted(author_sorted)
 
     def books(self, search_text=None, sort_by='title'):
