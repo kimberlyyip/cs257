@@ -28,6 +28,12 @@ class Author:
         if self.surname == other.surname and self.given_name < other.given_name:
             return True
         return False
+    
+    def print_authors(output):
+        for author in output:
+            print(author.given_name + " " + author.surname)
+        for book in author.books:
+            print("\t" + book.title)
         
     # For sorting authors, you could add a "def __lt__(self, other)" method
     # to go along with __eq__ to enable you to use the built-in "sorted" function
@@ -51,6 +57,10 @@ class Book:
         if self.title.strip('"') < other.title.strip('"'):
             return True
         return False
+
+    def print_books(output):
+        for item in output:
+            print(item.title)
 
 class BooksDataSource:
     def __init__(self, books_csv_file_name):
