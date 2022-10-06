@@ -32,7 +32,7 @@ class Author:
     def print_authors(self):
         print(self.given_name + " " + self.surname)
         for book in self.books:
-            print("\t" + book.title)
+            print("\t" + book.title + " " + book.publication_year)
         
     # For sorting authors, you could add a "def __lt__(self, other)" method
     # to go along with __eq__ to enable you to use the built-in "sorted" function
