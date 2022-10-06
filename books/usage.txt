@@ -2,9 +2,9 @@
 NAME
 	books.py 
 SYNOPSIS
-	python3 books.py <authors|-a> ...[-h | --help]
-	python3 books.py <books|-b> ...[-h | --help]
-	python3 books.py <range|-r> <start year> [,<end year>]... [-h | --help]
+	python3 books.py author ...[-h | --help]
+	python3 books.py books ...[-h | --help]
+	python3 books.py range <start year> [,<end year>]... [-h | --help]
 	python3 books.py [-h | --help]
 DESCRIPTION
 	The following options are available:
