@@ -29,10 +29,9 @@ class Author:
             return True
         return False
     
-    def print_authors(output):
-        for author in output:
-            print(author.given_name + " " + author.surname)
-        for book in author.books:
+    def print_authors(self):
+        print(self.given_name + " " + self.surname)
+        for book in self.books:
             print("\t" + book.title)
         
     # For sorting authors, you could add a "def __lt__(self, other)" method
@@ -58,9 +57,8 @@ class Book:
             return True
         return False
 
-    def print_books(output):
-        for item in output:
-            print(item.title)
+    def print_books(self):
+        print(self.title + " " + self.publication_year)
 
 class BooksDataSource:
     def __init__(self, books_csv_file_name):
