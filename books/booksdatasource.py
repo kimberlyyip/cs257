@@ -119,8 +119,9 @@ class BooksDataSource:
         else:
             search_text = search_text.lower()
             for item in self.authors_list:
-                if item.surname.lower() == search_text and item not in author_sorted:
-                    author_sorted.append(item)
+                if search_text in item.surname.lower() or search_text in item.given_name. lower():
+                    if item not in author_sorted:
+                        author_sorted.append(item)
             return sorted(author_sorted)
 
     def books(self, search_text=None, sort_by='title'):
