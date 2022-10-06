@@ -122,15 +122,6 @@ class BooksDataSource:
                 author_full = author.given_name.lower() + " " + author.surname.lower()
                 if search_text in author_full and author not in author_sorted:
                     author_sorted.append(author)
-                # if search_one in author.given_name.lower() and " ".join(search_two) in author.surname.lower():
-                #     if author not in author_sorted:
-                #         author_sorted.append(author)
-                # elif " ".join(search_two) in author.surname.lower() and search_one not in author.given_name.lower():
-                #     if author not in author_sorted:
-                #      author_sorted.append(author)
-                # elif search_one in author.given_name.lower() and " ".join(search_two) not in author.surname.lower():
-                #     if author not in author_sorted:
-                #         author_sorted.append(author)
             return sorted(author_sorted)
 
     def books(self, search_text=None, sort_by='title'):
