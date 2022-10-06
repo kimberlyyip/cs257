@@ -18,7 +18,7 @@ def main():
      usage = open('usage.txt')
      print(usage.read())
      usage.close()
-  elif(sys.argv[1] == "authors"):
+  elif(sys.argv[1] == "authors" or sys.argv[1] == "-a"):
     if len(sys.argv) == 2:
       output = file.authors()
       for item in output:
@@ -39,7 +39,7 @@ def main():
           year_sorted.print_books()
     else:
       raise SyntaxError("Amount of inputs can not be handled")
-  elif(sys.argv[1] == "books"):
+  elif(sys.argv[1] == "books" or sys.argv[1] == "-b"):
     if len(sys.argv) == 2:
       output = file.books()
       for item in output:
@@ -50,7 +50,7 @@ def main():
         item.print_books()
     else:
       raise SyntaxError("Amount of inputs can not be handled")
-  elif(sys.argv[1] == "range"):
+  elif(sys.argv[1] == "range" or sys.argv[1] == "-r"):
     if len(sys.argv) == 2:
       output = file.books_between_years()
       for item in output:
