@@ -13,6 +13,7 @@ import booksdatasource
 
 def print_authors(output):
   for item in output:
+    print()
     for book in item.books:
       print(book.title)
 
@@ -42,8 +43,7 @@ def main():
         output = file.authors(sys.argv[2])
         for item in output:
           year_sorted = sorted(item.books, key = lambda book: book.publication_year)
-          for book in year_sorted:
-            print(book.title)
+          print_books(year_sorted)
     else:
       raise SyntaxError("Amount of inputs can not be handled")
   elif(sys.argv[1] == "books"):
@@ -62,7 +62,7 @@ def main():
     elif len(sys.argv) == 3:
       output = file.books_between_years(sys.argv[2])
       print_books(output)
-    elif len(sys.arv) == 4:
+    elif len(sys.argv) == 4:
       output = file.books_between_years(sys.argv[2],sys.argv[3])
       print_books(output)
     else:
