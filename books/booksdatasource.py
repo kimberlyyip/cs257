@@ -121,7 +121,7 @@ class BooksDataSource:
             search_first = search_text[0]
             search_last = search_text [1:]
             for author in self.authors_list:
-                if search_first in author.given_name.lower() or " ".join(search_last) in author.surname.lower():
+                if search_first in author.given_name.lower() and " ".join(search_last) in author.surname.lower():
                     if author not in author_sorted:
                         author_sorted.append(author)
             return sorted(author_sorted)
