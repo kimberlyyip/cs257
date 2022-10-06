@@ -2,6 +2,7 @@
    booksdatasourcetest.py
    Jeff Ondich, 24 September 2021
    Authors: Sydney Nguyen and Kimberly Yip
+   Revised by: Sydney Nguyen and Kimberly Yip
 '''
 
 from booksdatasource import Author, Book, BooksDataSource
