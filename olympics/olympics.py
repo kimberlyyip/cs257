@@ -51,7 +51,7 @@ def get_noc_medals():
     try:
         connection = get_connection()
         cursor = connection.cursor()
-        #gathers all countries that won gold medals
+        #Gathers all countries that won gold medals
         query_gold = '''SELECT noc.abbreviation, olympic_games_events.medal, COUNT(olympic_games_events.medal)
                     FROM noc, olympic_games_events
                     WHERE noc.id = olympic_games_events.noc_id
@@ -64,7 +64,7 @@ def get_noc_medals():
             count = row[2]
             noc_medals.append([noc, count])
             noc_list.append(noc)
-        #takes into account all the countries that won no gold medals
+        #Takes into account all the countries that won no gold medals
         query_noc = '''SELECT noc.abbreviation
                 FROM NOC
                 ORDER BY noc.abbreviation'''
@@ -83,6 +83,7 @@ def get_noc_medals():
 def get_athlete_medals(search_text):
     '''Returns a list of all the medals won by a specified athlete listed in chronological order of games competed.'''
     athlete_medals=[]
+    #Takes into account if the full name is not given exactly as in the database
     search_text=search_text.replace(" ", "%%")
     try:
         query = '''SELECT olympic_games_events.medal, olympic_games.year, olympic_games.season, events.name, noc.abbreviation
