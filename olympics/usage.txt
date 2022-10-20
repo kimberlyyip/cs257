@@ -1,10 +1,12 @@
 NAME
     olympics.py
+
 SYNOPSIS
     python3 olympics.py gold ...[-h | --help]
     python3 olympics.py medals <search string>...[-h | --help]
     python3 olympics.py athletes ...[-h | --help]
     python3 olympics.py [-h | --help]
+    
 DESCRIPTION
     The following options are available:
 
