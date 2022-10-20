@@ -1,0 +1,7 @@
+CREATE TABLE athletes (id SERIAL, name text, sex text, birth_year integer);
+CREATE TABLE teams (id SERIAL, abbreviation text, region text);
+CREATE TABLE athletes_teams (athlete_id integer, team_id integer);
+
+CREATE TABLE olympic_games (id SERIAL, year integer, season text, city text);
+CREATE TABLE events (id SERIAL, name text);
+CREATE TABLE olympic_games_events (event_id integer, olympic_game_id integer);
