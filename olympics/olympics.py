@@ -124,6 +124,10 @@ def main():
     if("-h" in sys.argv or "--help" in sys.argv):
         print_usage()
     
+    elif(len(sys.argv) == 1): #If no method is specified
+        print("Not a valid method. Refer to usage statement below.")
+        print_usage()
+
     elif(sys.argv[1] == "gold"):
         if len(sys.argv) == 2: #No extra instances given
             noc_gold = get_noc_medals()
@@ -137,11 +141,15 @@ def main():
     elif(sys.argv[1] == "medals"):
         if len(sys.argv) == 3: #No extra instances given
             name = sys.argv[2]
-            print(f'========== ALl Medals Won by "{name}"==========')
             athlete_medals = get_athlete_medals(name)
-            for athlete in athlete_medals:
-                print(athlete[0] + ' ' + athlete[1] + ' ' + athlete[2] + ' ' + athlete[3] + ' ' + athlete[4])
-            print()
+            if athlete_medals == []:
+                print("No athlete found. Refer to usage statement below.")
+                print_usage()
+            else:
+                print(f'========== ALl Medals Won by "{name}"==========')
+                for athlete in athlete_medals:
+                    print(athlete[0] + ' ' + athlete[1] + ' ' + athlete[2] + ' ' + athlete[3] + ' ' + athlete[4])
+                print()
         else:
             if len(sys.argv) < 3:
                 print("Not enought inputs: Specify an athlete in quotes. Ex: \"Greg Louganis\". Refer to the usage statement below for more information.")
@@ -152,11 +160,15 @@ def main():
     elif(sys.argv[1] == "athletes"):
         if len(sys.argv) == 3: #No extra instances given
             noc = sys.argv[2]
-            print(f'========== All Athletes from "{noc}" ==========')
             athletes = get_athletes(noc)
-            for athlete in athletes:
-                print(athlete)
-            print()
+            if athletes == []:
+                print("No NOC found. Refer to usage statement below.")
+                print_usage()
+            else:
+                print(f'========== All Athletes from "{noc}" ==========')
+                for athlete in athletes:
+                    print(athlete)
+                print()
         else:
             if len(sys.argv) < 3:
                 print("Not enough inputs: Specify a NOC in quotes (Ex. \"SGP\"). Refer to the usage statement below for more information.")
