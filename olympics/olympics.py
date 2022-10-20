@@ -83,7 +83,7 @@ def get_noc_medals():
 def get_athlete_medals(search_text):
     '''Returns a list of all the medals won by a specified athlete listed in chronological order of games competed.'''
     athlete_medals=[]
-    #Takes into account if the full name is not given exactly as in the database
+    #Takes into account if the search string is not given exactly as the names in the database
     search_text=search_text.replace(" ", "%%")
     try:
         query = '''SELECT olympic_games_events.medal, olympic_games.year, olympic_games.season, events.name, noc.abbreviation
@@ -103,6 +103,7 @@ def get_athlete_medals(search_text):
             season = str(row[2])
             event = str(row[3])
             noc = str(row[4])
+            #For formatting printing later
             athlete_medals.append([medal, year, season, event, noc])
     except Exception as e:
         print(e, file=sys.stderr)
@@ -110,24 +111,31 @@ def get_athlete_medals(search_text):
     connection.close()
     return athlete_medals
 
+def print_usage():
+    usage = open('usage.txt')
+    print(usage.read())
+    usage.close()
+
+def extra_instances():
+    print("Amount of inputs cannot be handled. Refer to usage statement below.")
+    print_usage()
+
 def main():
     if("-h" in sys.argv or "--help" in sys.argv):
-        usage = open('usage.txt')
-        print(usage.read())
-        usage.close()
+        print_usage()
     
     elif(sys.argv[1] == "gold"):
-        if len(sys.argv) == 2: #no instances given
+        if len(sys.argv) == 2: #No extra instances given
             noc_gold = get_noc_medals()
             print('===== The Number of Gold Medals Won by all NOCs in Decreasing Order =====')
             for noc in noc_gold:
                 print(noc[0] + ':' + str(noc[1]))
             print()
         else:
-            raise SyntaxError("Amount of inputs can not be handled")
+            extra_instances()
     
     elif(sys.argv[1] == "medals"):
-        if len(sys.argv) == 3:
+        if len(sys.argv) == 3: #No extra instances given
             name = sys.argv[2]
             print(f'========== ALl Medals Won by "{name}"==========')
             athlete_medals = get_athlete_medals(name)
@@ -136,12 +144,13 @@ def main():
             print()
         else:
             if len(sys.argv) < 3:
-                raise SyntaxError("Not enough inputs: Specify an athlete in quotes. Ex. \"Greg Louganis\"")
+                print("Not enought inputs: Specify an athlete in quotes. Ex: \"Greg Louganis\". Refer to the usage statement below for more information.")
+                print_usage()
             else:
-                raise SyntaxError("Amount of inputs can not be handled")
+                extra_instances()
     
     elif(sys.argv[1] == "athletes"):
-        if len(sys.argv) == 3:
+        if len(sys.argv) == 3: #No extra instances given
             noc = sys.argv[2]
             print(f'========== All Athletes from "{noc}" ==========')
             athletes = get_athletes(noc)
@@ -150,15 +159,14 @@ def main():
             print()
         else:
             if len(sys.argv) < 3:
-                raise SyntaxError("Not enough inputs: Specify a NOC in quotes. Ex. \"SGP\"")
+                print("Not enough inputs: Specify a NOC in quotes (Ex. \"SGP\"). Refer to the usage statement below for more information.")
+                print_usage()
             else:
-                raise SyntaxError("Amount of inputs can not be handled")
+                extra_instances()
     
     else:
         print("Not a valid method. Refer to usage statement below.")
-        usage = open('usage.txt')
-        print(usage.read())
-        usage.close()
+        print_usage()
 
 if __name__ == '__main__':
     main()
