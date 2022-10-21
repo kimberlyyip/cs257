@@ -11,5 +11,6 @@ import urllib.request
 
 API_BASE_URL = 'https://api.covidtracking.com'
 
-def get_state_cases():
-    pass
+def get_state_cases(state):
+    url = f'{API_BASE_URL}'
+    #/v1/states/current.json
