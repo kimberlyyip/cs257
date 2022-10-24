@@ -19,4 +19,5 @@ def get_state_cases(state):
     result_list = []
     for case_dictionary in state_case_list:
         date = case_dictionary.get('date', '')
-        positive_cases = 
+        positive_cases = case_dictionary.get('positive', '')
+        deaths = case_dictionary.get('death', '')
