@@ -23,6 +23,9 @@
 import sys
 import json
 import urllib.request
+import ssl
+
+ssl._create_default_https_context = ssl._create_unverified_context
 
 def print_state_death_counts(state):
     url = f'https://api.covidtracking.com/v1/states/{state}/daily.json'
