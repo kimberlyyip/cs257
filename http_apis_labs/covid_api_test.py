@@ -10,6 +10,9 @@ import sys
 import argparse
 import json
 import urllib.request
+import ssl
+
+ssl._create_default_https_context = ssl._create_unverified_context
 
 API_BASE_URL = 'https://api.covidtracking.com'
 
