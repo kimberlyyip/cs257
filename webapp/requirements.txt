@@ -1,8 +1,22 @@
 Authors: Sydney Nguyen, Sophia Wang, and Kimberly Yip
+CS.257
 
-Description of dataset:	
-	The data set we will be using can be found at the following url:https://www.kaggle.com/datasets/andrewmvd/board-games
-	The dataset we have chosen to work with contains a list of boardgames with the following coloumn categories: ID, name, year published, min players, max players, playtime, min age, users rated, rating average, BoardGamesGeek ranking, complexity average, owned users, mechanics, genres.
-	
-A brief description of your dataset. Include instructions for how to get the dataset (typically, just a URL and maybe a note about where to click should do the job).
-A list of short use cases or user stories you would like to support in the final version of your web application. You may use any of the templates described in the Wikipedia articles on user stories or use cases. For each use case or user story, provide a brief description of how it might be implemented on your website.
+Description of the dataset: 
+	The data set we will be using can be found at the following URL: https://www.kaggle.com/datasets/andrewmvd/board-games. The dataset we have chosen to work with contains a list of board games with the following column categories: ID, name, year published, min players, max players, playtime, min age, users rated, rating average, BoardGamesGeek ranking, complexity average, owned users, mechanics, genres.
+ 
+Use cases/user stories: 
+	Story: A board game connoisseur will be able to search by genre, playtime, and number of players to make sure that they can find games similar to the ones they already like.
+	Implementation: One way we were thinking about implementing this is by offering the ability to filter by genre, playtime, and number of players. Or we could search specifically by genre, playtime, and number of players to find all the board games that match that description.
+ 
+	Story: A person thinking of buying a board game will be able to check the user rating to see whether a game is worth their money
+	Implementation: We can implement this by having the option to search for the specific board game. On a specific page for the board game, there will be information about the genre, playtime, number of players, complexity, and reviews written by other users. 
+ 
+	Story: A person who works at a board game company will be able to check a list of top-rated board games in each genre to see if their game is considered good by players.
+	Implementation: We can implement this by allowing the company to make an account with board games they have produced attached to their account. On the individual pages for each board game, anyone will be able to see all the reviews written for the board game. 
+ 
+	Story: A user who has a lot of board games can find basic information on the board games they own without having to go through the boxes/manuals one by one
+	Implementation: We can implement this by having the option to search for the specific board game. On a specific page for the board game, there will be information about the genre, playtime, number of players, complexity, and reviews written by other users.
+ 
+	Story: A user who wants to start a board games club can save particular board games as their favorites so that they can find them more easily in the future
+	Implementation: We can implement this by allowing users to make a personal account. Users logged into their account can navigate to a board game’s page to save it as their favorite by clicking a button (or just click a button on the search results page). Then, on their account page, there will be a list of their favorited games.
+
