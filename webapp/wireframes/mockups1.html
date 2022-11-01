@@ -11,6 +11,10 @@
         form {text-align: center;}
         p {text-align: center;}
         * {box-sizing: border-box;}
+        .topnav {
+        overflow: hidden;
+        background-color: #E9E9E9;
+        }
         body {
         margin: 0;
         font-family: Arial, Helvetica, sans-serif;
@@ -22,12 +26,12 @@
         padding: 6px;
         margin-top: 8px;
         font-size: 17px;
-        border: none;
+        border: 1px;
         }
         .topnav .search-container button:hover {
         background: #ccc;
         }
-        @media screen and (max-width: 1000px) {
+        @media screen and (max-width: 1250px) {
         .topnav .search-container {
         float: none;
         }
@@ -53,7 +57,7 @@
         .dropdown {
         position: relative;
         display: inline-block;
-        margin-right: 100px;
+        margin-right: 150px;
         }
         .dropdown-content {
         display: none;
@@ -73,7 +77,7 @@
         .dropdown:hover .dropdown-content {display: block;}
         .dropdown:hover .dropbtn {background-color: #3E8E41;}
     </style>
-    </style>
+
     <div class="dropdown" style="float:right">
         <button class="dropbtn">Menu</button>
         <div class="dropdown-content">
@@ -82,14 +86,11 @@
         </div>
     </div>
     <div class="topnav">
-        <div class="search-container" style=“width:250px;height:250px;border:1px;solid:#000;margin:auto;align:center”>
+        <div class="search-container" style=“width:100px;height:100px;border:1px;solid:#000;margin:auto;align:center”>
         <form action="/action_page.php">
-        <input type="text" placeholder="Search.." name="search">
+        <input type="text" placeholder="Search..." name="search">
     </form>
   </div>
-</div>
-</div>
-<div style="padding-left:16px">
 </head>
 </body>
 </html>
