@@ -3,12 +3,12 @@
   <head lang="en">
     <meta charset="UTF-8">
     <title>CSS for layout</title>
-    <link rel="stylesheet" href="Untitled-2.css" type="text/css" />
+    <link rel="stylesheet" href="mockups5.css" type="text/css" />
 </head>
 
 
 <body>
-<div > 
+<div> 
 <div> 
 <div class="dropdown" style="float:right">
     <button class="dropbtn">Menu</button>
@@ -25,29 +25,46 @@
     
       <h2>Board games Database</h2>
       <form action="/action_page.php">
-          <input type="text" placeholder="Search.." name="search">       
+          <input type="text" placeholder="Search..." name="search">       
     </form>
 </div>
 
-</div>
 
 <div class="sidebar">
     <div class="widget user_widget_search">
-      <form id="user_wiget_search_form" class="user_wiget_search_form" method="GET">  
+      <form class="user_wiget_search_form" method="GET">  
         <h3> Sort By: </h3>
       <div id = "organize_categories">
       <label for="user_sort"> Genre: </label>
-          <div class="form-group">
-    <input type="checkbox" class="custom-control-input">
-    <span class="custom-control-indicator"></span>
-    <span class="custom-control-description">I forgot</span>
-    </div>
-    
-    
-          <div class="form-group">
-    <input type="checkbox" class="custom-control-input">
-    <span class="custom-control-indicator"></span>
-    <span class="custom-control-description">all the </span>
+        <div class="form-group">
+            <input type="checkbox" class="custom-control-input">
+            <span class="custom-control-indicator"></span>
+            <span class="custom-control-description">Family</span>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" class="custom-control-input">
+            <span class="custom-control-indicator"></span>
+            <span class="custom-control-description">Strategy </span>
+        </div>
+
+    <div id="organize_categories">
+        <label for="user_sort">Age of players:</label>
+        <div class="form-group">
+            <input type="checkbox" class="custom-control-input">
+            <span class="custom-control-indicator"></span>
+            <span class="custom-control-description">7 to 10 years</span>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" class="custom-control-input">
+            <span class="custom-control-indicator"></span>
+            <span class="custom-control-description">11 to 15 years</span>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" class="custom-control-input">
+            <span class="custom-control-indicator"></span>
+            <span class="custom-control-description">18 years & up</span>
+        </div>
+
     </div>
           <div class="form-group">
             <button type="submit" class="btn btn-block btn-primary">Submit</button>
