@@ -79,7 +79,7 @@ text-align: center;
 
 /* Fixed sidenav, full height */
 .sidenav {
-    height: 100%;
+    margin-top: 200px;
     width: 200px;
     position: fixed;
     z-index: 1;
@@ -88,6 +88,7 @@ text-align: center;
     background-color: gray;
     overflow-x: hidden;
     padding-top: 20px;
+    padding-bottom: 20px;
   }
   
   /* Style the sidenav links and the dropdown button */
@@ -99,7 +100,7 @@ text-align: center;
     display: block;
     border: none;
     background: none;
-    
+    width: 100%;
     text-align: left;
     cursor: pointer;
     outline: none;
@@ -119,14 +120,14 @@ text-align: center;
   
   /* Add an active class to the active dropdown button */
   .active {
-    background-color: green;
+    background-color: red;
     color: white;
   }
   
   /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
   .dropdown-container {
     display: none;
-    background-color: #262626;
+    background-color: gray;
     padding-left: 8px;
   }
   
