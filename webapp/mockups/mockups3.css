@@ -53,8 +53,7 @@ display: block;
     width: 75px
 }
 
-#login_box{
-    display:flex;
+.login_box{
     width:300px;
     height:300px;
     border:2px solid #000;
