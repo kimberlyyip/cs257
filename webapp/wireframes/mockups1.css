@@ -14,7 +14,11 @@ h2 {text-align: center;}
  align-items: center;
  background-color: #e9e9e9;
  padding: 10px;
+ }
 
+ .topnav img{
+  height: 75px;
+  width: 75px
  }
 
  .topnav input[type=text] {
@@ -76,4 +80,8 @@ h2 {text-align: center;}
  text-align:center;
  display:block;
  float:left;
+}
+
+#game_img img {
+  width: 200px;
 }
