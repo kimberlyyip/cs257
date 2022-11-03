@@ -85,6 +85,7 @@ text-align: center;
     z-index: 1;
     top: 0;
     left: 0;
+    background-color: gray;
     overflow-x: hidden;
     padding-top: 20px;
   }
@@ -94,11 +95,11 @@ text-align: center;
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 20px;
-    color: #818181;
+    color: black;
     display: block;
     border: none;
     background: none;
-    width: 100%;
+    
     text-align: left;
     cursor: pointer;
     outline: none;
