@@ -15,6 +15,11 @@ background-color: #E9E9E9;
 padding: 10px;
 }
 
+.topnav img{
+    height: 75px;
+    width: 75px;
+}
+
 .topnav input[type=text] {
 float: center;
 padding: 6px;
@@ -27,6 +32,7 @@ border: 1px solid #ccc;
 .dropdown {
 margin-right: 100px;
 margin-top: 25px;
+float: right;
 }
 
 .dropdown-content {
@@ -61,6 +67,21 @@ padding: 25px;
     height: 75px;
 }
 
+.header h2{
+    float:left;
+    background-color:gray;
+    color:white;
+    padding: 12px 16px;
+}
+
+.header h3{
+    margin-left:50px;
+}
+
+.header p{
+    margin-left:100px;
+}
+
 #categories{
     width: 75%;
     height: 50px;
@@ -81,3 +102,7 @@ padding: 25px;
     display:block;
     float:left;
 }
+
+#game_img img {
+    width: 200px;
+  }
