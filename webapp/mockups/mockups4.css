@@ -71,15 +71,15 @@ padding: 25px;
     float:left;
     background-color:gray;
     color:white;
-    padding: 12px 16px;
+    padding: 10px 15px;
 }
 
 .header h3{
-    margin-left:50px;
+    margin-left:25px;
 }
 
 .header p{
-    margin-left:100px;
+    margin-left:50px;
 }
 
 #categories{
