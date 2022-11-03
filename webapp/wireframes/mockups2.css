@@ -2,6 +2,12 @@
 Authors: Sydney Nguyen, Sophia Wang, Kimberly Yip
 */
 
+h3{
+  border:2px black solid;
+  font-size:36px; 
+  padding:8px;
+  width: flex;
+}
 div {
               
     padding: 15px; 
@@ -90,6 +96,12 @@ align-items: center;
 background-color: #E9E9E9;
 padding: 10px;
 }
+
+.topnav img{
+  height: 75px;
+  width: 75px
+ }
+
 .topnav input[type=text] {
 float: center;
 padding: 6px;
@@ -101,6 +113,7 @@ border: 1px solid #ccc;
 .dropdown {
 margin-right: 100px;
 margin-top: 25px;
+float: right;
 }
 .dropdown-content {
 display: none;
@@ -124,4 +137,31 @@ background-color: white;
 width: 100%;
 border: 1px solid black;
 padding: 25px;
+}
+
+.review{
+  padding:10px;
+  width:420px;
+}
+
+.floatingdiv2{
+  width:500px; 
+  float:left;
+}
+
+.floatingdiv2 p span{
+  font-weight:bold;
+}
+
+.floatingdiv3{
+  width:500px;
+  float:left;
+  border:2px black solid;
+}
+
+.favorties{
+  float:left;
+  margin-right:200px;
+  padding:32px;
+  padding-left:0px;
 }
