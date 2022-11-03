@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="mockups5.css" type="text/css" />
+</head>
+<body>
+
+<div class="sidenav">
+  <button class="dropdown-btn">Genre
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <div class="widget user_widget_search">
+      <form class="user_wiget_search_form" method="GET">  
+        <div class="form-group">
+            <input type="checkbox" class="custom-control-input">
+            <span class="custom-control-indicator"></span>
+            <span class="custom-control-description">Family</span>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" class="custom-control-input">
+            <span class="custom-control-indicator"></span>
+            <span class="custom-control-description">Strategy </span>
+        </div>
+
+    <div id="organize_categories">
+        <label for="user_sort">Age of players:</label>
+        <div class="form-group">
+            <input type="checkbox" class="custom-control-input">
+            <span class="custom-control-indicator"></span>
+            <span class="custom-control-description">7 to 10 years</span>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" class="custom-control-input">
+            <span class="custom-control-indicator"></span>
+            <span class="custom-control-description">11 to 15 years</span>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" class="custom-control-input">
+            <span class="custom-control-indicator"></span>
+            <span class="custom-control-description">18 years & up</span>
+        </div>
+    </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-block btn-primary">Submit</button>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html> 
