@@ -1,0 +1,105 @@
+
+Authors: Sydney Nguyen, Sophia Wang, Kimberly Yip
+
+Database Design:
+
+users
+_________
+user_id
+username
+hashed_password
+
+
+Favorite Board Game
+_________
+users_id 
+Board_game_id
+
+User Review
+_________
+User_id
+board_game_id 
+review  (There will be an enforced character limit)
+
+Board Game
+________
+Id
+Name
+category_id
+min_player
+max_player
+avg_time
+min_time
+max_time
+avg_rating
+num_votes
+image
+age
+num_owned
+designer_id 
+Weight
+
+
+Category
+________
+Category_id
+Category
+
+Designer
+________
+Designer_id
+designer
+
+*getting a list of all board games by certain attributes (default is to print in alphabetical order)
+
+REQUEST: /board_games
+RESPONSE: A JSON list of dictionaries. Each dictionary will represent a single board game, alphabetized by board game name.
+Each board game dictionary will have the following fields.
+
+ID -- (int) the id of the board_game
+	Name -- (string) the name of the board_game
+	avg_rating – (int) the 
+Category_id -- (int) the id corresponding to the category of the board_game
+Min_player -- (int) the minimum number of players 
+Max_player -- (int) the max number of players 
+Avg_time -- (int) the average time in minutes it takes to play a single game
+Min_time -- (int) the min time in minutes it takes to play a single game
+Max_time -- (int) the max time in minutes it takes to play a single game
+avg_rating -- (int) the board_game’s average rating
+num_votes -- (int) the number of users that have voted on this board_game’s rating
+image -- (png, probably) the picture of the board_game
+age -- (int) how many years ago the board_game was created
+owned -- (int) how many users own this board_game
+designer_id -- (int) the id corresponding to the designer of the board_game
+Weight -- (int) how heavy this game is in pounds
+
+This request can have many optional GET parameters, one for each column in the Board Game table.
+For example: /board_games?min_rating=4&name=”catan”
+	          /board_games?publisher = ***** & titlecontains = “**”
+	          /board_games?publisher   * sorts by publishers alphabetically
+
+
+*A user that wants to access their boardgame data
+
+REQUEST: /board_games/user/user = “user,password”
+RESPONSE: A dictionary representing a user with the following fields:
+
+	Favorite games-- (list of strings) list of their favorite games
+	Name -- (string) the name of the user
+	Password -- (string) the user’s password
+
+	
+* A user wants to create their username 
+REQUEST: /board_games/register/ input = “user,password”
+RESPONSE: A success statement will print
+
+	String: A success statement that a user has been registered 
+
+* A user wants to sign in
+REQUEST: /board_games/signin/ input = “user,password”
+RESPONSE: A success statement will print
+
+	String: A success statement that a user has been signed in
+
+
+
