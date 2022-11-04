@@ -2,9 +2,7 @@
 Authors: Sydney Nguyen, Sophia Wang, Kimberly Yip
 */
 
-
-
-CREATE TABLE user(
+CREATE TABLE game_user(
 	id SERIAL,
 	username text,
 	list_of_favorite_games_ids integer,
