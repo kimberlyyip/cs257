@@ -57,8 +57,7 @@ RESPONSE: A JSON list of dictionaries. Each dictionary will represent a single b
 Each board game dictionary will have the following fields.
 
 ID -- (int) the id of the board_game
-	Name -- (string) the name of the board_game
-	avg_rating – (int) the 
+Name -- (string) the name of the board_game
 Category_id -- (int) the id corresponding to the category of the board_game
 Min_player -- (int) the minimum number of players 
 Max_player -- (int) the max number of players 
