@@ -19,6 +19,7 @@ CREATE TABLE review(
 	id_board_game integer
 );
 
+/*
 CREATE TABLE board_game(
 	id_board_game SERIAL,
 	board_game_title text,
@@ -32,6 +33,7 @@ CREATE TABLE board_game(
 	num_votes integer,
 	age integer
 );
+*/
 
 CREATE TABLE board_game(
 	id_board_game SERIAL,
