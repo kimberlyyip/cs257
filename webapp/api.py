@@ -21,7 +21,7 @@ def get_connection():
     return psycopg2.connect(database=config.database,
                             user=config.user,
                             password=config.password,
-                            port='5433')
+                            port='5432')
 
 
 @api.route('/games/')
