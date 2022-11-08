@@ -1,14 +1,15 @@
 '''
     api.py
-    Jeff Ondich, 25 April 2016
-    Updated 8 November 2021
+    Sydney Nguyen, Sophia Wang, and Kimberly Yip
+    Code borrowed from Jeff Ondich, 25 April 2016
+    Updated 9 November 2022
 
-    Tiny Flask API to support the tiny books web application.
+    Sample Flask API to support the tiny board games web application.
 '''
 import sys
 import flask
 import json
-#import config
+import config
 import psycopg2
 
 api = flask.Blueprint('api', __name__)
@@ -17,27 +18,20 @@ def get_connection():
     ''' Returns a connection to the database described in the
         config module. May raise an exception as described in the
         documentation for psycopg2.connect. '''
-    return psycopg2.connect(database='books',
-                            user='loaner',
-                            password='',
-                            port='5433')
+    return psycopg2.connect(database=config.database,
+                            user=config.user,
+                            password=config.password,
+                            port='5432')
 
-@api.route('/authors/') 
-def get_authors():
-    ''' Returns a list of all the authors in our database. See
-        get_author_by_id below for description of the author
-        resource representation.
-
-        By default, the list is presented in alphabetical order
-        by surname, then given_name. You may, however, use
-        the GET parameter sort to request sorting by birth year.
-
-            http://.../authors/?sort=birth_year
-
+@api.route('/board_games/') 
+def get_board_games():
+    ''' A JSON list of dictionaries. Each dictionary will represent a single board game, 
+    alphabetized by board game name.
         Returns an empty list if there's any database failure.
     '''
-    query = '''SELECT id, given_name, surname, birth_year, death_year
-               FROM authors ORDER BY '''
+    query = '''SELECT id_board_game, Board_game_title, Designer_id, category_id, weight, 
+    num_owned, avg_rating, min_players, max_players, min_time, max_time, avg_time, num_votes, img, age
+               FROM board_game ORDER BY Board_game_title'''
 
     sort_argument = flask.request.args.get('sort')
     if sort_argument == 'birth_year':
