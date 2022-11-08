@@ -42,25 +42,34 @@ function loadAuthorsSelector() {
         let selectorBody = '';
         for (let k = 0; k < games.length; k++) {
             let game = games[k];
-            selectorBody += '<option value="' + game['id_board_game'] + '">'
-                                + game['board_game_title'] + ', ' + game['year_published'] + ',' + game['min_players']
+            selectorBody += '<option value="' + game['name'] + '">'
+                                + game['name'] + ', ' + game['pub_year']
                                 + '</option>\n';
         }
 
 
-        // game = {'id_board_game':row[0],
-        //               'board_game_title':row[1],
-        //               'year_published':row[2],
-        //               'min_players':row[3],
-        //               'max_players':row[4],
-        //               'play_time':row[5],
-        //               'min_age':row[6],
-        //               'category_id':row[7],
-        //               'users_rated':row[8],
-        //               'rating_avg':row[9],
-        //               'bgg_rank':row[10],
-        //               'owned_users':row[11],}
-        //     games_list.append(game)
+        // game = {'rank':row[0],
+        // 'bgg_url':row[1],
+        // 'game_id':row[2],
+        // 'name':row[3],
+        // 'min_player':row[4],
+        // 'max_player':row[5],
+        // 'avg_time':row[6],
+        // 'min_time':row[7],
+        // 'max_time':row[8],
+        // 'pub_year':row[9],
+        // 'avg_rating':row[10],
+        // 'geek_rating':row[11],
+        // 'num_votes':row[12]
+        // 'image_url':row[13]
+        // 'min_age':row[14]
+        // 'mechanic':row[15]
+        // 'num_owned':row[16]
+        // 'category':row[17]
+        // 'designer':row[18]
+        // 'weight':row[19]}
+
+
 
         let selector = document.getElementById('author_selector');
         if (selector) {
