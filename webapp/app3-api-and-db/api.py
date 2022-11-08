@@ -18,10 +18,22 @@ def get_connection():
     ''' Returns a connection to the database described in the
         config module. May raise an exception as described in the
         documentation for psycopg2.connect. '''
-    return psycopg2.connect(database=config.database,
-                            user=config.user,
-                            password=config.password,
-                            port='5432')
+    return psycopg2.connect(database='boardgames',
+                            user='loaner',
+                            password='',
+                            port='5433')
+
+@api.route('/authors/') 
+def get_authors():
+    ''' Returns a list of all the authors in our database. See
+        get_author_by_id below for description of the author
+        resource representation.
+
+        By default, the list is presented in alphabetical order
+        by surname, then given_name. You may, however, use
+        the GET parameter sort to request sorting by birth year.
+
+            http://.../authors/?sort=birth_year
 
 @api.route('/board_games/') 
 def get_board_games():
@@ -58,6 +70,47 @@ def get_board_games():
 
     return json.dumps(author_list)
 
+
+@api.route('/games/')
+def get_games():
+    query = '''SELECT * FROM board_game'''
+
+    # sort_argument = flask.request.args.get('sort')
+    # if sort_argument == 'birth_year':
+    #     query += 'birth_year'
+    # else:
+    #     query += 'surname, given_name'
+
+    #author_list = []
+
+
+
+    games_list = []
+    try:
+        connection = get_connection()
+        cursor = connection.cursor()
+        cursor.execute(query, tuple())
+        for row in cursor:
+            game = {'id_board_game':row[0],
+                      'board_game_title':row[1],
+                      'year_published':row[2],
+                      'min_players':row[3],
+                      'max_players':row[4],
+                      'play_time':row[5],
+                      'min_age':row[6],
+                      'category_id':row[7],
+                      'users_rated':row[8],
+                      'rating_avg':row[9],
+                      'bgg_rank':row[10],
+                      'owned_users':row[11],}
+            games_list.append(game)
+        cursor.close()
+        connection.close()
+    except Exception as e:
+        print(e, file=sys.stderr)
+
+    return json.dumps(games_list)
+
 @api.route('/books/author/<author_id>')
 def get_books_for_author(author_id):
     query = '''SELECT books.id, books.title, books.publication_year
@@ -80,4 +133,5 @@ def get_books_for_author(author_id):
         print(e, file=sys.stderr)
 
     return json.dumps(book_list)
+
 
