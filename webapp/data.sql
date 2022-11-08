@@ -24,7 +24,7 @@ SET default_table_access_method = heap;
 -- Name: games; Type: TABLE; Schema: public; Owner: -
 --
 
-CREATE TABLE games (
+CREATE TABLE public.games (
     rank integer NOT NULL,
     bgg_url text,
     game_id integer,
