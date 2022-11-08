@@ -1,7 +1,7 @@
 /*
- * books.js
- * Jeff Ondich, 27 April 2016
- * Updated, 5 November 2020
+ * boardgames.js
+ * Sydney Nguyen, Kimberly Yip, Sophia Wang 
+ * 
  */
 
 window.onload = initialize;
