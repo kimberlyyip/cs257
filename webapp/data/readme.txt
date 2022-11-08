@@ -7,7 +7,7 @@ How to set up our board games data so you can run our sample web application.
 1. Creating the database.
 
     $ psql -U YOUR_PSQL_USER_NAME postgres
-    postgres=# CREATE DATABASE books;
+    postgres=# CREATE DATABASE boardgames;
 
 or just
 
