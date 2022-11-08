@@ -31,7 +31,7 @@ def mockups2():
 @app.route('/mockups3') 
 '''route to mockups3'''
 def mockups3():
-    return flask.render_template('index.html')
+    return flask.render_template('mockups3.html')
 
 @app.route('/mockups4') 
 '''route to mockups4'''
