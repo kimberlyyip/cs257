@@ -19,35 +19,27 @@ CREATE TABLE review(
 	id_board_game integer
 );
 
-/*
-CREATE TABLE board_game(
-	id_board_game SERIAL,
-	board_game_title text,
-	designer_id integer,
-	category_id integer,
-	num_owned integer,
-	avg_rating float,
-	min_players integer,
-	max_players integer,
-	play_time integer,
-	num_votes integer,
-	age integer
-);
-*/
-
-CREATE TABLE board_game(
-	id_board_game SERIAL,
-	board_game_title text,
-	year_published integer,
-	min_players integer,
-	max_players integer,
-	play_time integer,
-	min_age integer,
-	category_id integer,
-	users_rated integer,
-	rating_avg float,
-	bgg_rank integer,
-	owned_users integer,
+CREATE TABLE games (
+    rank integer NOT NULL,
+    bgg_url text,
+    game_id integer,
+    name text,
+    min_player integer,
+    max_player integer,
+    avg_time integer,
+    min_time integer,
+    max_time integer,
+    pub_year integer,
+    avg_rating double precision,
+    geek_rating double precision,
+    num_votes integer,
+    image_url text,
+    min_age integer,
+    mechanic text,
+    num_owned integer,
+    category text,
+    designer text,
+    weight double precision
 );
 
 
