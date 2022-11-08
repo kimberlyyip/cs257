@@ -80,7 +80,7 @@ For example: /board_games?min_rating=4&name=”catan”
 
 *A user that wants to access their boardgame data
 
-REQUEST: /board_games/user/user = “user,password”
+REQUEST: /board_games/user/credentials = “user,password”
 RESPONSE: A dictionary representing a user with the following fields:
 
 	Favorite games-- (list of strings) list of their favorite games
