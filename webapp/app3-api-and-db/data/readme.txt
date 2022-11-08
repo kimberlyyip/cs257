@@ -1,9 +1,8 @@
-Setting up the books/authors database
+Setting up the board games database
 CS257 Software Design
 Fall 2020
-Jeff Ondich
-
-How to set up my books/authors data so you can run my sample web application.
+Sophia Wang, Kimberly Yip, Sydney Nguyen
+How to set up our board games data so you can run our sample web application.
 
 1. Creating the database.
 
@@ -12,11 +11,11 @@ How to set up my books/authors data so you can run my sample web application.
 
 or just
 
-    $ createdb books
+    $ createdb boardgames
 
 (where $ is a Unix prompt, and postgres=# is a psql prompt).
 
 2. Populating the database.
 
-    $ psql -U YOUR_PSQL_USER_NAME books < books.sql
+    $ psql -U YOUR_PSQL_USER_NAME boardgames < database-schema.sql
 
