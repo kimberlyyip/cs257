@@ -18,11 +18,12 @@ def dictionary_map():
       writer = csv.writer(category_file)
       heading_row = next(reader) # skips the first line
       for row in reader:
-        category = row[17]
-        if category not in category_list:
-            category_id = len(category_list) + 1
-            category_list[category] = category_id
-            writer.writerow([category_id, category])
+        categories = row[17].split(', ')
+        for category in categories:
+          if category not in category_list:
+              category_id = len(category_list) + 1
+              category_list[category] = category_id
+              writer.writerow([category_id, category])
 
     designer_list = {}
     with open('bgg_db_1806.csv') as original_data_file,\
@@ -59,8 +60,19 @@ def dictionary_map():
         num_owned = row[16]
         weight = row[19]
         designer_id = designer_list[row[18]]
-        category_id = category_list[row[17]]
-        writer.writerow([game_id, name, rank, category_id, min_player, max_player, avg_time, min_time, max_time, avg_rating, num_votes, image_url, min_age, num_owned, designer_id, year_published, weight])
+        writer.writerow([game_id, name, rank, min_player, max_player, avg_time, min_time, max_time, avg_rating, num_votes, image_url, min_age, num_owned, designer_id, year_published, weight])
+
+    with open('bgg_db_1806.csv') as original_data_file,\
+      open('game_categories.csv', 'w') as game_category_file:
+      reader = csv.reader(original_data_file)
+      writer = csv.writer(game_category_file)
+      heading_row = next(reader) # skips the first line
+      for row in reader:
+        game_id = row[2]
+        categories = row[17].split(', ')
+        for category in categories:
+          category_id = category_list[category]
+          writer.writerow([game_id, category_id])
     
 if __name__ == '__main__':
    dictionary_map()
