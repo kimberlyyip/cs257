@@ -1,0 +1,2463 @@
+1,Isaac Childres
+2,"Rob Daviau, Matt Leacock"
+3,Vlaada Chvátil
+4,Jacob Fryxelius
+5,"Ananda Gupta, Jason Matthews"
+6,Corey Konieczka
+7,Jamey Stegmaier
+8,"Jens Drögemüller, Helge Ostertag"
+9,Alexander Pfister
+10,"Ludovic Roudy, Bruno Sautter"
+11,Stefan Feld
+12,"Antoine Bauza, Bruno Cathala"
+13,"Roberto Di Meglio, Marco Maggi, Francesco Nepitello"
+14,Uwe Rosenberg
+15,Andreas Seyfarth
+16,"Morten Monrad Pedersen, Jamey Stegmaier, Alan Stone"
+17,"Nate French, Matthew Newman"
+18,Nikki Valens
+19,Mac Gerdts
+20,Eric M. Lang
+21,"Chris Cantrell, Rick Ernst, Stone Librande, Prashant Saraswat, Nathan Tiras"
+22,"Justin Kemppainen, Corey Konieczka, Jonathan Ying"
+23,Reiner Stockhausen
+24,"Jeroen Doumen, Joris Wiersinga"
+25,Friedemann Friese
+26,"Dane Beltrami, Corey Konieczka, Christian T. Petersen"
+27,Touko Tahkokallio
+28,Adam Poots
+29,Martin Wallace
+30,Ignacy Trzewiczek
+31,"Simone Luciani, Daniele Tascini"
+32,"Richard Garfield, Lukas Litzsinger"
+33,Michael Kiesling
+34,Antoine Bauza
+35,"Sebastian Bleasdale, Richard Breese"
+36,R. Eric Reuss
+37,William Attia
+38,"Corey Konieczka, Nikki Valens"
+39,"Peggy Chassenet, Manuel Rozoy"
+40,Thomas Lehmann
+41,Christian T. Petersen
+42,"Peter Lee, Rodney Thompson"
+43,Bruno Cathala
+44,Chad Jensen
+45,"Wolfgang Kramer, Richard Ulrich"
+46,Juma Al-JouJou
+47,Donald X. Vaccarino
+48,"Wei-Hwa Huang, Thomas Lehmann"
+49,Paul Dennen
+50,Jason Little
+51,"Jonathan Gilmour, Isaac Vega"
+52,"Raymond Edwards, Suzanne Goldberg, Gary Grady"
+53,"Sébastien Dujardin, Xavier Georges, Alain Orban"
+54,Vital Lacerda
+55,Reiner Knizia
+56,"Helmut Ohley, Leonhard ""Lonny"" Orgler"
+57,Matt Leacock
+58,Gord!
+59,(Uncredited)
+60,"Richard Amann, Viktor Peter, Dávid Turczi"
+61,"Jacques Bariot, Guillaume Montiage"
+62,"Daniel Clark (I), Corey Konieczka, Adam Sadler, Kevin Wilson"
+63,Bernd Brunnhofer
+64,Matúš Kotry
+65,Ted Alspach
+66,"Samuel Bailey, James Kniffen, Corey Konieczka"
+67,"Thiago Aranha, Guilherme Goulart, Eric M. Lang, Fred Perret"
+68,Don Eskridge
+69,"Robert Dougherty, Darwin Kastle"
+70,"Ben Cichoski, Daniel Mandel"
+71,"Jesús Torres Castro, Matt Leacock"
+72,Rüdiger Dorn
+73,Alan R. Moon
+74,"Glenn Drover, Martin Wallace"
+75,Richard Borg
+76,"Rustan Håkansson, Nina Håkansson, Einar Rosén, Robert Rosén"
+77,"Roberto Fraga, Yohan Lemonnier"
+78,"Bill Eberle, Jack Kittredge, Bill Norton, Peter Olotka, Kevin Wilson"
+79,Ted Raicer
+80,Hisashi Hayashi
+81,"Virginio Gigli, Simone Luciani"
+82,Nate French
+83,Sébastien Pauchon
+84,Ole Steiness
+85,Andreas Steding
+86,"Raphaël Guiton, Jean-Baptiste Lullien, Nicolas Raoult"
+87,"Inka Brand, Markus Brand"
+88,Marc André
+89,"Vlaada Chvátil, Scot Eaton"
+90,"Michael Keller (II), Andreas ""ode."" Odendahl"
+91,Christian Martinez
+92,"Wolfgang Kramer, Richard Ulrich, Jens Christopher Ulrich"
+93,"Jamey Stegmaier, Alan Stone"
+94,Urs Hostettler
+95,Devin Low
+96,Shem Phillips
+97,Dirk Henn
+98,"Bruno Cathala, Ludovic Maublanc"
+99,Kris Burm
+100,"Richard Borg, Robert A. Kouba"
+101,Cédrick Chaboussit
+102,Klaus-Jürgen Wrede
+103,Glenn Drover
+104,Mark Simonitch
+105,"Bryan Pope, Benjamin Pope"
+106,Matt Calkins
+107,Colby Dauch
+108,Phil Walker-Harding
+109,Ryan Laukat
+110,"Ed Carter, Carl Chudyk"
+111,Andreas Steiger
+112,"Adrian Adamescu, Daryl Andrews"
+113,"Andreas Pelikan, Alexander Pfister"
+114,Richard Garfield
+115,"Oleksandr Nevskiy, Oleg Sidorenko"
+116,"Christian Leonhard, Jason Matthews"
+117,"Flaminia Brasini, Virginio Gigli, Simone Luciani"
+118,Régis Bonnessée
+119,Cody Miller
+120,Tory Niemann
+121,Jean-Louis Roubira
+122,Francis Tresham
+123,Tobey Ho
+124,Ed Beach
+125,Kevin Riley
+126,"Frank Brooks, Stephen Hand, Kevin Wilson"
+127,"Michał Oracz, Jakub Wiśniewski"
+128,"Richard Amann, Viktor Peter"
+129,Kevin Wilson
+130,Shimpei Sato
+131,"James Kniffen, Christian T. Petersen"
+132,"Gabriele Mari, Gianluca Santopietro"
+133,Philippe Keyaerts
+134,Karl-Heinz Schmiel
+135,"Mike Boxleiter, Tommy Maranges, Max Temkin"
+136,"Bruno Cathala, Bruno Faidutti"
+137,Croc
+138,Jervis Johnson
+139,"Matthias Cramer, Louis Malz, Stefan Malz"
+140,Tim Fowers
+141,"Kasper Aagaard, Christian Marcussen"
+142,"D. Brad Talton, Jr."
+143,"Carl de Visser, Jarratt Gray"
+144,John Yianni
+145,"Tom Jolly, Luke Laurie"
+146,Michał Oracz
+147,Emerson Matsuuchi
+148,Sid Sackson
+149,Don Greenwood
+150,Christian Marcussen
+151,Jerry Hawthorne
+152,Seiji Kanai
+153,"Michael Kiesling, Wolfgang Kramer"
+154,Brandon Tibbetts
+155,"Bill Eberle, Jack Kittredge, Peter Olotka"
+156,"Sandy Petersen, Lincoln Petersen"
+157,Richard Halliwell
+158,Julian Courtland-Smith
+159,Scott Almes
+160,"Michael Rieneck, Stefan Stadler"
+161,"Rob Daviau, Chris Dupuis"
+162,"Dominic Crapuchettes, Dmitry Knorre, Sergey Machin"
+163,Paolo Mori
+164,"Richard Launius, Kevin Wilson"
+165,"Alex Davy, James Kniffen, Corey Konieczka, Jason Little, Brady Sadler, Adam Sadler"
+166,"Sérgio Halaban, André Zatz"
+167,"Nuno Bizarro Sentieiro, Paulo Soledade"
+168,François Gandon
+169,Etienne Espreman
+170,"Wolfgang Panning, Marco Ruskowski, Marcel Süßelbeck"
+171,Matthias Cramer
+172,"Beau Beckett, Jeph Stahl"
+173,Richard Sivél
+174,Kevin Lanzing
+175,"Reiner Knizia, Eric M. Lang, Christian T. Petersen"
+176,Stefan Dorra
+177,"Peter Lee, Rodney Thompson, Andrew Veen"
+178,"Ted Alspach, Akihisa Okui"
+179,"Andrea Chiarvesio, Luca Iennaco"
+180,"Stephen Baker, Rob Daviau, Craig Van Ness"
+181,"Christopher Badell, Paul Bender, Adam Rebottaro"
+182,"Aaron Dill, John Kovaleski, Sean Sweigart"
+183,Christophe Boelinger
+184,Jason C. Hill
+185,Carl Chudyk
+186,"Brett Sobol, Seth Van Orden"
+187,Klaus Teuber
+188,"Acchittocca, Flaminia Brasini, Virginio Gigli, Stefano Luperto, Antonio Tinto"
+189,"Forrest-Pruzan Creative, Kami Mandell, Andrew Wolf"
+190,"Corey Konieczka, Lukas Litzsinger"
+191,Keith Matejka
+192,"Mike Selinker, Chad Brown, Tanis O'Connor, Paul Peterson, Gaby Weidling"
+193,Michael Menzel
+194,"Fabien Riffaud, Juan Rodriguez"
+195,Steve Finn
+196,"Michael Adams, Peter Sarrett"
+197,Volko Ruhnke
+198,Christophe Raimbault
+199,"Jonathan Gilmour, Brian Lewis"
+200,Asger Harding Granerud
+201,"Matt Leacock, Chuck D. Yager"
+202,Sébastien Dujardin
+203,"Tom Dalgliesh, Jerry Taylor"
+204,Kota Nakayama (中山 宏太)
+205,Brian Mayer
+206,"Nate French, Eric M. Lang"
+207,"Christian T. Petersen, Kevin Wilson"
+208,"Anthony J. Gallela, Eric Goldberg, Kevin Maroney, Zev Shlasinger"
+209,"Daniel Clark (I), Tim Flanders, Annie VanderMeer Mitsoda, Greg Spyridis, Nikki Valens"
+210,Jean du Poël
+211,"Matthew Dunstan, Brett J. Gilbert"
+212,Bruno Faidutti
+213,"Bruno Cathala, Serge Laget"
+214,Xavier Georges
+215,"Edward Bolme, Mike Elliott, Mark Wootton"
+216,Hjalmar Hach
+217,"Bruno Cathala, Charles Chevallier"
+218,"Adam Carlson, Josh J. Carlson"
+219,"Frédéric Henry, Antoine Bauza, Pascal Bernard, Bruno Cathala, Croc, Ludovic Maublanc, Laurent Pouchain"
+220,Vladimír Suchý
+221,Tim Puls
+222,Kasper Lapp
+223,Peter Hawes
+224,"Charlie Catino, Steven Kimball"
+225,Helmut Ohley
+226,"Corey Konieczka, Christian T. Petersen"
+227,"Suzanne Goldberg, Gary Grady, Jérôme Ropert"
+228,Tony Boydell
+229,"Andreas Seyfarth, Karen Seyfarth"
+230,"Richard Berthold, Don Greenwood, Robert Haines"
+231,"Wolfgang Kramer, Markus Lübke"
+232,"James Ernest, Mike Selinker"
+233,Benoit Vogt
+234,Dan Cassar
+235,"Justin Kemppainen, Brady Sadler, Adam Sadler"
+236,Paul Peterson
+237,"Jay Cormier, Sen-Foong Lim"
+238,Harry Wu
+239,"Grant Rodiek, Michał Oracz, Michał Walczak"
+240,Karsten Hartwig
+241,Mike Fitzgerald
+242,Richard Launius
+243,Eric Zimmerman
+244,"Phil Eklund, Matt Eklund, Jim Gutt"
+245,Rikki Tahta
+246,Peter Prinz
+247,Steffen Bogen
+248,Courtney F. Allen
+249,John D. Clair
+250,Isaac Vega
+251,Peter Sarrett
+252,Bowen Simmons
+253,Bruce Allen
+254,Thorsten Gimmler
+255,Uwe Eickert
+256,Alexandr Ushan
+257,"Jeremy Holcomb, Stephen McLaughlin"
+258,Serge Laget
+259,"Marco Canetta, Stefania Niccolini"
+260,"Malcolm Braff, Bruno Cathala, Sébastien Pauchon"
+261,"Stephen Hand, Kevin Wilson"
+262,Yoann Levet
+263,"Mike Elliott, Bryan Kinsella, Ethan Pasternack"
+264,"Stefano Castelli, Andrea Crespi, Lorenzo Silva"
+265,Craig Besinque
+266,Ken Dunn
+267,Marcel-André Casasola Merkle
+268,Henry Stern
+269,Lukas Litzsinger
+270,"Jason Matthews, Ted Torgerson"
+271,Orin Bishop
+272,"Mark Herman, Volko Ruhnke"
+273,Kristian Amundsen Østby
+274,"Rob Daviau, Bruce Glassco, Bill McQuillan, Mike Selinker, Teeuwynn Woodruff"
+275,Seth Jaffee
+276,"Laurent Lavaur, Eric Randall"
+277,Vangelis Bagiartakis
+278,Hervé Rigal
+279,"Mike Elliott, Eric M. Lang"
+280,Mark Herman
+281,"Corey Konieczka, Christian T. Petersen, Tim Uren"
+282,Hervé Marly
+283,Jim Krohn
+284,"John Foley, Chad Jensen, Kai Jensen"
+285,Trey Chambers
+286,"Thomas Vande Ginste, Wolf Plancke"
+287,Adam Kałuża
+288,Ben Rosset
+289,Shadi Torbey
+290,"Michael Palm, Lukas Zach"
+291,"Alex Hague, Justin Vickers"
+292,"Michael Kiesling, Andreas Schmidt"
+293,Mikkel Bertelsen
+294,Peter Lee
+295,"Gil d'Orey, Nuno Bizarro Sentieiro, Paulo Soledade"
+296,"Patrick Leder, David Somerville"
+297,"Matthew O'Malley, Morten Monrad Pedersen, Ben Rosset"
+298,John H. Butterfield
+299,"Bernd Brunnhofer, Karl-Heinz Schmiel"
+300,John Hill (I)
+301,Michael Schacht
+302,"Jeff Grossman, Volko Ruhnke"
+303,"Gavan Brown, Matt Tolman"
+304,Richard Breese
+305,"Stephen Baker, Rob Daviau, Chris Nelson, Craig Van Ness"
+306,Harold Vanderbilt
+307,Alex Rockwell
+308,"John Fiorillo, Justin Gary"
+309,"Asger Harding Granerud, Daniel Skjold Pedersen"
+310,"Reiner Knizia, Klaus-Jürgen Wrede"
+311,Allan B. Calhamer
+312,Dominic Crapuchettes
+313,Ludovic Maublanc
+314,"Simone Romano, Nunzio Surace"
+315,BakaFire
+316,Chris Cieslik
+317,Fran Diaz
+318,"Alan R. Moon, Aaron Weissblum"
+319,Ed Marriott
+320,Andrew Parks
+321,"Andrea Chiarvesio, Pierluca Zizzi"
+322,Bernard Tavitian
+323,"Gaëtan Beaujannot, Jean Yves Monpertuis"
+324,"Claudia Hely, Roman Pelek"
+325,"Peter Lee, Bill Slavicsek"
+326,"Robert Dougherty, John Fiorillo, Justin Gary, Brian M. Kibler"
+327,"Richard Sivél, Peer Sylvester"
+328,Greg Daigle
+329,Mike Elliott
+330,Michiel Justin Elliott Hendriks
+331,Kane Klenko
+332,"Wolfgang Sentker, Ralf zur Linde"
+333,"Jeff Horger, Carla Horger"
+334,"Carl Chudyk, Chris Cieslik"
+335,Lewis Pulsipher
+336,"Mike Elliott, Brent Keith"
+337,Stephen Baker
+338,"Bruno Cathala, Marc Paquien"
+339,Filip Neduk
+340,"Jun Sasaki, Goro Sasaki"
+341,Gil Hova
+342,"Rob Daviau, Alan Roach, Craig Van Ness"
+343,Sir John Suckling
+344,Ghislain Masson
+345,Isaias Vallejo
+346,"(Uncredited), Richard Borg"
+347,Gerd Fenchel
+348,"Eilif Svensson, Kristian Amundsen Østby"
+349,"Gaëtan Beaujannot, Alain Rivollet"
+350,Christopher Chung
+351,Wolfgang Kramer
+352,Alex Randolph
+353,Doug Eckhart
+354,"Franz-Benno Delonge, Thomas Ewert"
+355,Brent Povis
+356,"John Goodenough, Corey Konieczka, Christian T. Petersen"
+357,"Richard Hamblen, Robert A. Kouba"
+358,Aaron Weissblum
+359,Robert A. Kouba
+360,David Sanders
+361,"Carey Grayson, Randy Nash, Rick Soued"
+362,"Tom Jolly, Kevin Wilson"
+363,"Brad Andres, Nate French, Eric M. Lang"
+364,"Bill Eberle, John Goodenough, Jack Kittredge, Corey Konieczka, Peter Olotka, Christian T. Petersen"
+365,"Gary Dicken, Steve Kendall, Phil Kendall"
+366,"Scott Frisco, Steven Strumpf"
+367,"Gordon Lamont, Fraser Lamont"
+368,Stefan Risthaus
+369,Joshua Buergel
+370,"Phil Eklund, Matt Eklund"
+371,"Uwe Eickert, John Hill (I), Dana Lombardy"
+372,none
+373,"Rob Heinsoo, Peter Lee, Mike Mearls, Bill Slavicsek"
+374,David Short
+375,Chris Taylor (I)
+376,"Bruno Faidutti, Alan R. Moon"
+377,"Mike Elliott, Rob Heinsoo, Jim Lin, Gregory Marques, Sean McCarthy, Jay Schneider, Rob Watkins"
+378,Franz-Benno Delonge
+379,"Rob Daviau, Justin D. Jacobson, Wolfgang Kramer"
+380,Tom Cleaver
+381,"Antoine Bauza, Ludovic Maublanc"
+382,"Dan Schnake, Adam West"
+383,Sebastian Bleasdale
+384,Joseph Fatula
+385,Will Schoonover
+386,Jeff Horger
+387,Maxime Rambourg
+388,Grégory Oliver
+389,Alain Epron
+390,"Laurent Escoffier, David Franck"
+391,J. Alex Kevern
+392,"Adrian Abela, David Chircop"
+393,"Andy Jones, Gavin Thorpe"
+394,Joel Finch
+395,Susan McKinley Ross
+396,Carl Paradis
+397,"Chad Brown, Tanis O'Connor, Paul Peterson, Mike Selinker, Gaby Weidling"
+398,Justin Blaske
+399,Gary Kim
+400,"Cédric Lefebvre, Fabrice Rabellino"
+401,Dominique Bodin
+402,"James D'Aloisio, Austin Rucker, Craig Van Ness"
+403,Heinz-Georg Thiemann
+404,"Volko Ruhnke, Brian Train"
+405,Ken Fisher
+406,Steffen Benndorf
+407,"Günter Cornett, Alvydas Jakeliunas"
+408,"Aureliano Buonfino, Lorenzo Silva, Lorenzo Tucci Sorrentino"
+409,Bernd Eisenstein
+410,"Doris Matthäus, Frank Nestel"
+411,Andreas Pelikan
+412,"Ryan Amos, Marc Kelsey, Aron West"
+413,"John H. Butterfield, Eric Lee Smith"
+414,Sean Ross (I)
+415,"Masaru Aoki, Carol Wiseley"
+416,Naoki Homma
+417,Michael Gray
+418,"Darrell Hardy, Martin Wallace"
+419,"Matt Hyra, Ben Stoll"
+420,Nicolas Robert
+421,Ian Brody
+422,"Ben Pinchback, Matt Riddle"
+423,"Kory Heath, Andrew Looney"
+424,"Steve Ellis (II), Hisashi Hayashi"
+425,Dan Verssen
+426,Richard Hamblen
+427,Hope S. Hwang
+428,Yuri Zhuravljov
+429,Connor Reid
+430,"Nate French, Eric M. Lang, Christian T. Petersen"
+431,Rustan Håkansson
+432,Yves Tourigny
+433,Yann and Clem
+434,Yasutaka Ikeda
+435,Luigi Ferrini
+436,Jean-Christophe Bouvier
+437,"Grant Dalgliesh, Justin Thompson"
+438,Klaus Miltenberger
+439,Chénier La Salle
+440,Adam P. McIver
+441,Kalle Malmioja
+442,"Philippe des Pallières, Hervé Marly"
+443,Masao Suganuma
+444,"Larry Harris, Jr."
+445,Evan Derrick
+446,"Brad Andres, Erik Dahlman, Nate French"
+447,Satoshi Nakamura
+448,Philip duBarry
+449,"Alan Gerding, Sean McCoy"
+450,"Kenneth Minde, Kristian Amundsen Østby"
+451,Walter Schneider
+452,Michael Rieneck
+453,Philippe Mouchebeuf
+454,"Steve Kendall, Phil Kendall"
+455,Tom McMurchie
+456,Ian Cooper (I)
+457,Brian Gomez
+458,"Stephen Avery, Tom Vasel"
+459,"Henrik Berg, Åse Berg"
+460,Nicolas Poncin
+461,David Sirlin
+462,Klemens Kalicki
+463,Julien Vergonjeanne
+464,"Volko Ruhnke, Andrew Ruhnke"
+465,"Vlaada Chvátil, Andrew Parks"
+466,A. J. Porfirio
+467,Peter Wichmann
+468,"James Ernest, Patrick Rothfuss"
+469,"Jonathan Gilmour, Ben Pinchback, Matt Riddle"
+470,"Dominique Ehrhard, Duccio Vitale"
+471,Mario Papini
+472,Sami Laakso
+473,"Yeon-Min Jung, Jun-Hyup Kim"
+474,"Andrea Angiolino, Pier Giorgio Paglia"
+475,Nicolas Oury
+476,Phil Eklund
+477,Masato Uesugi
+478,"Jason B. McAllister, David A. Trampier"
+479,"Keren Philosophales, Michael Shinall"
+480,Adam Kwapiński
+481,Cyril Demaegd
+482,Klaus Palesch
+483,Justin De Witt
+484,James Vaughan
+485,"Bill Eberle, Jack Kittredge, Bill Norton, Peter Olotka"
+486,"Dominic Crapuchettes, Satish Pillalamarri"
+487,Harold Buchanan
+488,Blaise Muller
+489,"Richard Borg, Mike Fitzgerald"
+490,Jacob Jaskov
+491,Klaus Zoch
+492,Grzegorz Rejchtman
+493,"Dave Williams (II), Mark Wootton"
+494,"Andy Chambers, Jervis Johnson, Rick Priestley"
+495,Jesús Torres Castro
+496,"Flo de Haan, John Rodriguez, Francis Tresham"
+497,François Rouzé
+498,Peer Sylvester
+499,"Derek Carver, Pierre Cléquin, Bruno Faidutti, Corey Konieczka"
+500,Kristian Čurla
+501,Ralf Burkert
+502,Jun Sasaki
+503,Leo Colovini
+504,"Forest Brown, L. R. ""Butch"" Leeper, Jordan Weisman"
+505,"Mike Elliott, Bryan Reese, Mark Wootton"
+506,Dirk Baumann
+507,Jens Drögemüller
+508,Corey Young
+509,Fréderic Moyersoen
+510,Frédéric Henry
+511,Wray Ferrell
+512,James Kniffen
+513,"Denis Blanchot, Guillaume Gille-Naves, Igor Polouchine"
+514,Emmanuel Aquin
+515,Günter Burkhardt
+516,Corné van Moorsel
+517,"Andrew Fischer, Nathan I Hajek"
+518,Bill Dixon
+519,Jacques Zeimet
+520,Bauldric & Friends
+521,"Don Greenwood, Jared Scarborough"
+522,"Christina Ng Zhen Wei, Yeo Keng Leong"
+523,Fabrice Besson
+524,Stefan Kögl
+525,Filip Miłuński
+526,Daniel Solis
+527,TauCeti Deichmann
+528,"Rob Daviau, Craig Van Ness"
+529,"Alice Carroll, Cyril Demaegd"
+530,"Jesse Evans, Rick Young"
+531,"Bruno Faidutti, Serge Laget"
+532,"Rick Holzgrafe, Isaias Vallejo"
+533,Günter Cornett
+534,Stephen Glenn
+535,Erik V Larsen
+536,Jesse Li
+537,"Richard H. Berg, John B. Firer, Mark Simonitch"
+538,"Christopher Guild, Andrew Parks"
+539,Coleman Charlton
+540,"Eduardo Baraf, Steve Finn, Keith Matejka"
+541,Reinhard Staupe
+542,Eric Lee Smith
+543,"Murat Célébi, Nicolas Degouy, TOT"
+544,Wolfgang Warsch
+545,"Paul Laane, Touko Tahkokallio"
+546,"Mario Porpora, Pietro Righi Riva, Luca Francesco Rossi, Nicolò Tedeschi"
+547,Thomas Spitzer
+548,Robert K. Gabhart
+549,"Greg Pinder, Harry Rowland"
+550,Gregory M. Smith
+551,Susumu Kawasaki
+552,"Richard Garfield, Robert Goudie, L. Scott Johnson"
+553,"Geoff Engelstein, Sydney Engelstein"
+554,"Darwin Bromley, Bill Fawcett"
+555,"Joe Babbitt, Will M. Baker, Edward Bolme, Curt Crane, Mike Elliott, Jeff Quick, Mark Wootton"
+556,"Beau Beckett, Dave Kimmel, Jeph Stahl"
+557,John Clowdus
+558,"Peter Lee, Ben Petrisor"
+559,"Eric Goldberg, Ben Grossman, Steve Marsh (I), Steven Marsh (II), Vincent Tsao, Nikola Vrtis"
+560,"Frank Chadwick, Alan Emrich"
+561,"Jürgen P. Grunau, Wolfgang Kramer, Hans Raggan"
+562,Tetsuya Nakamura
+563,"Don Greenwood, James Stahler"
+564,"Daniel Alves, Patrick Matheus, Eurico Cunha Neto"
+565,"Brent Beck, Apryl Stott"
+566,"Stefan Dorra, Ralf zur Linde"
+567,"Joe Price, JT Smith"
+568,Carlo A. Rossi
+569,"Tom Jolly, Lukas Litzsinger, Christian T. Petersen"
+570,Chris Darsaklis
+571,"Simon Berman, David Carl, Robert Hawkins, Ron Kruzie, Brian Putnam, Doug Seacat, Jason Soles, Matt Wilson"
+572,Brett G. Murrell
+573,Thomas Dagenais-Lespérance
+574,Jason Kotarski
+575,Steve Jackson (I)
+576,Marco Pranzo
+577,Justin Gary
+578,"Agnieszka Kopera, Andrei Novac"
+579,Mirko Marchesi
+580,"Piotr Haraszczak, Ignacy Trzewiczek"
+581,Cédric Millet
+582,"Alessio Cavatore, Tuomas Pirinen, Rick Priestley"
+583,Scott Caputo
+584,"Nate Chatellier, Manny Trembley"
+585,Mark Major
+586,Al Newman
+587,"Ken Gruhl, Quentin Weir"
+588,"Jacques Bariot, Thomas Cauët, Guillaume Montiage"
+589,"Wray Ferrell, Brad Johnson (I)"
+590,"Daniel Clark (I), Kevin Wilson"
+591,Emiliano Sciarra
+592,Michael Shinall
+593,Alessandro Lala
+594,"Louis Malz, Stefan Malz"
+595,"Paul Randles, Daniel Stahl"
+596,"Tom Dalgliesh, Ron Gibson, Lance Gutteridge"
+597,Michael Keller (II)
+598,"Philippe Beaudoin, Pierre Poissant-Marquis"
+599,"Cliff Bohm, Geoff Bottone, Colleen Skadl"
+600,"Jeff Alexander, Brent Keith, Bryan Reese, David Seay, David Williams (I), Mark Wootton, John Zinser"
+601,Tim Eisner
+602,Daniel Val
+603,"Konstantinos Kokkinis, Sotirios Tsantilas"
+604,"Randall N. Bills, Dylan Birtolo, Loren Coleman, Talon Coleman, Mike Elliott, Rob Heinsoo, Jim Lin, Gregory Marques, Sean McCarthy, Jay Schneider, Rob Watkins"
+605,"Phil Eklund, Cole Wehrle"
+606,"Hagen Dorgathen, Uwe Rosenberg"
+607,"Larry Harris, Jr., Mike Selinker"
+608,S. Craig Taylor
+609,"Makoto Nakajima, Adam Starkweather"
+610,Stefan Kloß
+611,"Darwin Bromley, Steven Courtemanche, Larry Roznai"
+612,Paul Toyne
+613,Alberto Corral
+614,"Thomas Vuarchex, Pierrick Yakovenko"
+615,"Manfred Burggraf, Dorothy Garrels, Wolf Hoermann, Fritz Ifland, Werner Scheerer, Werner Schlegel"
+616,John Edwards
+617,"Chris Birkenhagen, John Cadice, Deke Stella"
+618,David Parlett
+619,Wolfgang Riedesser
+620,Alan D. Ernstein
+621,Nathaniel Levan
+622,"Colby Dauch, Rob Daviau, Chris Dupuis, Jerry Hawthorne, Peter Lee, Craig Van Ness"
+623,"Jens-Peter Schliemann, Bernhard Weber"
+624,Jason Maxwell
+625,"Guillaume Blossier, Frédéric Henry"
+626,Thomas Liesching
+627,Alban Viard
+628,"Günter Burkhardt, Wolfgang Kramer"
+629,"Sébastien Gigaudaut, David Rakoto"
+630,John Goodenough
+631,"Jeroen Doumen, Matt Leacock"
+632,Gutier Lusquiños Rodríguez
+633,"Dimitris Drakopoulos, Konstantinos Kokkinis"
+634,Peter Burley
+635,Robert Abbott
+636,"John Goodenough, Jeff Tidball"
+637,Eilif Svensson
+638,Alain Ollier
+639,Darrell Louder
+640,Joel Toppen
+641,Tim Harrison
+642,"Akihiro Itoh, Kwaji, Daichi Okano, Kito Shinma"
+643,"Stefan Feld, Michael Rieneck"
+644,Rob Bontenbal
+645,"Hal Eccles, Will Kenyon, Jason Maxwell, Tim Uren"
+646,Emanuele Ornella
+647,Hal Richman
+648,"Don Beyer, Ray Eifler, Steve Gross"
+649,"Tom McMurchie, Jordan Weisman"
+650,"Robin Lees, Steve Mackenzie"
+651,Nico Carroll
+652,"Glenn Drover, Larry Harris, Jr., Martin Wallace"
+653,Sean MacDonald
+654,Ben Hull
+655,"William Jacobson, Amanda Kohout"
+656,Curt Covert
+657,Jonathan Ying
+658,Stefano Groppi
+659,"Ursula Stephan, Klaus-Jürgen Wrede"
+660,"Chad Brown, Tanis O'Connor, Paul Peterson, Mike Selinker, Liz Spain, Gaby Weidling"
+661,"Antoine Bauza, Masato Uesugi"
+662,Darwin Kastle
+663,"Pantelis Bouboulis, Sotirios Tsantilas"
+664,"藤田 真吾 (Shingo Fujita), Shotaro Nakashima, 大木基至 (Motoyuki Ohki), Hiromi Oikawa"
+665,"John Goodenough, Robert Harris"
+666,Hermann Luttmann
+667,"Brian Henk, Clayton Skancke"
+668,Frank West
+669,Salvatore Vasta
+670,"L. Ross Babcock, III, Sam Lewis, Jordan Weisman"
+671,"Cliff Bohm, Geoff Bottone, Cold FuZion Studios, Colleen Skadl"
+672,"Brian Engelstein, Geoff Engelstein, Sydney Engelstein"
+673,"Gil d'Orey, Antonio Sousa Lara"
+674,David V. H. Peters
+675,Nicolas Normandon
+676,"Jeff Beck (II), Tim Fowers"
+677,"Jason Harner, Matthew Ransom"
+678,"Marcin Krupiński, Filip Miłuński"
+679,Danilo Sabia
+680,Din Li Tsan
+681,"Josh Cappel, Adam Gertzbein"
+682,"Dimitry Davidoff, Andrew Plotkin"
+683,Holger Lanz
+684,Marco Teubner
+685,"Guillaume Lémery, Nicolas Schlewitz"
+686,"Hjalmar Hach, Luca Ricci, Lorenzo Silva"
+687,Francesco Rotta
+688,"Andrea Angiolino, Bruno Faidutti, Alan R. Moon, Pier Giorgio Paglia"
+689,"Bernhard Lach, Uwe Rapp"
+690,Koota Yamada
+691,Dominique Ehrhard
+692,Aaron Haag
+693,Jeff Ochs
+694,Marsha J. Falco
+695,Karol Madaj
+696,Christoph Cantzler
+697,"Glen Frank, Bruce Shelley"
+698,Jeffrey D. Allers
+699,Ronald Wettering
+700,"Cliff Bohm, Geoff Bottone, Jeff Morrow"
+701,"Andreas ""ode."" Odendahl"
+702,"David V. H. Peters, Harry Wu"
+703,"Lorenzo Silva, Lorenzo Tucci Sorrentino"
+704,Brian Yu
+705,"Jeffrey D. Allers, Bernd Eisenstein"
+706,"Jaro Andruszkiewicz, Waldek Gumienny"
+707,Rüdiger Koltze
+708,Krzysztof Wolicki
+709,Carlo Lavezzi
+710,"Wolfgang Kramer, Horst-Rainer Rösner"
+711,Diego Ibañez
+712,"Philippe des Pallières, Loïc Lamy"
+713,"Rob Heinsoo, Cory Jones"
+714,Jakob Bonds
+715,"Andrea Angiolino, Andrea Mainini"
+716,"Richard Lambert, Andrew Rilstone, James Wallis"
+717,"Jordan Goddard, Mandy Goddard"
+718,"Seiji Kanai, Hayato Kisaragi"
+719,Mark McLaughlin
+720,Niek Neuwahl
+721,"Craig Besinque, Tom Dalgliesh"
+722,"Oliver Sibthorpe, Gary Sibthorpe"
+723,"Jakob Bonds, Dan Glimne"
+724,Peter Adolph
+725,"Tobias Goslar, Roland Goslar"
+726,"Darwin Bromley, Tom Wham"
+727,Giancarlo Fioretti
+728,Roberto Fraga
+729,"Mike McVey, Brian Snoddy, Matt Wilson"
+730,"Darrell Louder, Mike Mullins"
+731,"Richard H. Berg, Mark Herman"
+732,Chris Handy
+733,"Mike Langlois, Christian Leonhard"
+734,Britton Roney
+735,"Johannes Ackva, Max Gabrian"
+736,"Johnny O'Neal, Chris O'Neal"
+737,David Gregg
+738,Ron Gonzalo García
+739,Heinrich Glumpler
+740,Mike Hutton
+741,Charles Vasey
+742,Tim Pinder
+743,Tom Jolly
+744,"Bryan Ansell, Richard Halliwell, Jervis Johnson, Rick Priestley"
+745,"Aaron Brosman, Matthew Burch, Bryan Pope"
+746,Masayuki Kudou
+747,Mike Nudd
+748,"Martin Kallenborn, Matthias Prinz"
+749,Mark Chaplin
+750,"Robert Abbott, Alex Randolph"
+751,"Edgar Cayce, Harry Gavitt, George S. Parker"
+752,"Jakob Bonds, Gustav Bonds, Dan Glimne"
+753,"Brian Bennett, Uwe Eickert, Robert Żak"
+754,Albrecht Nolte
+755,Kuro
+756,"Richard Baker, Mons Johnson, Peter Lee"
+757,Kory Heath
+758,James M. Hewitt
+759,"Shanon Lyon, Marisa Pena"
+760,Tony Go
+761,"Chris Dupuis, Peter Lee, Kevin Tatroe, Rodney Thompson"
+762,"Andrea Chiarvesio, Gianluca Santopietro"
+763,"Matt Wilson, Erik Yaple"
+764,"Chris Dupuis, Mike Mearls"
+765,"Dori Smith, Phillip John Smith"
+766,"T. C. Petty, III"
+767,Bill Payne
+768,Nick Sibicky
+769,Richard James
+770,"Michel Lalet, Laurent Levi"
+771,"Mike Elliott, Rob Heinsoo, Brian Tinsman, Jonathan Tweet"
+772,"Leo Colovini, Alex Randolph"
+773,"Tom Braunlich, Gary Gabrel"
+774,Arve D. Fühler
+775,Simon McGregor
+776,Travis Hancock
+777,Jeremy Lennert
+778,Joseph Miranda
+779,"Vangelis Bagiartakis, Dávid Turczi"
+780,"Don Greenwood, John Prados"
+781,David Brain
+782,"Bob Brechin, Brian Degas, Major P.R. Reid M.B.E., M.C."
+783,Max J. Kobbert
+784,Alf Seegert
+785,Matthew Dunstan
+786,"Antoine Bauza, Serge Laget"
+787,Wolfgang Lüdtke
+788,Josh Wood
+789,Kim Satô
+790,Keith Baker
+791,Théo Rivière
+792,Thibaud de la Touanne
+793,Jack Degnan
+794,Justin Oh
+795,Dwight Sullivan
+796,"Travis R. Chance, Nick Little (I)"
+797,Jürgen Strohm
+798,Jake Thornton
+799,Johannes Sich
+800,"Tony Curtis, Mark Simonitch"
+801,"Marcin Senior Ropka, Viola Kijowska"
+802,"Bruno Faidutti, Jef Gontier"
+803,Eric B. Vogel
+804,"Jeff Grubb, Peter Lee, Bill Slavicsek, Jonathan Tweet, Rob Watkins"
+805,Jeremy Anderson
+806,Kuraki Mura
+807,Kevin McPartland
+808,Harry Rowland
+809,"Katalin Nimmerfroh, Dávid Turczi, Mihály Vincze"
+810,Brett J. Gilbert
+811,"Sebastian Bleasdale, Reiner Knizia"
+812,Jeff Siadek
+813,"Chuck Kallenbach, Tom Lischke, Mike Reynolds"
+814,Robert P. Moore
+815,"Luke Hooper, Michael Larson, Del Segura"
+816,Rick Young
+817,Craig Van Ness
+818,Jakob Andrusch
+819,Anthony Conta
+820,Matt Hyra
+821,"Cyril Demaegd, Frédéric Henry"
+822,"Laura Robinson, Paul Toyne"
+823,Mark Mokszycki
+824,Fabio Lopiano
+825,Wilko Manz
+826,Alfred Mosher Butts
+827,"Phil Eklund, Philipp Klarmann"
+828,Lauge Luchau
+829,"Doug Kaufman, Alfred Leonardi"
+830,"Tom Braunlich, Jerry Darcy, Chuck Kallenbach, Roland L. Tesh"
+831,"Gérard Delfanti, Gérard Mathieu, Pascal Trigaux"
+832,Lee Yih
+833,"Dan Raspler, Al Rose"
+834,Ben Harkins
+835,"Yves le Quellec, Nicolas Rident"
+836,Andrew Innes
+837,"Molly Glover, Tom Jolly"
+838,"Anders Tyrland, Olle Tyrland"
+839,Mark K. Swanson
+840,"Rena Nathanson, Abe Nathanson"
+841,Ephraim Hertzano
+842,"S. Craig Taylor, James B. Wood"
+843,"Seth Jaffee, Dan Keltner"
+844,Thiago Boaventura
+845,Błażej Kubacki
+846,Stephen Hand
+847,"James Hlavaty, Timothy Moore"
+848,Christophe Pont
+849,Mike Nagel
+850,"David Carl, Alex Hall, Mat Hart, Richard Loxam"
+851,Carey Grayson
+852,"Jim Snyder, Mark H. Walker"
+853,"Rolf Sagel, André Spil"
+854,"Ben Stoll, Patrick Sullivan (II)"
+855,Claude Lucchini
+856,Werner Hodel
+857,"Don Greenwood, Michael S. Matheny"
+858,"Colby Dauch, Isaac Vega"
+859,Cole Wehrle
+860,"Vojkan Krstevski, Ivana Krstevski, Maja Matovska, Toni Toshevski"
+861,佐藤 雄介 (Yusuke Sato)
+862,Ulrich Blum
+863,Tom Stasiak
+864,"Grafik Studio Krüger, Alan R. Moon, Aaron Weissblum"
+865,"Ben Cichoski, Mike Hummel, Cory Jones, Brian M. Kibler, Daniel Mandel, Matt Place, Patrick Sullivan (II), Drew Walker (I), Andrew Wolf"
+866,John Welch
+867,"Brad Stock, Brian Stock"
+868,Torsten Landsvogt
+869,Matteo Santus
+870,"Wilko Manz, Steven Kimball"
+871,Brian Hersch
+872,"Rob Daviau, JR Honeycutt"
+873,Dieter Nüßle
+874,Tom Wham
+875,Gerhard Hecht
+876,Chih-Fan Chen
+877,Attila Szőgyi
+878,"Stephen Baker, Rob Daviau, Larry Harris, Jr."
+879,Alan Turoff
+880,Darren Kisgen
+881,"Marc Gascoigne, Jervis Johnson"
+882,Adam Starkweather
+883,Manfred Ludwig
+884,"John LaBelle, Thomas Rabideau, Dave Rabideau"
+885,Tobias Stapelfeldt
+886,"Tim Eisner, Ryan Swisher"
+887,"William Grosselin, Didier Poli"
+888,"Friedemann Friese, Marcel-André Casasola Merkle"
+889,"Thomas M. Divoll, John B. Reilly"
+890,"Rob Daviau, Bill Sabram, Craig Van Ness"
+891,"Brad Freeman, Eric Goldberg, Doug Kaufman, Kevin Maroney, Ken Rolston"
+892,Adam West
+893,"Eddy Boxerman, Dave Burke"
+894,"Nikolas Sakaloglou, Sotirios Tsantilas"
+895,"Leo Colovini, Klaus-Jürgen Wrede"
+896,Volker Schächtele
+897,"Phil Hall, John Harshman"
+898,"Ted Alspach, Toryo Hojo, N2"
+899,Tristan Hall
+900,Stephen V. Cole
+901,Renaud Verlaque
+902,Lutz Stepponat
+903,Christwart Conrad
+904,"Shane Steely, Jared Tinney"
+905,Bruce Glassco
+906,"Christophe Leclercq, Alain Ollier"
+907,Mark Derrick
+908,"Dave Fulton, Jacob Tlapek"
+909,Saashi
+910,Ralf Lehmkuhl
+911,Dirk Knemeyer
+912,"Reiner Knizia, Andy Lewis"
+913,"Jonathan Gilmour, Ben Harkins"
+914,René Wiersma
+915,Fabrice Mazza
+916,Friedemann de Pedro
+917,Andrew McNeil
+918,"Travis R. Chance, Jonathan Gilmour, Nick Little (I)"
+919,Mark H. Walker
+920,Andrew Looney
+921,Richard H. Berg
+922,"Ryan Spangler, Sean Spangler"
+923,"Stephen Baker, Barry Yearsley"
+924,Alessandro Zucchini
+925,"Dirk Baumann, Thomas Odenhoven, Matthias Schmitt"
+926,Dave Williams (II)
+927,Tomas Flodén
+928,"Jordi Gené, Gregorio Morales"
+929,Thomas Odenhoven
+930,Nick Kellet
+931,Doug Bass
+932,"Curt Crane, Mike Elliott, Jeff Quick"
+933,Antonio Catalán
+934,Joseph McCullough
+935,"Bill Podurgiel, Ted Terranova"
+936,Geoff Engelstein
+937,"Lin Lutke-Glanemann, Thomas Spitzer"
+938,Phil Kendall
+939,"Matt Anderson, Nathan Caroland, Redd Cohen, Aaron Darland, Justin Gibbs, David Hanold, Eric Johns, Mack Martin, Dan Weber"
+940,Daniel Hodges (I)
+941,Ian D. Wilson
+942,Alex Churchill
+943,Hassan Lopez
+944,Chris Leder
+945,Martyn F
+946,Phil Yates
+947,"Andy Jones, Bill King, Nigel Stillman"
+948,Austin Rucker
+949,"Tom Dalgliesh, Grant Dalgliesh"
+950,"Robert Dougherty, Chad Ellis, Darwin Kastle"
+951,James J. St. Laurent
+952,"Monte Cook, Jeff Grubb, Seth Johnson, Jon Leitheusser, Jeff Quick, Jordan Weisman"
+953,Guillaume Blossier
+954,Andy Chambers
+955,Eddie Robbins
+956,Jim Dunnigan
+957,Darin A. Leviloff
+958,Robert Harris
+959,Nick Karp
+960,Simone Cerruti Sola
+961,"James D'Aloisio, Ethan Fleischer, Craig Van Ness"
+962,"Mark Simonitch, Jaro Andruszkiewicz"
+963,"Andrea Meyer, Erik Nielsen"
+964,"Doug Kaufman, Robert J. Kuntz, Tom Wham"
+965,Michael Rinella
+966,Kalle Krenzer
+967,"David McKenzie, Barry Nakazono"
+968,"Tom W. Green, III, Stephen C. Smith"
+969,"Enrico Pesce, Federica Rinaldi"
+970,Shaun Derrick
+971,"(Uncredited), Katharine Chapman"
+972,H. Jean Vanaise
+973,"Dean Bass, Andy Chambers, Chris Colston, Richard Halliwell, Jervis Johnson, Andy Jones, Paul Murphy"
+974,Brian Train
+975,John Coveyou
+976,Mark Gerrits
+977,Stéphane Vachon
+978,"Richard Launius, Jason Maxwell"
+979,"Christopher Kirkman, Richard Launius, Darrell Louder"
+980,Rudy Seuntjens
+981,"Robert G. Markham, Mark Seaman"
+982,Werner Ernst George Muller
+983,"Stefan Feld, Christoph Toussaint"
+984,"Paolo Parente, Olivier Zamfirescu"
+985,"Roberto Di Meglio, Marco Maggi, Francesco Nepitello, Salvatore Pierucci"
+986,Lipschitzz
+987,Thierry Denoual
+988,"Don Greenwood, Ben Knight, Mark McLaughlin"
+989,James Mathe
+990,Brad Brooks
+991,Adam E. Daulton
+992,P. D. Magnus
+993,Kris Gould
+994,Mikko Punakallio
+995,"Rob Daviau, Dan Sanfilippo"
+996,Phil Kelly
+997,Brien J. Miller
+998,Rory O'Connor
+999,"Rob Daviau, Robert Doyle, Justin D. Jacobson"
+1000,"Philip C. Barker, Sue Laflin Barker, Richard Bodley Scott"
+1001,"Thomas Cauët, Cyril Demaegd"
+1002,Lee Brimmicombe-Wood
+1003,"Matt Burchfield, Grant Wylie, Mike Wylie"
+1004,"Brian Shotton, Kenny Sims"
+1005,Spartaco Albertarelli
+1006,Łukasz Woźniak
+1007,"Acchittocca, Virginio Gigli"
+1008,"Dox Lucchin, Pedro Latro"
+1009,Patrick Lysaght
+1010,Laurent Pouchain
+1011,Daniel Berger (I)
+1012,"François Combe, Gilles Lehmann"
+1013,"Rebecca Bleau, Nicholas Cravotta"
+1014,Jürgen P. Grunau
+1015,"Colby Dauch, Dustin DePenning, Jerry Hawthorne, Craig Van Ness"
+1016,Alessio Cavatore
+1017,"Kirsten Becker, Jens-Peter Schliemann"
+1018,John Gibson
+1019,"Martino Chiacchiera, Silvano Sorrentino"
+1020,Loïc Lamy
+1021,Dave Chalker
+1022,Geoffrey Mott-Smith
+1023,Mark Latham
+1024,Roberto Pestrin
+1025,"Emely Brand, Lukas Brand"
+1026,Richard Denning
+1027,"Peter Eggert, Tobias Stapelfeldt"
+1028,Yohan Lemonnier
+1029,"Aamir Syed, Omar Syed"
+1030,"Andy Chambers, Jervis Johnson, Rick Priestley, Gavin Thorpe"
+1031,Prospero Hall
+1032,Bart Van Dijk
+1033,"Cliff Bohm, Jeff Morrow, Sam Waller"
+1034,"Dave Clark (I), Randall C. Reed, Nick Smith (I)"
+1035,Andrei Novac
+1036,Pierluca Zizzi
+1037,"Mike Fitzgerald, Nick Sauer"
+1038,jim pinto
+1039,Frank Chadwick
+1040,Stefano Luperto
+1041,Miranda Evarts
+1042,"R. S. Erickson, Thomas F. Erickson, Jr."
+1043,Bernhard Weber
+1044,Mike Richie
+1045,"George S. Parker, Grace Parker"
+1046,"James Eastham, Steve Ellis (II)"
+1047,Andrea Mainini
+1048,Robert Couch
+1049,Jesper Bülow
+1050,"Charles Chevallier, Catherine Dumas, Pascal Pelemans"
+1051,Luke Peterschmidt
+1052,Manuel Correia
+1053,Mike Gnade
+1054,"Alexandar Guerov, Ledha Guerova"
+1055,Eric Solomon
+1056,"Gaetano Evola, Rosanna Leocata"
+1057,Dean Essig
+1058,"Bill Cooke, Alan Turoff"
+1059,"Roman Pelek, Michael Schacht"
+1060,Asger Johansen
+1061,"Richard Baker, Mike Elliott"
+1062,"Michael Meier-Bachl, Francis Tresham"
+1063,"Matthew Grosso, Andy Patton"
+1064,Michael Eskue
+1065,Bruno Crépeault
+1066,John Harrington
+1067,Tylar Allinder
+1068,Chris Darden
+1069,Keith Meyers
+1070,Perepau Llistosella
+1071,Koichi Yamazaki
+1072,"Yu-Chen Tseng, Eros Lin"
+1073,"James Ernest, Heinrich Glumpler, Paul Peterson"
+1074,"Sébastien Pauchon, Billy Stevenson"
+1075,Joey Vigour
+1076,"Arnaud Urbon, Ludovic Vialla"
+1077,"Spartaco Albertarelli, Angelo Zucca"
+1078,Alan Paull
+1079,Carlo Bortolini
+1080,Alexandre Garcia
+1081,Kevin G. Nunn
+1082,Hannu Uusitalo
+1083,Douglas Seaton
+1084,Neil Zimmerer
+1085,Aaron Vanderbeek
+1086,"Eric M. Lang, Kevin Wilson"
+1087,"Mat Hart, Richard Loxam"
+1088,"Steve Brewster, Tom Dalgliesh, Lance Gutteridge"
+1089,"Tom Dalgliesh, Lance Gutteridge"
+1090,Rob Heinsoo
+1091,Richard Brady
+1092,Andrew Federspiel
+1093,Hans van Tol
+1094,"Chad Irby, Steve Jackson (I)"
+1095,Lucas Hedgren
+1096,"Karen Boginski, Jody Boginski-Barbessi, Kenneth C. Shannon, III"
+1097,"Craig Bartell, Tim Flowers"
+1098,Mark A. Campbell
+1099,Andrei Burago
+1100,Michael Feldkötter
+1101,James Ernest
+1102,"Domingo Cabrero, Carlos López, Santi Santisteban"
+1103,Sophia Wagner
+1104,"Dean Conrad, John Streets"
+1105,Rudi Hoffmann
+1106,James M. Day
+1107,"Fel Barros, Christophe Madura, Alexandru Olteanu, David Rakoto, Michael Shinall"
+1108,Travis Worthington
+1109,Benjamin Schwer
+1110,"J. H. G. Hendriks, Steve Jackson (I)"
+1111,"Andrew Parks, Manny O'Donnell"
+1112,"Erin McDonald, Christian Strain"
+1113,Gordon Calleja
+1114,Robert Bradley
+1115,Herschel Hoffmeyer
+1116,"Nathan Caroland, Eric Johns, Dan Weber"
+1117,"Marco Maggi, Francesco Nepitello"
+1118,ginkgo
+1119,"Matt Loomis, Isaac Shalev"
+1120,"Marco Ruskowski, Marcel Süßelbeck"
+1121,Kevin Bishop
+1122,Hayato Kisaragi
+1123,"Amanda Birkinshaw, Barry Yearsley"
+1124,Jean-François Lassonde
+1125,"Bruno Faidutti, Eric M. Lang"
+1126,Joseph M. Balkoski
+1127,"Marek Mydel, Piotr Stankiewicz"
+1128,"Tom Dalgliesh, Grant Dalgliesh, Mark Kwasny"
+1129,Robert Burke
+1130,"John Poniske, Rick Young"
+1131,"Mat Brinkman, Jochen Hartmann, Nate Hayden"
+1132,John Poniske
+1133,"Peter Steinke, Martin Wieland"
+1134,"Dean Essig, Dave Friedrichs"
+1135,"Roger Burten, Alan Coleman, Vincent A. A. J. Erato"
+1136,Walter Obert
+1137,Johannes Schmidauer-König
+1138,Henri Kermarrec
+1139,"Uwe Eickert, Gunter Eickert, Dean Halley"
+1140,"Christopher Badell, Luther Bell Hendricks V, Kevin G. Nunn"
+1141,"Bruno Cathala, Matthieu Lanvin"
+1142,Alexander Huemer
+1143,"Eros Lin, Zong-Hua Yang (Bob)"
+1144,Bertram Kaes
+1145,Brian Suhre
+1146,"Alessio Cavatore, Rick Priestley"
+1147,"Edward Fear, Mike Hummel, Matt Hyra, Daniel Mandel, Patrick Sullivan (II)"
+1148,K. C. Humphrey
+1149,"Jim Griffin, Elaine Henninger, Joe Roznai, Barb Roznai"
+1150,Andrea Sfiligoi
+1151,Andrew Fischer
+1152,Michelle Schanen
+1153,"Hubert Bartos, Łukasz S. Kowal"
+1154,Erik Burigo
+1155,Mike McManaway
+1156,"Chad Brown, Tanis O'Connor, Paul Peterson, Keith Richmond, Mike Selinker, Liz Spain, Gaby Weidling"
+1157,"Gene Billingsley, Rodger B. MacGowan, Dan Verssen"
+1158,Steven Aramini
+1159,Thomas Rauscher
+1160,Martin Schlegel
+1161,Martin Ebel
+1162,"Sébastien Gigaudaut, David Rakoto, Nikki Valens"
+1163,Jonathan Tweet
+1164,"Paolo Mori, Francesco Sirocchi"
+1165,Saar Shai
+1166,Dan Cunningham
+1167,"Rafał Cywicki, Krzysztof Cywicki, Krzysztof Hanusz"
+1168,"Douglas Malewicki, Michael Stackpole"
+1169,"Marco Maggi, Gabriele Mari, Francesco Nepitello"
+1170,Larry Roznai
+1171,Guan Chih Huang
+1172,"Reiner Knizia, Jeff Tidball"
+1173,"Gary Arant, Justin Gary"
+1174,"Brigitte Ditt, Wolfgang Ditt"
+1175,"Joseph Reiser, Eric Lee Smith"
+1176,"Ekaterina Gorn, Igor Sklyuev"
+1177,Iori Tsukinami (月並いおり)
+1178,Joe Van Wetering
+1179,Alfred Leonardi
+1180,"John Coussis, Ben Knight"
+1181,Michele Mura
+1182,"Dean Essig, Rod Miller"
+1183,"Fred Schachter, B. Sinigaglio, Steve Weiss"
+1184,"Michael Bennighof, Jim Dunnigan"
+1185,"Steffen Benndorf, Reinhard Staupe"
+1186,David Chott
+1187,Fabrice Vandenbogaerde
+1188,"Marc Gouyon-Rety, Volko Ruhnke"
+1189,David G. D. Hecht
+1190,"Christoph Reiser, Sebastian Resl"
+1191,Jacques Johan Mogendorff
+1192,"Josh Derksen, Thomas M. Gofton, Dan Hoang, Aron Murch, Cameron Parkinson"
+1193,"Bruno Faidutti, Paul Randles, Mike Selinker"
+1194,"Nick Blain, Will Donovan"
+1195,Jon M. Tuffley
+1196,"Bill Eberle, Justin Kemppainen, Peter Olotka, Greg Olotka"
+1197,"Anna-Marie Nelson, Scott Nelson"
+1198,Michael R. Keller
+1199,"Alan Emrich, Thomas Prowell, Salvatore Vasta"
+1200,David E. Whitcher
+1201,"Riccardo Guerra, Giulio Guerra, Marco Mutta"
+1202,"Leo Colovini, Michael Schacht"
+1203,Galen Ciscell
+1204,Thomas H. Jung
+1205,"Rafał Cywicki, Jacek ""Darken"" Gołębiewski"
+1206,"Tim Hutchings, Mathew Sisson"
+1207,"Hanno Kuhn, Wilfried Kuhn"
+1208,Alex Bykov
+1209,David Gómez Relloso
+1210,Ralph H. Anderson
+1211,"Spartaco Albertarelli, Marianna Fulvi, Elena Prette, Angelo Zucca"
+1212,"Günter Burkhardt, Wolfgang A. Lehmann"
+1213,"Steve Jackson (I), Andrew Wolf"
+1214,Jason Topolski
+1215,Samuel Strick
+1216,"Jeffrey Breslow, Howard J. Morrison, Rouben Terzian"
+1217,"Eric M. Lang, Christian T. Petersen"
+1218,Douglas Malewicki
+1219,Danny Holte
+1220,Legend Dan Hoffman
+1221,Christoph Toussaint
+1222,Michael Michaels
+1223,Randy Rathert
+1224,Guglielmo Duccoli
+1225,"Dmitry Knorre, Sergey Machin"
+1226,Randall C. Reed
+1227,Matthew Ma
+1228,"Steven Poelzing, Alf Seegert"
+1229,David Dockter
+1230,"Tim Armstrong (I), Dean Essig, Steve Newhouse"
+1231,John Zinser
+1232,"James Ernest, Tom Jolly"
+1233,Rob Daviau
+1234,Dan Baden
+1235,"Skaff Elias, Rob Heinsoo, Jonathan Tweet"
+1236,Mike Selinker
+1237,"Brian Engelstein, Geoff Engelstein"
+1238,Gilbert Obermair
+1239,"Vangelis Bagiartakis, Panagiotis Zinoviadis"
+1240,"Stefan Kloß, Anna Oppolzer"
+1241,"Howard Barasch, Richard H. Berg"
+1242,Ulrich Weyel
+1243,"Josep M. Allué, Víktor Bautista i Roca"
+1244,Bruce Harper
+1245,"Pascal Bernard, Laurent Pouchain"
+1246,Alexandre Buchel
+1247,"Alex Crispin, Thomas Pike, James Shelton"
+1248,"John W. Mollett, Lewis Waterman"
+1249,Anthony Burch
+1250,Mark Rivera
+1251,Charlie Krank
+1252,"ANJAR, Chuck Kennedy, Bruce Lund"
+1253,"Ed Beach, Mike Belles"
+1254,Mattox Shuler
+1255,"Wolfgang Kramer, Ursula Kramer"
+1256,Takashi Ishida
+1257,Oliver Kiley
+1258,"Dan Glimne, Grzegorz Rejchtman"
+1259,"Josh Cappel, Jay Cormier, Sen-Foong Lim"
+1260,"David Heath, Jeff Lewis, Mark H. Walker"
+1261,Mark Corsey
+1262,"Josh Dillon, Daniel Dranove, Eli Halpern, Ben Hantoot, David Munk, David Pinsof, Max Temkin, Eliot Weinstein"
+1263,"Robert Dijkman Dulkes, Matt Golec"
+1264,"Seiji Kanai, Hayato Kisaragi, Masato Uesugi"
+1265,"David Chircop, Yannick Massa"
+1266,"Dan Keltner, David Short"
+1267,Kenichi Tanabe
+1268,David B. Bromley
+1269,"Joe Roznai, Larry Roznai"
+1270,"Richard H. Berg, Mark Simonitch"
+1271,Firmino Martínez
+1272,"Jean Bey, Nicolas Fructus, Florent Maudoux, Adrian Smith, Kevin Walker, Richard Wright, Alessia Zambonin"
+1273,"David A. Fox, Michael Welker"
+1274,"Richard Baker, Paul Barclay, Aaron Forsythe, Devin Low, Jonathan Tweet"
+1275,"Alexey Konnov, Alexey Paltsev, Anatoliy Shklyarov, Trehgrannik"
+1276,Andrew Wolf
+1277,Jeremiah Lee
+1278,Jim Keifer
+1279,"Tobias Goslar, Roland Goslar, Johannes Goslar"
+1280,Holger Bösch
+1281,"Wojtek Krupnik, Wojtek Wojcik"
+1282,Kirsten Hiese
+1283,Craig Browne (I)
+1284,Wolfgang Panning
+1285,Stéphane Boudin
+1286,"Monty Stambler, Ann Stambler"
+1287,"Gary Chalk, Tony Webster"
+1288,"Thomas Klausner, Timo Multamäki, Kevin Wilson"
+1289,Brent Keith
+1290,"Alan Emrich, Steve Kosakowski"
+1291,"Mick Ado, Alan R. Moon"
+1292,"Bruno Faidutti, Michael Schacht"
+1293,"Angelika Fassauer, Peter Haluszka"
+1294,"Andy Chambers, Pete Haines, Jervis Johnson, Rick Priestley"
+1295,Nathanael Mortensen
+1296,Yoshiteru Shinohara
+1297,Ed Wimble
+1298,"Takumi Akabane, Tsunekaz Ishihara"
+1299,"Ben Cichoski, Mike Donais, Paul Sottosanti"
+1300,"Alessio Cavatore, Stephan Hess, Rick Priestley"
+1301,Paul Murphy
+1302,James Wallis
+1303,Gabriel Ecoutin
+1304,Greg Costikyan
+1305,Fabian Zimmermann
+1306,"Matthew Inman, Elan Lee, Shane Small"
+1307,"Julian Courtland-Smith, Brian Engelstein, Geoff Engelstein, Sydney Engelstein"
+1308,"Glenn Rahman, Kenneth Rahman"
+1309,Matthew Moore
+1310,"Joseph M. Balkoski, Ed Beach"
+1311,Lance Hill
+1312,Mr. Bistro
+1313,Randy Heller
+1314,Matthew Parkes
+1315,Daniel A. George (I)
+1316,Peter-Paul Joopen
+1317,M. Robert Stribula
+1318,紅陽 (Kouyou)
+1319,"Dean Essig, John Kisner, Hans Mielants"
+1320,"Larry Roznai, Loren Roznai"
+1321,"Pitt Crandlemire, Aaron Weissblum"
+1322,Klaus Westerhoff
+1323,"Steve Finn, Seamus Finn"
+1324,Hermann Huber
+1325,François Haffner
+1326,"Andrew Doull, Phil Eklund, Jon Manker"
+1327,Benoit Turpin
+1328,Charlie Bink
+1329,David G. Royffe
+1330,Christopher Hamm
+1331,Alex Davy
+1332,"Anthony F. Buccini, Jim Dunnigan, Redmond A. Simonsen"
+1333,"Dominique Ehrhard, Michel Lalet"
+1334,Charles Chevallier
+1335,Scott de Brestian
+1336,Jon Southard
+1337,"Valentijn Eekels, Sebastiaan van den Roovaart"
+1338,Didier Dhorbait
+1339,Jeff Beck (II)
+1340,Horst-Rainer Rösner
+1341,"Gaëtan Beaujannot, Jonathan Gilmour, Jean Yves Monpertuis, Isaac Vega"
+1342,John Werner
+1343,Claude Soucie
+1344,Danny Devine
+1345,Zachary Eagle
+1346,Benoit Bannier
+1347,Dirk Liekens
+1348,"Michail Antonow, Jens-Peter Schliemann"
+1349,Nick Hayes
+1350,"Piet Hein, John Nash"
+1351,Thomas Denmark
+1352,Marco Valtriani
+1353,"Víctor Fernández, Gorka Mata, Sergi Solé Pascual"
+1354,"Gary Kim, Evan Song"
+1355,Jim Bailey
+1356,"Heinz Meister, Klaus Zoch"
+1357,Przemysław Świerczyński
+1358,"Jose Garcia, Robin D. Laws"
+1359,Edward Sindelar
+1360,Jordan Draper
+1361,Olivier Warnier
+1362,"Frank Chadwick, John Harshman, Marc W. Miller"
+1363,Czarnè
+1364,Robert Sun
+1365,Kurt Keckley
+1366,Arturo Garcia
+1367,Michał Jagodziński
+1368,"Leonhard ""Lonny"" Orgler"
+1369,Philippe des Pallières
+1370,Anneliese Farkaschovsky
+1371,Teale Fristoe
+1372,"Chris Lawson, Federico Vellani"
+1373,Max Valembois
+1374,Pierre-Yves Lebeau
+1375,Jon Sudbury
+1376,"Morten Andersen, Tina Christensen, Robert Bonde Jensen, Lone Gram Larsen, Troels Vastrup"
+1377,"Ronald Hoekstra, Thomas Jansen, Patrick Zuidhof"
+1378,"Tom Herrschaft, Jeff Lewis, Mark H. Walker"
+1379,"Kevin Barrett, Michael Mulvihill, Jordan Weisman"
+1380,Paul MacKinnon
+1381,"David Chircop, Dávid Turczi"
+1382,"Larry Pinsky, Lindsley Schutz"
+1383,Mark Miklos
+1384,"James Hlavaty, Thomas Lehmann"
+1385,"Howard Barasch, John H. Butterfield"
+1386,Guido Hoffmann
+1387,Yehuda Berlinger
+1388,"Bryan Fischer, John Sizemore"
+1389,Brent Spivey
+1390,"Ted Alspach, Friedemann Friese"
+1391,Jan Zalewski
+1392,Simon Cogan
+1393,"Peter Minder, Helmut Ohley"
+1394,Damien Desnous
+1395,"John Cooper, Andrew Looney"
+1396,Alfred Viktor Schulz
+1397,Joshua J Mills
+1398,Jordan Sorenson
+1399,"Edward Fear, John Fiorillo, Justin Gary, Matt Hyra, Anthony Shaheen, Patrick Sullivan (II)"
+1400,"Karl-Heinz Schmiel, Klaus-Jürgen Wrede"
+1401,"Kat Kimoundri, Nathan Loos, Jonathan Mariucci"
+1402,Jeff Smets
+1403,"Christian Fiore, Knut Happel"
+1404,Simon Hunt
+1405,J. Arthur Ellis
+1406,Alfredo Genovese
+1407,Atsuo Yoshizawa
+1408,Olivier Rolko
+1409,"Mandy Henning, Melissa Limes"
+1410,Andrew Bryceson
+1411,Scott Nicholson
+1412,"David Ekberg, Brian Berg Asklev Hansen"
+1413,"Peter Corless, Doug Kaufman"
+1414,Frank DiLorenzo
+1415,"Sebastian Kozak, Michal Kozak, Michal Marciniak, Maciej Owsianny"
+1416,Andreas Kuhnekath
+1417,Dieter Danziger
+1418,Peter Morrison
+1419,"Antoine Bauza, Bruno Faidutti"
+1420,Jesse Catron
+1421,Sam Coates
+1422,"Marek Loskot, Jan Soukal"
+1423,Jodi Soares
+1424,"Seth Johnson, Michael Mulvihill, Brian Poel, Jordan Weisman"
+1425,Gavan Brown
+1426,David J. Mortimer
+1427,"G. W. ""Jerry"" D'Arcey, Rob Daviau, Justin D. Jacobson"
+1428,Andy Hopwood
+1429,"Jason Hawkins, Andrew Parks"
+1430,"Erik Smith, Scott Smith (I)"
+1431,"Gaëtan Beaujannot, Charles Chevallier"
+1432,David Ausloos
+1433,"Daniel Clark (I), Michael Hurley, Corey Konieczka, Jeff Tidball"
+1434,"Tetsuya Nakamura, Adam Starkweather"
+1435,Matt Tolman
+1436,"Curtis Baer, Dean Essig"
+1437,Proyecto Enigma
+1438,Segundo Santos
+1439,Christof Tisch
+1440,"Göran Björkman, Stefan Ekström"
+1441,Dennis Hoyle
+1442,Bruce Shelley
+1443,Kyle Daniel
+1444,"Grzegorz Okliński, Krzysztof Wolicki"
+1445,"Tom Oleson, David Williams (I)"
+1446,"Guillaume Blossier, Charly Cazals, Frédéric Henry"
+1447,Ben Knight
+1448,"Tom Dalgliesh, Ron Gibson, John Gordon, Lance Gutteridge"
+1449,Denis Blanchot
+1450,Phil Fry
+1451,"Leigh Caple, Mark Chaplin"
+1452,Jim Felli
+1453,Jean-Marie Albert
+1454,Scott Slomiany
+1455,Łukasz M. Pogoda
+1456,Joshua Gerald Balvin
+1457,Tonton Z
+1458,Travis R. Chance
+1459,"Naotaka Shimamoto, Yoshiaki Tomioka"
+1460,"Andrew Hackard, Steve Jackson (I)"
+1461,Rick Priestley
+1462,"Joseph M. Balkoski, Ed Beach, Mike Belles, Chris Withers"
+1463,Kevin Barrett
+1464,Krzysztof Zięba
+1465,Jim Barnes
+1466,"Manlio Manzini, Federico Vellani"
+1467,Norbert Proena
+1468,Cliff Kamarga
+1469,Jane Ruemmele
+1470,"Anselm Ostertag, Helge Ostertag"
+1471,Joli Quentin Kansil
+1472,"Ray Frigard, Henri Sala"
+1473,"Antonio Ferrara, Sebastiano Fiorillo"
+1474,David Harding (II)
+1475,"G. W. ""Jerry"" D'Arcey"
+1476,Cyrille Leroy
+1477,Jeep Barnett
+1478,Domenico Di Giorgio
+1479,Bill Crenshaw
+1480,Tom Dalgliesh
+1481,"Guy Haley, Jake Thornton"
+1482,"William Grosselin, Pascal Petit, Nicolas Raoult"
+1483,"Daryl Andrews, Stephen Sauer"
+1484,Nick Little (I)
+1485,"Marc Klerner, Florian Racky"
+1486,"Graeme Davis, Jervis Johnson"
+1487,Pascal Bernard
+1488,team SAIEN
+1489,Vance von Borries
+1490,Kristin Looney
+1491,"Steven Aramini, Danny Devine, Paul Kluka"
+1492,"Andy Chambers, Jervis Johnson, Gavin Thorpe"
+1493,"Riff Conner, Nathan Phoenix"
+1494,Derek Carver
+1495,"Knut Grünitz, Brian Berg Asklev Hansen"
+1496,Don Munro
+1497,"Matt Hyra, Adam Sblendorio, Mataio Wilson"
+1498,Erika Svanoe
+1499,"James D'Aloisio, Ethan Fleischer, Austin Rucker, Craig Van Ness"
+1500,"Dan Verssen, Dave Williams (II), Erik Yaple"
+1501,"Michael Stackpole, Jordan Weisman"
+1502,"Joe Huber (I), Thomas Lehmann"
+1503,Evan Jones
+1504,Milan Tasevski
+1505,"Ugo Di Meglio, Sergio Guerri"
+1506,"Derek Carver, Paul Cockburn"
+1507,Jeremy White
+1508,J. D. Webster
+1509,Josh Lamont
+1510,"Jean Bey, Jérôme Rigal"
+1511,"Alessio Cavatore, Matthew Ward"
+1512,"Sean Äaberg, Eric Radey"
+1513,Marcin Tomczyk
+1514,Gene Mackles
+1515,Aron West
+1516,"Hiroaki Suzuki, Eiji Wakasugi"
+1517,Wolfgang Werner
+1518,Michael McGinnis
+1519,Yuichi Sakashita
+1520,"Wolfgang Kramer, Reinhard Staupe"
+1521,"Josh Lytle, Dylan Mayo, Christopher Medina, Ken Pilcher"
+1522,"Alan Emrich, Gary Graber, Carl Paradis"
+1523,Madoka Kitao
+1524,"Rhuadrhi Oliver, Mauro Pane"
+1525,"Vince D'Amelio, Joe Morrissey, Doug Woolsey"
+1526,John Cooper
+1527,"Edward Curran, Frank Davis"
+1528,"Christian T. Petersen, Anders M. Petersen"
+1529,Ian Richard
+1530,"Robert Burke, Richard Launius"
+1531,Evan Davis (I)
+1532,"Zach Greenvoss, Amanda Greenvoss"
+1533,"Francesco Giovo, Marco Valtriani"
+1534,"Grant Wylie, Mike Wylie"
+1535,Andrew Haught
+1536,"Joshua Buergel, Grant Rodiek"
+1537,Beau Beckett
+1538,"John Astell, Rich Banner, Frank Chadwick"
+1539,Steve Carey
+1540,"Christopher Batarlis, Jim Samartino"
+1541,"Nate Heiss, Jeff Morrow, Sam Waller"
+1542,"Willis P. Carpenter, Garrett J. Donner, Michael S. Steer, Mick (Mike) Uhl"
+1543,Bob Kalinowski
+1544,Mike Wokasch
+1545,"Ryan Miller, Luke Peterschmidt"
+1546,"Mauricio Vismona, Mauricio Miyaji, Fabiano Onça"
+1547,"Jeff Billings, Mike Billings"
+1548,"David S. Neft, Dr. Thomas Nicely"
+1549,"Bruno Cathala, Christian Martinez"
+1550,"Jake Given, Zach Given, Jonathan Ritter-Roderick"
+1551,"Alexander Pfister, Dennis Rappel"
+1552,"Tom Quinn, Ted Quinn, Mark Sherry"
+1553,Stuart Sisk
+1554,Dan Manfredini
+1555,Cielo d'Oro
+1556,"Virginia Charves, Bertram Kaes"
+1557,"Diego M. Lobariñas Criserá, Adrián Ferreiro"
+1558,"Asger Harding Granerud, Daniel Skjold Pedersen, Daniele Tascini"
+1559,"Fabrice Beghin, Frédéric Delporte, Etienne Espreman"
+1560,Jeff Grubb
+1561,Jake Staines
+1562,"Stephen C. Jackson, Brien J. Miller"
+1563,Wade Broadhead
+1564,Heinz Wüppen
+1565,Tom Decker
+1566,"András Drozdy, Gombos Gergely, Gergely Kruppa"
+1567,"Matthew Dunstan, Chris Marling"
+1568,"Matt Hyra, Erik V Larsen"
+1569,"Scott Porter, Bryce Porter"
+1570,Cédric Lefebvre
+1571,Albert A. Nofi
+1572,"Tony Curtis, Vance von Borries"
+1573,"Alberto Abal, Jesús Fuster, David Rosillo"
+1574,Chris James (I)
+1575,"Mike Fitzgerald, Andrew Korson"
+1576,"John Howarth, Trevor Jones"
+1577,Richard Wilkins
+1578,"Ross Maker, Dave Wesely"
+1579,"Gilbert Collins, Dave Stiffler"
+1580,"Gene Billingsley, Mitchell Land"
+1581,Doug Reuter
+1582,David Wilkinson
+1583,"Bruce S. Maxwell, Richard J. Trup"
+1584,Bruce Sterten
+1585,"Eric Hanuise, Fréderic Moyersoen"
+1586,Peter Struijf
+1587,Stephen Gibson
+1588,Sean Scott Garrity
+1589,Tyler Sigman
+1590,Steven Cunliffe
+1591,"Bruno Cathala, Florian Sirieix"
+1592,"Richard Launius, Pete Shirey"
+1593,"Dean Essig, Hans Kishel, John Kisner"
+1594,Henri Sala
+1595,Sean Druelinger
+1596,"James Ernest, Paul Peterson"
+1597,Ivan Prat
+1598,"Don Greenwood, Ben Knight"
+1599,Per Gauding
+1600,"Mary Flanagan, Zara Downs, Max Seidman"
+1601,"Glenn Ford, Mike Hutchinson"
+1602,Jens-Peter Schliemann
+1603,Danny S. Parker
+1604,Simon Cutforth
+1605,Marco Pozzi
+1606,"Martino Chiacchiera, Marta Ciaccasassi, Pierluca Zizzi"
+1607,Jay Meyer
+1608,Olivier Revenu
+1609,"Jarek Ewertowski, Grzegorz Oleksy"
+1610,Conor McGoey
+1611,"Randall N. Bills, Loren Coleman"
+1612,Philip Sabin
+1613,"Ran Ackels, Edi Birsan, Paul Brown, John Hart, David Hewitt, John Myler, Kevin Tewart"
+1614,"Chris Childs, Tony Richardson"
+1615,Robert Doyle
+1616,"Patrick Stevens, Alex Stevens"
+1617,Barry W. Doyle
+1618,"Michael Bennighof, Brian L. Knipple"
+1619,David G. Watts
+1620,Phil Orbanes Sr.
+1621,"John Edwards, Richard Hamblen, Alan R. Moon"
+1622,"Robert Corbett, Greg Stafford"
+1623,Friedhelm Krahwinkel
+1624,Kevin Zucker
+1625,David L. Smith
+1626,"Takashi Hamada, Kenji Shimojima"
+1627,"Michael Donais, Paul Sottosanti"
+1628,"Wil Dijkstra, Ben van Dijk"
+1629,"Adam Starkweather, Masahiro Yamazaki"
+1630,Robert Auerochs
+1631,Frederick A. Herschler
+1632,"George Buckenham, Alex Fleetwood"
+1633,"Elwood Thomas Baker, Charles Graham Baker"
+1634,François-Stanislas Thomas
+1635,"Sergio Aragonés, Ken Whitman"
+1636,"Don Herndon, Neil Randall"
+1637,Nikolay Pegasov
+1638,"Frank Branham, Sandi West"
+1639,Gottardo Zancani
+1640,Michael Dreiling
+1641,Marcos Macri
+1642,"Adam Troke, Jeremy Vetock, Matthew Ward"
+1643,Krzysztof Matusik
+1644,"Nadezhda Penkrat, Yury Yamshchikov"
+1645,Vladimír Brummer
+1646,"Matthew Kirby, Mark Alan Osterhaus"
+1647,"Dean Essig, Al Sandrick"
+1648,"John Astell, Frank Chadwick"
+1649,Jesse Labbe
+1650,Jim Doherty
+1651,Peter C. Hayward
+1652,Luís Brüeh
+1653,"J. C. Connors (I), Ben Knight"
+1654,Stefano Cavanè
+1655,Petre Tutunea
+1656,Haim Shafir
+1657,Ken Rush
+1658,Artyom Nichipurov
+1659,John W. Fuseler
+1660,Frank Davis
+1661,"Giuseppe Baù, Leo Colovini"
+1662,"Klaus Palesch, Horst-Rainer Rösner"
+1663,"Yves Hirschfeld, Gilles Monnet"
+1664,"Chris Marling, David Thompson (I)"
+1665,"Skott Kilander, Brian S. Roe"
+1666,Dean Brown
+1667,Terry Doherty
+1668,Mark Klassen
+1669,"Seth Carus, Richard Hamblen, Randall C. Reed, Russell Vane"
+1670,"Charlie Krank, Richard Launius, Sandy Petersen, Lynn Willis"
+1671,"Kevin McPartland, Jerry Shiles"
+1672,Walter Zamkauskas
+1673,Björn Rabenstein
+1674,"Johann Rüttinger, Jacques Zeimet"
+1675,Frank Thyben
+1676,Michele Quondam
+1677,Alex Berry
+1678,David Illescas
+1679,Ludovic Gaillard
+1680,"Aaron Weissblum, Norman Woods"
+1681,"Daniel Callister, James Mathe"
+1682,Pawn
+1683,Gabriele Mari
+1684,"Tanja Engel, Sara Engel"
+1685,"Dean Essig, Alan Wambold"
+1686,Luca Bellini
+1687,"Luis Álvaro Hernández, Alvar Sanz"
+1688,Aaron Lauster
+1689,"Klaus Teuber, Benjamin Teuber"
+1690,Projekt Team III
+1691,Javier Velásquez
+1692,"Randall N. Bills, John Haward"
+1693,Hartmut Kommerell
+1694,"Richard Borg, Konstantin Krivenko"
+1695,"James Ernest, Michael Mulvihill, Mike Selinker"
+1696,Michael Resch
+1697,Neal Schlaffer
+1698,"Sean Brown, Ole Steiness"
+1699,"Neil Fawcett, James Flack, Julian Glover, Alain Padfield, Franco Sammarco, Derek Sinclair"
+1700,"Nobutake Dogen, Nao Shimamura"
+1701,Heikki Harju
+1702,Javier Romero
+1703,Daniel Quodbach
+1704,"Phil Hall, John Harshman, Eric Hotz"
+1705,"Jack Lawson, Andrew Lawson"
+1706,Christoph Behre
+1707,"Justin Brunetto, Curt Covert"
+1708,Alain Orban
+1709,"Seiji Kanai, Kuro"
+1710,"C. Calhoun, William Fortin, Dennis Greci, Alfred Leonardi, Mary Leonardi, Nancy Loomis, Hal McKinney, Paul S. Weintraub, Michael Stackpole"
+1711,"Inka Brand, Markus Brand, Michael Rieneck"
+1712,Sławomir Stępień
+1713,Sérgio Halaban
+1714,József Dorsonczky
+1715,C. Simon Reid
+1716,Gavin Birnbaum
+1717,"Forest Brown, David F. Tepool, Wm. John Wheeler"
+1718,Walter Vejdovsky
+1719,Fernando Abad
+1720,Cristyn Magnus
+1721,Reinhold Wittig
+1722,"David Carl, Will Schoonover"
+1723,"Dean Essig, David A. Powell"
+1724,Leeson George
+1725,Shane Lacy Hensley
+1726,Kirk Uhlmann
+1727,"Andrew Haught, Chris Townley, Phil Yates"
+1728,"Oliver Schaaf, Dave Williams (II)"
+1729,"L. Ross Babcock, III, Forest Brown, Tara Gallagher, Sam Lewis, Mike Nystul, Bryan Nystul, Jordan Weisman, Wm. John Wheeler"
+1730,"Philip duBarry, Jason Kotarski"
+1731,"Greg Costikyan, Doug Kaufman"
+1732,Howard Thompson
+1733,Rich Hasenauer
+1734,Simon Knock
+1735,Robert Yates
+1736,"Jim Dunnigan, Joseph Miranda"
+1737,Eduardo Baraf
+1738,"Skaff Elias, Mike Elliott, Paul Peterson"
+1739,Juraj Bilich
+1740,"Giorgio De Michele, Pierluca Zizzi"
+1741,Marco Bing
+1742,Terence Peter Donnelly
+1743,"Andrew Sheerin, Andrew Tompkins"
+1744,Ray Tapio
+1745,Michail Antonow
+1746,Scott W. Leibbrandt
+1747,Christoph Bauer
+1748,Simone Luciani
+1749,"Colby Dauch, J. Arthur Ellis, Andrea Mezzotero"
+1750,"Steve Bennett, Judy Martin"
+1751,Dirk Blennemann
+1752,Tim Taylor
+1753,Arron Watts
+1754,"Juliana Patel, Ariel Rubin"
+1755,"Brian Leet, Kevin Worden"
+1756,"Christoph Bauer, Max Kleinschroth, Philipp Rösch, Tilman Schneider"
+1757,Michael Cieslinski
+1758,Roger Miller
+1759,"Tetsuya Nakamura, Jun Tajima"
+1760,Terry Simo
+1761,Matt Wolfe
+1762,Matt Mette
+1763,ゆお (Yuo)
+1764,William Julius Champion Jr.
+1765,"Mark Goadrich, Brett Myers"
+1766,"Tobias Gohrbandt, Heiko Günther"
+1767,"Fred Binkitani, Emanuele Ornella"
+1768,"Chris Dupuis, Michael Gray, Gary Gygax, Larry Kessling, David R. Megarry, S. Schwab, Steve Winter"
+1769,"Alberto Abudinen, Diego Benavente, Ketty Galleguillos"
+1770,Jacobo Cagigal
+1771,Don Bone
+1772,Calie Esterhuyse
+1773,Alex Putfin
+1774,Murat Célébi
+1775,"Jan Daněk, Jiří Daněk, Jan Dřevíkovský, Filip Kozák, Kryštof Kozák, Jan Kozák"
+1776,"Steve Dixon, Shawn Rife"
+1777,"Whit Alexander, Richard Tait"
+1778,"Vincent Jouanneau, Jean-Pierre Nicolas"
+1779,Simon Havard
+1780,Sheamus Parkes
+1781,"Don Greenwood, Reiner Knizia"
+1782,J. A. Nelson
+1783,André Perriolat
+1784,"Theo Coster, Ora Coster, Theora Design"
+1785,Mick (Mike) Uhl
+1786,Jonathan Franklin
+1787,J. Stephen Peek
+1788,Jason Miceli
+1789,Don Green
+1790,Tom Schoeps
+1791,Forrest-Pruzan Creative
+1792,Michael D. Kelley
+1793,"Anton Dresden, Buzz Siler"
+1794,"Richard Hamblen, Tom Wham"
+1795,"S. Craig Taylor, Neil Zimmerer"
+1796,Dan Shapiro
+1797,Michael S. Matheny
+1798,John Bohrer
+1799,Momo Besedic
+1800,"Albert Lamorisse, Michael I. Levin"
+1801,Jeff Tidball
+1802,Grant Rodiek
+1803,"Dean Essig, David A. Powell, Thomas Prowell"
+1804,Zhu Rong
+1805,"Jim Dunnigan, Mark Herman"
+1806,Larry Levy
+1807,"Yukihiro Kuroda, Adam Starkweather"
+1808,Hans-Peter Stoll
+1809,Harold E. Hock
+1810,"Stephen Baker, Jean-René Vernes, Barry Yearsley"
+1811,Andrés J. Voicu
+1812,Meelis Looveer
+1813,Stefan Alexander
+1814,Drew Chamberlain
+1815,Heiko Günther
+1816,"Christos Giannakoulas, Manolis Zachariadis"
+1817,Marcel Lupin
+1818,Jeff Lai
+1819,"Cynthia Bodin, Bastiaan Brederode, Cephas Howard"
+1820,Piero Cioni
+1821,"Dan Glimne, Henrik Strandberg"
+1822,Pieter Boots
+1823,Jack Darwid
+1824,Tom Kruszewski
+1825,Wei-Min Ling
+1826,Christian Lemay
+1827,Darwin Bromley
+1828,"Patrick Gere, Nico Pirard"
+1829,Claude Leroy
+1830,"Elwin Charpentier, Didier Dincher"
+1831,"Antler Productions, Jay Moriarty"
+1832,Jürgen Kohl
+1833,Tim Page
+1834,Julien Prothière
+1835,"Gerd Deininger, Andreas Michaelis"
+1836,"Nina Paley, Donald X. Vaccarino"
+1837,Pierre Jacquot
+1838,Christian Beierer
+1839,Arnold Hendrick
+1840,"Josh Lytle, Stephen McLaughlin, Philip Tavel, Dan Tibbles"
+1841,"Chris Gosselin, Chris Kreuter"
+1842,"David D'Arcey, G. W. ""Jerry"" D'Arcey, Frank Thibault"
+1843,"Rustan Håkansson, Eli Håkansson"
+1844,Peter Bogdasarian
+1845,"Jason Medina, Bryan Pope"
+1846,"Allen Chang, Alistair Kearney"
+1847,Charles S. Roberts
+1848,"Joli Quentin Kansil, Rick Soued"
+1849,Jim Deacove
+1850,Matthew Campbell
+1851,Steffen Mühlhäuser
+1852,Don Lloyd
+1853,Murray Eskenazi
+1854,Gerard Mulder
+1855,"Fabrizio Bonifacio, Riccardo Crosa, Massimiliano Enrico, Chiara Ferlito, Tim Uren"
+1856,Nate Hayden
+1857,Dave Townsend
+1858,"B. Sinigaglio, Mick (Mike) Uhl"
+1859,Robert Leonhard
+1860,Tushar Gheewala
+1861,Keith Avallone
+1862,"Josh Cappel, Daniel Rocchi"
+1863,Klaus Geis
+1864,"Nick Richardson, Brian Youse"
+1865,"Alan Emrich, Beth Queman, Dan Verssen"
+1866,John Wrot!
+1867,Kim Kanger
+1868,"Kevin Barrett, Jordan Weisman"
+1869,Daniel Windfeld Schmidt
+1870,Douglas Niles
+1871,"François Bruel, Philippe des Pallières"
+1872,"Kevin Barrett, Paul Nobles, Matt Robinson"
+1873,Keith Rentz
+1874,Pau Carles
+1875,Walter Toncar
+1876,Igor Polouchine
+1877,"Alan Emrich, Rodger B. MacGowan, Joseph Miranda"
+1878,Florian Fay
+1879,"Adam Kwapiński, Michał Sieńko"
+1880,Taran Lewis Kratz
+1881,"Nick Street, Martin Vaux"
+1882,Filippo Chirico
+1883,Fred Buestchler
+1884,Pesu Nabeno
+1885,"Paolo Di Stefano, Gabriel Gendron"
+1886,"Jason D. Kingsley, Charles C. Wright"
+1887,Julian Allain
+1888,"Jean-Baptiste Fremaux, Thomas Luzurier, Paul-Adrien Tournier"
+1889,Sergey Machin
+1890,"Aleksander Biela, Krzysztof Matusik"
+1891,"Kyle Battle, Ken Griffin, Russ Rupe"
+1892,Scott Fisher
+1893,Dave Schueler
+1894,Katsumasa Tomioka
+1895,"T. O'Neill, S. Craig Taylor"
+1896,"Brad Hessel, David James Ritchie"
+1897,Stephan Riedel
+1898,"Jun Sasaki, Taiki Shinzawa (新澤 大樹)"
+1899,Marco Fuini
+1900,Keith Gross
+1901,"Adam Mnich, Ignacy Trzewiczek"
+1902,Tim Roediger
+1903,"Charles Chevallier, Arnaud Urbon"
+1904,David Luis Sanhueza
+1905,"Leonard Boyd, David Brashaw"
+1906,Brandon Beran
+1907,"Alberto Menoncin, Silvio Negri-Clementi"
+1908,Carl Mayer
+1909,Rick Heli
+1910,Shayne Logan
+1911,Jens Kappe
+1912,Matthieu Berthier
+1913,Peter Neugebauer
+1914,Ramy Badie
+1915,Bevan Clatworthy
+1916,Timofey Shargorodskiy
+1917,"Sean Brown, Clint Herron"
+1918,"Bruno Faidutti, Sérgio Halaban, André Zatz"
+1919,"Andy Chambers, Rick Priestley"
+1920,"Ed Teixeira, Mark H. Walker"
+1921,"Monte Mattson, Dennis A. Spors, Ed Wimble"
+1922,Michael Lipton
+1923,Harry Obst
+1924,Nigel Buckle
+1925,"Randall C. Reed, Vance von Borries"
+1926,"Darrell Hardy, Tom Jolly, Christian T. Petersen"
+1927,Richard Onanian
+1928,Daniel Fremgen
+1929,Heinz Meister
+1930,Roger Heyworth
+1931,Rob Angel
+1932,Markus Kropf
+1933,Chris Bayliss
+1934,Jack Dire
+1935,Hal Eccles
+1936,Kimmo Sorsamo
+1937,Byron Collins
+1938,Dave LeLacheur
+1939,Michael Seal
+1940,"Roland Goslar, Johannes Goslar, Søren Schaffstein"
+1941,"Fel Barros, Marco Portugal"
+1942,"Anders Fager, Lars Johansson"
+1943,Julian Anstey
+1944,"Richard Kane, Mike Ruttler"
+1945,"Thomas Pouchin, Nicolas Rident"
+1946,"Roberto Fraga, Odet L'Homer"
+1947,"Konstantinos Iovis, Lefteris Iroglidis, Ioannis Stamatis"
+1948,"Karl Lepp, Julianne Lepp"
+1949,"Chris Zinsli, Suzanne Zinsli"
+1950,Chris Janiec
+1951,"Andy Chambers, Mack Martin"
+1952,Piotr Siłka
+1953,Shun
+1954,Randy Nash
+1955,David J. Lewis
+1956,"Michael Garton, John McLaughlin"
+1957,"Richard Borg, Alan R. Moon"
+1958,"Martin Arnold, Armin Müller"
+1959,Dan Campagna
+1960,Marc Ripoll
+1961,Rocco Privetera
+1962,Michael Bennighof
+1963,Vera Baumeister
+1964,Maxime Tardif
+1965,"Alex Medeiros, Cole Medeiros"
+1966,Cameron Browne
+1967,"Olivier Grégoire, Thibaut Quintens"
+1968,"Richard Baker, Mons Johnson"
+1969,Thomas N. Shaw
+1970,"Jeffrey Breslow, Howard J. Morrison"
+1971,"Mark McLaughlin, Fred Schachter"
+1972,"Neil Fawcett, Michael Hetherington, Alain Padfield, Franco Sammarco, Derek Sinclair, Christopher Worth"
+1973,Greg Lam
+1974,Simon Junker
+1975,Douglas Schulz
+1976,"John H. Butterfield, Edward J. Woods"
+1977,"Filip Głowacz, Ireneusz Huszcza"
+1978,Nicolas Rident
+1979,"Andy Chambers, Rick Priestley, Gavin Thorpe"
+1980,Frank Bebenroth
+1981,Yan Yegorov
+1982,Andy Hoare
+1983,"Bill Madison, Mark Miklos"
+1984,"Stefanie Rohner, Christian Wolf"
+1985,"Anthony Amato, Nicole Kline"
+1986,Anton Karger
+1987,Craig Zipse
+1988,"Pete Abrams, Jeff Lewis, Mark H. Walker"
+1989,CD Projekt
+1990,Dick Seitz
+1991,"Tony Gullotti, Joshua Sprung"
+1992,Jason Tagmire
+1993,"Laurent Escoffier, Sébastien Pauchon"
+1994,"Dana Lombardy, Art Lupinacci"
+1995,Thierry Chapeau
+1996,"Marco Legato, Francesco Testini"
+1997,Brendan Evans
+1998,"Mike Elliott, Jonathan Tweet"
+1999,"Peter Gousis, Michael D. Kelley"
+2000,Przemek Wojtkowiak
+2001,"Matt Burchfield, Grant Wylie, Mike Wylie, Kevin Wylie"
+2002,"Rob Daviau, Anthony E. Pratt"
+2003,Christian Freeling
+2004,"Aureliano Buonfino, Andrea Crespi, Lorenzo Silva, Lorenzo Tucci Sorrentino"
+2005,"Neal Sofge, Michael Wasson"
+2006,"Daniel Fryxelius, Thomas Fryxelius"
+2007,Servando Carballar
+2008,Philippe Thibaut
+2009,Marek Mydel
+2010,"Remo Conzadori, Nestore Mangone"
+2011,Jeff Gracia
+2012,Roberto Di Meglio
+2013,"Ed Rains, Vance von Borries"
+2014,"Paul Dangel, Mathew Hinkle"
+2015,Joseph Kisenwether
+2016,Micah Fuller
+2017,Francisco Ronco
+2018,Mike Carr
+2019,"Tom Dalgliesh, Dan Mings, Carl Willner"
+2020,"Steve Blease, Mike Elliott, Jon M. Tuffley"
+2021,Gioacchino Prestigiacomo
+2022,Bruce S. Maxwell
+2023,Aza Chen
+2024,Frédéric Guérard
+2025,"Manuel D. Cruz Díaz, Antonio J. Dionisio"
+2026,Andreas Schmidt
+2027,"Joe Alread, Michael Girard, Chuck Kallenbach, Tom Lischke, Evan Lorentz, Kendrick Summers"
+2028,"Neil Fawcett, Mark Sims"
+2029,"Monte Mattson, Ed Wimble"
+2030,Philippe Proux
+2031,Mark Calin Caliman
+2032,"Jarmo Kuitunen, Martti Ojalainen"
+2033,"Tray Green, Dawn Payn"
+2034,"Jani Moliis, Tero Moliis"
+2035,Emanuele Santandrea
+2036,Anthony Rubbo
+2037,"Eric Goldberg, Guy Hail, John Hill (I)"
+2038,"Jonathan Peletis, Jake Thornton"
+2039,"Richard H. Berg, Mark Herman, Alan J. Ray, Stephen R. Welch"
+2040,Gianluca Santopietro
+2041,Leif Steiestol
+2042,David Carl
+2043,Ken Stevens
+2044,"Glenn Drover, Hisashi Hayashi, Martin Wallace"
+2045,George S. Parker
+2046,Arty Conliffe
+2047,Kolja Sparrer
+2048,"Roger Nord, Pascal Toupy"
+2049,Brent Vincent
+2050,Néstor Romeral Andrés
+2051,Kouji Kimura
+2052,Tom Russell
+2053,Timo Multamäki
+2054,Scott Hungerford
+2055,Peter Hansson
+2056,"Brady Sadler, Adam Sadler"
+2057,"Paul Van Hove, Liesbeth Vanzeir"
+2058,"Olivier Chanry, Michel Pinon"
+2059,Roberta Taylor
+2060,"Steven Aramini, Dan Letzring"
+2061,"Thomas M. Gofton, Aron Murch, Cameron Parkinson"
+2062,François Vander Meulen
+2063,C. Aaron Kreader
+2064,"Nicole Jekich, Luke Turpeinen"
+2065,"Trevor Benjamin, Brett J. Gilbert"
+2066,"JR Honeycutt, Dirk Knemeyer"
+2067,"Shaun Graham, Scott Huntington"
+2068,Stephen DeBaun
+2069,"Jeff Arbough, Michael Knight, Dave Ploense"
+2070,Claude Weber
+2071,Carl White
+2072,Mark Hinkle
+2073,"James Ernest, Toivo Rovainen"
+2074,"Sean Cahill, Jon Lonngren"
+2075,Randy Hoyt
+2076,"Robert J. Kuntz, Tom Wham"
+2077,Karl Marcelle
+2078,Bruce Nesmith
+2079,"Ludovic Maublanc, Angèle Maublanc"
+2080,Ty Douds
+2081,Terry Goodchild
+2082,Behrooz Shahriari
+2083,Alex Bagosy
+2084,CW Karstens
+2085,Martin Knight
+2086,Clint Herron
+2087,Babis Giannios
+2088,"Maxim Istomin, Ivan Popov"
+2089,"Leo Colovini, Bruno Faidutti"
+2090,James F. Goff
+2091,"John Fiore, Rory O'Connor"
+2092,Dale Walton
+2093,"David Villegas, Christopher Witt, Krista Witt"
+2094,"Michał Jagodziński, Paweł Niziołek, Jarosław Wajs"
+2095,"Mark Guttag, Vance von Borries"
+2096,Gary C. Morgan
+2097,Deborah Boss
+2098,Max Holliday
+2099,Serge Macasdar
+2100,"James Trunzo, Tom Trunzo"
+2101,"Frank Crittin, Grégoire Largey"
+2102,Art Lupinacci
+2103,Christian Tiggemann
+2104,Anne-Marie De Witt
+2105,Konstantin Seleznev
+2106,Anthony Daamen
+2107,"Emiliano ""Wentu"" Venturini"
+2108,Brent Critchfield
+2109,James Kyle
+2110,"Mike Selinker, Chad Brown, Tanis O'Connor, Paul Peterson, Keith Richmond, Liz Spain, Elisa Teague, Gaby Weidling"
+2111,Robert Żak
+2112,"Bill Eberle, Edward Horn, Jr., Jack Kittredge, Peter Olotka"
+2113,"James Ernest, Phil Foglio"
+2114,Ty Bomba
+2115,"Philip C. Barker, Richard Bodley Scott"
+2116,Tony Chen
+2117,"Dean Essig, John Kisner"
+2118,Akihisa Okui
+2119,"Eric Goldberg, Irad B. Hardy, J. A. Nelson"
+2120,Arnaud Ladagnous
+2121,Marc Brunnenkant
+2122,折口 日向 (Hinata Origuchi)
+2123,Jaron Frost
+2124,"Michael Bennighof, Doug McNair"
+2125,Johnny Ebsen
+2126,Kai Haferkamp
+2127,"Urs Hostettler, Hermann Wieland"
+2128,"David Bush, Jim Simon, Anthony Williams"
+2129,Gregory Carslaw
+2130,Brian Kohrman
+2131,"Charles S. Roberts, Thomas N. Shaw"
+2132,Werner Falkhof
+2133,Jeb Havens
+2134,"Raymond Lau, Dave Williams (II)"
+2135,"Vlaada Chvátil, Casey Sershon"
+2136,"John Goodenough, Seiji Kanai, Hayato Kisaragi"
+2137,"Wes Erni, Ben Madison"
+2138,David S. Neft
+2139,Bono Light
+2140,Kyle Weinandy
+2141,"Brad Defruiter, Evan Lorentz"
+2142,Angelo Porazzi
+2143,"Thomas J. Mosbø, Coral J. F. Mosbø"
+2144,Frank Branham
+2145,Matt Wilson
+2146,Ian Livingstone
+2147,Jason Schneider
+2148,Carmen Kleinert
+2149,"Nicolas Assenbrunner, Cephas Howard, Thomas Robert Van der Heiden"
+2150,"Matt Hyra, Cory Jones"
+2151,Olivier Grégoire
+2152,"Tom Braunlich, Evan Lorentz, Bill Martinson, Jason Robinette, Roland L. Tesh"
+2153,Wesley Lamont
+2154,Alex Barbieri
+2155,Richard Spence
+2156,Nicolas Sato
+2157,"Laurence Gamelin, Philippe Gamelin"
+2158,Bernhard Naegele
+2159,Andy Geremia
+2160,Jeff London
+2161,"Dean Essig, Lee Forester, Wig Graves"
+2162,"Walter E. Johnston, IV"
+2163,Walter Kraul
+2164,"Zvi Shalem, Gali Shimoni"
+2165,"Sarah Reed, Will Reed"
+2166,Donald Benge
+2167,Jack Carmichael
+2168,Guido Eckhof
+2169,"Scott Diehl, David Lankton"
+2170,Tsai Huei-Chiang
+2171,Laurent Closier
+2172,S. Spencer
+2173,"Thorsten Löpmann, Andreas Wetter"
+2174,"Dean Essig, Roland LeBlanc"
+2175,"Joe Angiolillo, Joseph M. Balkoski"
+2176,"P. Boinske, Paul Dangel"
+2177,Paco Yanez
+2178,Nick Richardson
+2179,Luish Moraes Coelho
+2180,"Brian Hersch, Mike Wilks"
+2181,"Clayton Grey, Samuel Strick"
+2182,W. A. Thomas
+2183,"Sam Lewis, Jordan Weisman"
+2184,Mike Petty
+2185,"Chris Lombardi, Coryn Lombardi"
+2186,"Cyril Blondel, Jim Dratwa"
+2187,Elad Goldsteen
+2188,Gil d'Orey
+2189,"David Boniffacy, Daniel Quodbach"
+2190,Andrew Bond
+2191,Ian Stedman
+2192,"Fritz Bronner, John Olsen, Robert L. Sassone"
+2193,Leonard Quam
+2194,"Christoph Behre, Reinhard Staupe"
+2195,"Sylvie Barc, Roger Heyworth, Los Rodriguez"
+2196,"Steven ""Razlo"" Bailey"
+2197,Francisco Gallego Arredondo
+2198,"Ken Burnside, Eric Finley, Tony Valle"
+2199,"Colleen Macklin, John Sharp, Eric Zimmerman"
+2200,"Greg Powers, Brian Powers"
+2201,"Richard H. Berg, David A. Powell"
+2202,"Ronald Hofstätter, Dietmar Keusch"
+2203,Paul Dangel
+2204,"Martyn Oliver, Colin Thornton"
+2205,"Sean McGuire, Thomas McGuire"
+2206,Steve Kingsbury
+2207,Brian Shotton
+2208,Francis K. Lalumiere
+2209,"Walter H. Hunt, Gregory M. Pozerski"
+2210,"David Carl, Jack Coleman, Jason Soles, Matt Wilson"
+2211,"Alessandro Fontana, Kevin Zucker"
+2212,"Lisandro Nembrini, Gonzalo Rodrigo"
+2213,Anthony E. Pratt
+2214,Mike Young
+2215,Jose Antonio Abascal Acebo
+2216,Nathan Kilgore
+2217,"Fel Barros, Warny Marçano"
+2218,"Keiji Kariya, Hitoshi Yasuda"
+2219,Steve Newhouse
+2220,"Boston Logical Society, W. W. Swilling"
+2221,Manfred Schuling
+2222,David C. Isby
+2223,David Gerrard
+2224,Tyler Bielman
+2225,"L. Ross Babcock, III, Albie Fiore, Sam Lewis, Jordan Weisman, Dave Wylie"
+2226,"Rex A. Martin, Craig Sandercock"
+2227,Mike Hayes
+2228,Matthew O'Malley
+2229,"Larry Bond, Chris Carlson"
+2230,Joe Bisio
+2231,Christian Giove
+2232,Romaric Galonnier
+2233,Jun'ichi Sato
+2234,"Timothy B. Brown, Troy Denning"
+2235,Jason Boomer
+2236,"Robert Coggins, S. Craig Taylor"
+2237,"Andrew Christopher Enriquez, Michael Eskue"
+2238,"Simon Hall, Richard Bodley Scott, Terry Shaw"
+2239,B. Dennis Sustare
+2240,"Kazuhito Miyaki, Yusuke Watanabe"
+2241,Nate Bivins
+2242,Jeremie Kletzkine
+2243,Martin Nedergaard Andersen
+2244,"Aaron Dill, Andrew Haught, John Kovaleski, Sean Sweigart"
+2245,Graeme Jahns
+2246,Constantine Kevorque
+2247,Francesco Berardi
+2248,David Harvey
+2249,Jorge Valenzuela Palacios
+2250,Artem Safarov
+2251,"Todd Breitenstein, Kerry Breitenstein"
+2252,Rob Beyma
+2253,"David A. Powell, Boyd Schorzman"
+2254,Stephen Sauer
+2255,Joe Huber (I)
+2256,Jack Greene
+2257,"Michał Oracz, Ignacy Trzewiczek"
+2258,"Nathalie Saunier, Rémi Saunier, Thomas Vuarchex"
+2259,Tony Cimino
+2260,Bryan Reese
+2261,"Rob Heinsoo, Stephen Schubert"
+2262,Richard Clarke
+2263,"Roberto Fraga, Florence Fraga"
+2264,Perry Moore
+2265,"Dean Essig, Masahiro Yamazaki"
+2266,Dick Rustin
+2267,"George Chastain, Jason Coffey, Chuck Kroegel"
+2268,Ron Dubren
+2269,Johannes Zirm
+2270,Michael Coe
+2271,"Petr Bělík, EULER'S GAME"
+2272,Eric Lyons
+2273,"Mark Latham, Rick Priestley"
+2274,Mateusz Albricht
+2275,"James Ernest, Rick Fish"
+2276,Andrew Hanson
+2277,Eduardo García Martín
+2278,Kris McCardel Ware
+2279,Gabriel J. Cohn
+2280,Bryan Winter
+2281,Luke Crane
+2282,"Loren Cunningham, Jamie Cunningham"
+2283,Piergennaro Federico
+2284,"Robert Cutter, Dave Schroeder (II)"
+2285,Can Adatepe
+2286,Sean Rumble
+2287,"Jervis Johnson, Alan Perry, Michael Perry, Rick Priestley"
+2288,"Klaus Miltenberger, Kristin Mückel"
+2289,Matt Loomis
+2290,Yohan Goh
+2291,Rodrigo González
+2292,"Cliff Bohm, Geoff Bottone"
+2293,"Athena Cagle, Jasn Painter"
+2294,"Heinrich Glumpler, Marco Teubner"
+2295,"Eason Kao, Tsai Huei-Chiang"
+2296,"Marie Fort, Wilfried Fort"
+2297,David Schroeder
+2298,"Anima Studio, Carlos B. García Aparício"
+2299,"Ben Christenson, Patrick Christenson"
+2300,Daniel Alves
+2301,"Bill Eberle, Jack Kittredge"
+2302,Yven Nogicatt
+2303,Hans von Stockhausen
+2304,"Lenny Glynn, John Prados"
+2305,Chris Bryan
+2306,Rob Bartel
+2307,Yoshihisa Itsubaki
+2308,Alex Weldon
+2309,William L. Banks
+2310,Shane Willis
+2311,David Wyman
+2312,Gary Mroczka
+2313,Cole Medeiros
+2314,Jason Glover
+2315,Jon Mietling
+2316,Ben Madison
+2317,Rich Koehler
+2318,Gary Crowley
+2319,"Jeroen Doumen, Herman Haverkort, Tamara Jannink, Joris Wiersinga"
+2320,Jeff Glickman
+2321,Mr. Kageyama
+2322,"Jog Kung, Huang Yi Ming"
+2323,David Rene Miller
+2324,Bruce Costello
+2325,"Evan Song, Yoshiyuki Arai (あらいよしゆき)"
+2326,"Tor Abrahamsen, Dave Casper, Bruce Harper"
+2327,Daniel Mersey
+2328,Dieter Stein
+2329,Trevor Truran
+2330,Christiane Knepel
+2331,Pascal Cadot
+2332,"Ken Jacobsen, Ernesto Sassot"
+2333,"Elaine Henninger, Joe Roznai, Bill Wordelmann"
+2334,"Joseph M. Balkoski, Jim Dunnigan, Redmond A. Simonsen"
+2335,Eric Poses
+2336,"Philip A. Markgraf, Tony Valle"
+2337,"Shawn Carpenter, Robby Carpenter"
+2338,"Frank Alberts, Russell Ng"
+2339,Stephen A. Cuyler
+2340,Roberto Grasso
+2341,"Alexander Boucharelis, Lefteris Iroglidis"
+2342,"Israel Cendrero, Sheila Santos"
+2343,"Tom Bleys, Ian Van Gemeren, Bart Waeterschoot"
+2344,Seth Roback
+2345,John Astell
+2346,"Klaus Grähnke, Brian Walker"
+2347,Morgan Dontanville
+2348,Laurence A. Groves
+2349,Sjaak Griffioen
+2350,Daniel Danzer
+2351,Rich Gowell
+2352,"Mike Elliott, Jon M. Tuffley"
+2353,Keewoong Kim
+2354,Jose D. Flores
+2355,Geoff Girouard
+2356,"Kurt Martin, Ray Tapio"
+2357,Brett Brimmer
+2358,Sean Dallas McDonald
+2359,"Gavan Brown, Matt Tolman, Martin Wallace"
+2360,Christian Heuser
+2361,Jochen Schwinghammer
+2362,Frédéric Bey
+2363,Lee Ju-Hwa
+2364,Leandro Félix
+2365,"Kinetic, KniffDesign"
+2366,"Rüdiger Dorn, Maja Dorn"
+2367,Dave Mansell
+2368,"Michael Gustavsson, Rick Young"
+2369,R. Wayne Schmittberger
+2370,"Julien Faubet, Sylvain Hatesse"
+2371,"Jeff Grubb, David R. Megarry, Steve Winter"
+2372,Stéphane Maurel
+2373,"Dean Essig, Wig Graves"
+2374,"Simon Forrest, Jervis Johnson"
+2375,"Mike Foley (I), Barron Vangor Toth"
+2376,"Stuart McCorquodale, Mark Wheatley"
+2377,Laurent Guenette
+2378,"Fabio Del Rio, Paolo Del Rio"
+2379,Mike Nielsen
+2380,"Scott Martin (III), Todd Medema"
+2381,Brian L. Knipple
+2382,"Jesper Myrfors, John Tynes"
+2383,"Jervis Johnson, Rick Priestley, John Stallard"
+2384,Ted Cheatham
+2385,Nagy Balázs
+2386,Agnès Largeaud
+2387,Andrzej Kurek
+2388,Clint Bohaty
+2389,Mark Frazier
+2390,"Stanley Kubiak, Winston J. Kubiak"
+2391,Andrew Harman
+2392,José Carlos de Diego Guerrero
+2393,Gerhard Junker
+2394,Sam Brown
+2395,"Don Greenwood, Gérard Mathieu"
+2396,Gordon Alford
+2397,Antonio Scrittore
+2398,"Gary Chalk, Ian Livingstone"
+2399,Alessandro Saragosa
+2400,Peter Jones (I)
+2401,Ron Draker
+2402,Antony Brown
+2403,Ray Freeman
+2404,Manfred Reindl
+2405,"Jean-Thomas Rioux, Étienne Rioux"
+2406,Matt Worden
+2407,Frank Brandt
+2408,Peter Ventura
+2409,Bruss Brussco
+2410,Alexander Lauck
+2411,Nick Bentley
+2412,James Cooke Brown
+2413,"L. Ross Babcock, III, Jon Leitheusser, Jim Long, Matt Robinson, Jordan Weisman"
+2414,"Michael Bennighof, Philippe Leonard"
+2415,Jürgen Mayer
+2416,Seiemon Nunoura
+2417,"Eros Lin, Liu Xiao"
+2418,Luca Cammisa
+2419,"Hisashi Hayashi, Seiji Kanai, Hayato Kisaragi"
+2420,"Frédéric Colombier, Hervé Marly"
+2421,"Sam-goo, Evan Song"
+2422,"Johan Benvenuto, Nicolas Bourgoin"
+2423,Bryan Johnson
+2424,Roberto Mancino
+2425,"R. D. Lee, T.L. Simons"
+2426,"Bruno de Scorraille, Philippe Thibaut"
+2427,Vincent Everaert
+2428,Sean Chick
+2429,"Klaus Miltenberger, Udo Peise"
+2430,"Ulrike Catty, Paul Catty, Hans Führer, Maria Führer, Ernst Führer"
+2431,Christian Zoli
+2432,Frank Thibault
+2433,"Philippe Mouchebeuf, Duccio Vitale"
+2434,"Wolfgang Kramer, Hartmut Witt"
+2435,"Jocularis, Matteo Santus"
+2436,Gary Grady
+2437,"James Ernest, Jim Geldmacher"
+2438,"Dennis Kirps, Jean-Claude Pellin"
+2439,"David Freeman, Ryan Miller"
+2440,Larry V. Brom
+2441,"Cédric Barbé, Théo Rivière"
+2442,Sebastián Koziner
+2443,"David Graham, Steve Jackson (I), Mike Naylor"
+2444,"Rick Priestley, Nigel Stillman"
+2445,Alexandre Droit
+2446,"Martin Kallenborn, Jochen Scherer"
+2447,"Mike Breault, Dave LaForce, Douglas Niles"
+2448,Michael Duffield
+2449,"Marcus Ross, Cara Ryan"
+2450,Leandro Pires
+2451,"Clark Browning, Marco Pecota, Derrick Villeneuve"
+2452,Erik Kjerland
+2453,Franz Josef Lamminger
+2454,Desnet Amane
+2455,Irad B. Hardy
+2456,Hegedűs Csaba
+2457,Julien Sentis
+2458,Emmanuel Manuro
+2459,"Christopher Batarlis, Boris Polonsky"
+2460,"Tyler Bielman, Jonathon Loucks, Ethan Pasternack, Jordan Weisman"
+2461,"John Bohrer, Martin Wallace"
+2462,Robert G. Markham
+2463,Robert J. Hudecek
