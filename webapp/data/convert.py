@@ -13,7 +13,7 @@ import csv
 def dictionary_map():
     category_list = {}
     with open('bgg_db_1806.csv') as original_data_file,\
-      open('categories', 'w') as category_file:
+      open('categories.csv', 'w') as category_file:
       reader = csv.reader(original_data_file)
       writer = csv.writer(category_file)
       heading_row = next(reader) # skips the first line
@@ -26,7 +26,7 @@ def dictionary_map():
 
     designer_list = {}
     with open('bgg_db_1806.csv') as original_data_file,\
-      open('designer', 'w') as designer_file:
+      open('designer.csv', 'w') as designer_file:
       reader = csv.reader(original_data_file)
       writer = csv.writer(designer_file)
       heading_row = next(reader) # skips the first line
@@ -38,7 +38,7 @@ def dictionary_map():
             writer.writerow([designer_id, designer])
 
     with open('bgg_db_1806.csv') as original_data_file,\
-      open('games', 'w') as games_file:
+      open('games.csv', 'w') as games_file:
       reader = csv.reader(original_data_file)
       writer = csv.writer(games_file)
       heading_row = next(reader) # skips the first line
