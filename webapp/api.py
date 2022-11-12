@@ -63,17 +63,18 @@ def get_games():
 
 @api.route('/games/<game_id>')
 def get_info_for_game(game_id):
-    query = '''SELECT games.id, games.name, games.avg_rating
+    query = '''SELECT game_id, name, avg_rating
                FROM games
-               WHERE games.id = %s
-               ORDER BY games.year DESC'''
+               WHERE games.game_id = %s
+               ORDER BY games.pub_year DESC'''
     game_list = []
     try:
         connection = get_connection()
         cursor = connection.cursor()
         cursor.execute(query, (game_id,))
+        print(game_id)
         for row in cursor:
-            game = {'id':row[0], 'name':row[1], 'avg_rating':row[8]}
+            game = {'game_id':row[0], 'name':row[1], 'avg_rating':row[8]}
             game_list.append(game)
         cursor.close()
         connection.close()

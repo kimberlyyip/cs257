@@ -60,8 +60,15 @@ function loadGamesSelector() {
 }
 
 function onGamesSelectionChanged() {
-    let gameID = this.value; 
-    let url = getAPIBaseURL() + '/games' + gameID;
+
+
+    let element = document.getElementById('game_selector')
+
+    let gameID = element.value; 
+    let url = getAPIBaseURL() + '/games/' + gameID;
+
+    console.log('gameid:' + gameID)
+    console.log('element:' + element)
 
     fetch(url, {method: 'get'})
 
