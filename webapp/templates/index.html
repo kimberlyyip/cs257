@@ -2,20 +2,20 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='books.css') }}" /> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='boardgames.css') }}" />
     <script type="text/javascript" src="{{ url_for('static', filename='boardgames.js') }}" ></script>
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" />
     <title>CS 257: Software Design</title>
 </head>
 
 <body>
-    <h1>CS 257: Board Games Sample Web App</h1>
+    <h1>CS 257: Books Sample Web App</h1>
     <p>The appearance of this user interface is completely bare-bones, and
     not suitable for a final product. The point here is only to illustrate a
     handful of techniques in Javascript and Flask and PostgreSQL.</p>
 
-    <p>Games <select id="author_selector"></select></p>
+    <p>Games <select id="game_selector"></select></p>
 
-    <p><table id="books_table"></table></p>
+    <p><table id="gameinfo_table"></table></p>
 </body>
 </html>

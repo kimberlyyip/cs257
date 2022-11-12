@@ -7,11 +7,11 @@
 window.onload = initialize;
 
 function initialize() {
-    loadAuthorsSelector();
+    loadGamesSelector();
 
-    let element = document.getElementById('author_selector');
+    let element = document.getElementById('game_selector');
     if (element) {
-        element.onchange = onAuthorsSelectionChanged;
+        element.onchange = onGamesSelectionChanged;
     }
 }
 
@@ -25,7 +25,7 @@ function getAPIBaseURL() {
     return baseURL;
 }
 
-function loadAuthorsSelector() {
+function loadGamesSelector() {
     let url = getAPIBaseURL() + '/games/';
 
     // Send the request to the books API /authors/ endpoint
@@ -42,36 +42,12 @@ function loadAuthorsSelector() {
         let selectorBody = '';
         for (let k = 0; k < games.length; k++) {
             let game = games[k];
-            selectorBody += '<option value="' + game['name'] + '">'
+            selectorBody += '<option value="' + game['id'] + '">'
                                 + game['name'] + ', ' + game['pub_year']
                                 + '</option>\n';
         }
 
-
-        // game = {'rank':row[0],
-        // 'bgg_url':row[1],
-        // 'game_id':row[2],
-        // 'name':row[3],
-        // 'min_player':row[4],
-        // 'max_player':row[5],
-        // 'avg_time':row[6],
-        // 'min_time':row[7],
-        // 'max_time':row[8],
-        // 'pub_year':row[9],
-        // 'avg_rating':row[10],
-        // 'geek_rating':row[11],
-        // 'num_votes':row[12]
-        // 'image_url':row[13]
-        // 'min_age':row[14]
-        // 'mechanic':row[15]
-        // 'num_owned':row[16]
-        // 'category':row[17]
-        // 'designer':row[18]
-        // 'weight':row[19]}
-
-
-
-        let selector = document.getElementById('author_selector');
+        let selector = document.getElementById('game_selector');
         if (selector) {
             selector.innerHTML = selectorBody;
         }
@@ -83,28 +59,28 @@ function loadAuthorsSelector() {
     });
 }
 
-function onAuthorsSelectionChanged() {
-    let authorID = this.value; 
-    let url = getAPIBaseURL() + '/books/author/' + authorID;
+function onGamesSelectionChanged() {
+    let gameID = this.value; 
+    let url = getAPIBaseURL() + '/games' + gameID;
 
     fetch(url, {method: 'get'})
 
     .then((response) => response.json())
 
-    .then(function(books) {
+    .then(function(games) {
         let tableBody = '';
-        for (let k = 0; k < books.length; k++) {
-            let book = books[k];
+        for (let k = 0; k < games.length; k++) {
+            let games = games[k];
             tableBody += '<tr>'
-                            + '<td>' + book['title'] + '</td>'
-                            + '<td>' + book['publication_year'] + '</td>'
+                            + '<td>' + game['id'] + '</td>'
+                            + '<td>' + game['name'] + '</td>'
                             + '</tr>\n';
         }
 
         // Put the table body we just built inside the table that's already on the page.
-        let booksTable = document.getElementById('books_table');
-        if (booksTable) {
-            booksTable.innerHTML = tableBody;
+        let gamesTable = document.getElementById('gameinfo_table');
+        if (gamesTable) {
+            gamesTable.innerHTML = tableBody;
         }
     })
 

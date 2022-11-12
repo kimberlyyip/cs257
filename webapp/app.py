@@ -18,12 +18,12 @@ def home():
     '''route to home'''
     return flask.render_template('index.html')
 
-@app.route('/mockups1')
+@app.route('/home_page')
 def mockups1():
     '''route to mockups1'''
-    return flask.render_template('mocksup1.html')
+    return flask.render_template('home_page.html')
 
-@app.route('/mocksup2') 
+@app.route('/mockups2') 
 def mockups2():
     '''route to mockups2'''
     return flask.render_template('mockups2.html')

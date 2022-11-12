@@ -21,7 +21,7 @@ def get_connection():
     return psycopg2.connect(database=config.database,
                             user=config.user,
                             password=config.password,
-                            port='5432')
+                            port=config.port)
 
 
 @api.route('/games/')
@@ -32,27 +32,25 @@ def get_games():
         connection = get_connection()
         cursor = connection.cursor()
         cursor.execute(query, tuple())
+        print(cursor.query)
+
         for row in cursor:
-            game = {'rank':row[0],
-                      'bgg_url':row[1],
-                      'game_id':row[2],
-                      'name':row[3],
-                      'min_player':row[4],
-                      'max_player':row[5],
-                      'avg_time':row[6],
-                      'min_time':row[7],
-                      'max_time':row[8],
-                      'pub_year':row[9],
-                      'avg_rating':row[10],
-                      'geek_rating':row[11],
-                      'num_votes':row[12],
-                      'image_url':row[13],
-                      'min_age':row[14],
-                      'mechanic':row[15],
-                      'num_owned':row[16],
-                      'category':row[17],
-                      'designer':row[18],
-                      'weight':row[19]
+            game = {'game_id':row[0],
+                      'name':row[1],
+                      'rank': row[2],
+                      'min_player':row[3],
+                      'max_player':row[4],
+                      'avg_time':row[5],
+                      'min_time':row[6],
+                      'max_time':row[7],
+                      'avg_rating':row[8],
+                      'num_votes':row[9],
+                      'image_url':row[10],
+                      'min_age':row[11],
+                      'num_owned':row[12],
+                      'designer_id':row[13],
+                      'pub_year':row[14],
+                      'weight':row[15]
                       }
             games_list.append(game)
         cursor.close()
@@ -61,4 +59,26 @@ def get_games():
         print(e, file=sys.stderr)
 
     return json.dumps(games_list)
+
+
+@api.route('/games/<game_id>')
+def get_info_for_game(game_id):
+    query = '''SELECT games.id, games.name, games.avg_rating
+               FROM games
+               WHERE games.id = %s
+               ORDER BY games.year DESC'''
+    game_list = []
+    try:
+        connection = get_connection()
+        cursor = connection.cursor()
+        cursor.execute(query, (game_id,))
+        for row in cursor:
+            game = {'id':row[0], 'name':row[1], 'avg_rating':row[8]}
+            game_list.append(game)
+        cursor.close()
+        connection.close()
+    except Exception as e:
+        print(e, file=sys.stderr)
+
+    return json.dumps(game_list)
 
