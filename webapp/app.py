@@ -48,10 +48,10 @@ def mockups6():
     '''route to mockups6'''
     return flask.render_template('login_page.html')
 
-@app.route('/mockups7')
+@app.route('/forgot_password_page')
 def mockups7():
     '''route to mockups7'''
-    return flask.render_template('mockups7.html')
+    return flask.render_template('forgot_password.html')
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser('A books-and-authors application, including API & DB')
