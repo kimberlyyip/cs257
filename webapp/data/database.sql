@@ -32,7 +32,10 @@ CREATE TABLE game_categories(
     category_id integer
 );
 
+\copy categories from 'categories.csv' DELIMITER ',' CSV NULL as 'NULL'
 
+\copy designer FROM 'designer.csv' DELIMITER ',' CSV NULL AS 'NULL'
 
+\copy games FROM 'games.csv' DELIMITER ',' CSV NUll AS 'NULL'
 
-
+\copy game_categories FROM 'game_categories.csv' DELIMITER ',' CSV NULL AS 'NULL'
