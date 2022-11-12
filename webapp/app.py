@@ -23,30 +23,30 @@ def mockups1():
     '''route to mockups1'''
     return flask.render_template('home_page.html')
 
-@app.route('/mockups2') 
+@app.route('/boardgame_site') 
 def mockups2():
     '''route to mockups2'''
-    return flask.render_template('mockups2.html')
+    return flask.render_template('boardgame_site.html')
 
-@app.route('/mockups3') 
+@app.route('/create_user') 
 def mockups3():
     '''route to mockups3'''
-    return flask.render_template('mockups3.html')
+    return flask.render_template('create_user.html')
 
-@app.route('/mockups4') 
+@app.route('/user_home_page') 
 def mockups4():
     '''route to mockups4'''
-    return flask.render_template('mockups4.html')
+    return flask.render_template('user_home_page.html')
 
-@app.route('/mockups5') 
+@app.route('/search_page') 
 def mockups5():
     '''route to mockups5'''
-    return flask.render_template('mocksup5.html')
+    return flask.render_template('search_page.html')
 
-@app.route('/mockups6') 
+@app.route('/login_page') 
 def mockups6():
     '''route to mockups6'''
-    return flask.render_template('mockups6.html')
+    return flask.render_template('login_page.html')
 
 @app.route('/mockups7')
 def mockups7():
