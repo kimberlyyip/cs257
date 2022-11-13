@@ -84,8 +84,8 @@ def get_info_for_game(game_id):
     return json.dumps(game_list)
 
 @api.route('/games/<category>')
-def get_info_for_game(genre):
-    query = '''SELECT game.game_id, games.name, categories.category as category, games.avg_rating
+def get_category(category):
+    query = '''SELECT game.game_id, games.name, categories.category, games.avg_rating
                FROM games, categories, game_categories
                WHERE categories.category = %s
                AND game_categories.game_id = game.game_id
