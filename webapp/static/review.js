@@ -19,7 +19,6 @@ function submit_review(){
     method: 'POST',
     body: JSON.stringify({
       review_text: review_text,
-      anime_name: anime_name
     }),
     headers: {
       "Content-type" : "application/json; charset=UTF-8"
