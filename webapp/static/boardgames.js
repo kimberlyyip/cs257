@@ -42,7 +42,7 @@ function loadGamesSelector() {
         let selectorBody = '';
         for (let k = 0; k < games.length; k++) {
             let game = games[k];
-            selectorBody += '<option value="' + game['id'] + '">'
+            selectorBody += '<option value="' + game['rank'] + '">'
                                 + game['name'] + ', ' + game['pub_year']
                                 + '</option>\n';
         }
@@ -62,32 +62,38 @@ function loadGamesSelector() {
 function onGamesSelectionChanged() {
 
 
-    let element = document.getElementById('game_selector')
+    let element = document.getElementById('game_selector');
 
-    let gameID = element.value; 
-    let url = getAPIBaseURL() + '/games/' + gameID;
+    if (!element) {
+        console.log('no element')
+        return;
+    }
 
-    console.log('gameid:' + gameID)
+    let gameRank = element.value; 
+    let url = getAPIBaseURL() + '/games/' + gameRank;
+
+    console.log('gameRank:' + gameRank)
     console.log('element:' + element)
 
     fetch(url, {method: 'get'})
 
     .then((response) => response.json())
 
-    .then(function(games) {
+    .then(function(gameinfo) {
         let tableBody = '';
-        for (let k = 0; k < games.length; k++) {
-            let games = games[k];
+        console.log('gameinfo length:' + gameinfo.length)
+        for (let k = 0; k < gameinfo.length; k++) {
+            let game = gameinfo[k];
             tableBody += '<tr>'
-                            + '<td>' + game['id'] + '</td>'
+                            + '<td>' + game['rank'] + '</td>'
                             + '<td>' + game['name'] + '</td>'
                             + '</tr>\n';
         }
 
         // Put the table body we just built inside the table that's already on the page.
-        let gamesTable = document.getElementById('gameinfo_table');
-        if (gamesTable) {
-            gamesTable.innerHTML = tableBody;
+        let gameinfoTable = document.getElementById('gameinfo_table');
+        if (gameinfoTable) {
+            gameinfoTable.innerHTML = tableBody;
         }
     })
 

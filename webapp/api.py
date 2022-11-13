@@ -35,7 +35,7 @@ def get_games():
         print(cursor.query)
 
         for row in cursor:
-            game = {'game_id':row[0],
+            game = {'game_rank':row[0],
                       'name':row[1],
                       'rank': row[2],
                       'min_player':row[3],
@@ -61,21 +61,23 @@ def get_games():
     return json.dumps(games_list)
 
 
-@api.route('/games/<game_id>')
-def get_info_for_game(game_id):
-    query = '''SELECT game_id, name, avg_rating
+@api.route('/games/<game_rank>')
+def get_info_for_game(game_rank):
+    query = '''SELECT rank, name, avg_rating
                FROM games
-               WHERE games.game_id = %s
+               WHERE games.rank = %s
                ORDER BY games.pub_year DESC'''
     game_list = []
     try:
         connection = get_connection()
         cursor = connection.cursor()
-        cursor.execute(query, (game_id,))
-        print(game_id)
+        cursor.execute(query, (game_rank,))
+        print('gamerank' + game_rank)
+        print(cursor.query)
         for row in cursor:
-            game = {'game_id':row[0], 'name':row[1], 'avg_rating':row[8]}
+            game = {'game_rank':row[2], 'name':row[1]}
             game_list.append(game)
+        print('after for loop')
         cursor.close()
         connection.close()
     except Exception as e:
