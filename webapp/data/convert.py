@@ -33,11 +33,11 @@ def dictionary_map():
       heading_row = next(reader) # skips the first line
       for row in reader:
         designer = row[18].split(', ')
-        for designer in designers:
-          if designer not in designer_list:
+        for person in designer:
+          if person not in designer_list:
             designer_id = len(designer_list) + 1
-            designer_list[designer] = designer_id
-            writer.writerow([designer_id, designer])
+            designer_list[person] = designer_id
+            writer.writerow([designer_id, person])
 
     with open('bgg_db_1806.csv') as original_data_file,\
       open('games.csv', 'w') as games_file:
@@ -60,8 +60,7 @@ def dictionary_map():
         min_age = row[14]
         num_owned = row[16]
         complexity = row[19]
-        designer_id = designer_list[row[18]]
-        writer.writerow([game_id, name, rank, min_player, max_player, avg_time, min_time, max_time, avg_rating, num_votes, image_url, min_age, num_owned, designer_id, year_published, weight])
+        writer.writerow([game_id, name, rank, min_player, max_player, avg_time, min_time, max_time, avg_rating, num_votes, image_url, min_age, num_owned, year_published, complexity])
 
     with open('bgg_db_1806.csv') as original_data_file,\
       open('game_categories.csv', 'w') as game_category_file:
@@ -74,6 +73,18 @@ def dictionary_map():
         for category in categories:
           category_id = category_list[category]
           writer.writerow([game_id, category_id])
+
+    with open('bgg_db_1806.csv') as original_data_file,\
+      open('game_designers.csv', 'w') as game_designer_file:
+      reader = csv.reader(original_data_file)
+      writer = csv.writer(game_designer_file)
+      heading_row = next(reader) # skips the first line
+      for row in reader:
+        game_id = row[2]
+        designer = row[18].split(', ')
+        for person in designer:
+          designer_id = designer_list[person]
+          writer.writerow([game_id, designer_id])
     
 if __name__ == '__main__':
    dictionary_map()
