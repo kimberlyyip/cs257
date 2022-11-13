@@ -38,7 +38,7 @@ function get_category(category) {
             games = jsondata[i]
             type_item_class = category + '_item'
             type_genre_item = category + '_category_item'
-            image_address = game['image_url']
+            image_address = game['img_url']
             alt_text = game['name'] + " image"
             game_url = '/boardgame_site/' + game['name']
             animes_html += "<div id = 'img' >"
