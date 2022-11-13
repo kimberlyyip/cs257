@@ -32,6 +32,11 @@ CREATE TABLE game_categories(
     category_id integer
 );
 
+CREATE TABLE game_designers(
+    game_id integer, 
+    designer_id integer
+);
+
 \copy categories from 'categories.csv' DELIMITER ',' CSV NULL as 'NULL'
 
 \copy designer FROM 'designer.csv' DELIMITER ',' CSV NULL AS 'NULL'
@@ -39,3 +44,5 @@ CREATE TABLE game_categories(
 \copy games FROM 'games.csv' DELIMITER ',' CSV NUll AS 'NULL'
 
 \copy game_categories FROM 'game_categories.csv' DELIMITER ',' CSV NULL AS 'NULL'
+
+\copy game_designers FROM 'game_designers.csv' DELIMITER ',' CSV NULL AS 'NULL'
