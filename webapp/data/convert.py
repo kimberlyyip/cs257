@@ -32,8 +32,9 @@ def dictionary_map():
       writer = csv.writer(designer_file)
       heading_row = next(reader) # skips the first line
       for row in reader:
-        designer = row[18]
-        if designer not in designer_list:
+        designer = row[18].split(', ')
+        for designer in designers:
+          if designer not in designer_list:
             designer_id = len(designer_list) + 1
             designer_list[designer] = designer_id
             writer.writerow([designer_id, designer])
@@ -58,7 +59,7 @@ def dictionary_map():
         image_url = row [13]
         min_age = row[14]
         num_owned = row[16]
-        weight = row[19]
+        complexity = row[19]
         designer_id = designer_list[row[18]]
         writer.writerow([game_id, name, rank, min_player, max_player, avg_time, min_time, max_time, avg_rating, num_votes, image_url, min_age, num_owned, designer_id, year_published, weight])
 

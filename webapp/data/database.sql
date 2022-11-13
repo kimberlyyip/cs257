@@ -24,7 +24,7 @@ CREATE TABLE games (
     num_owned integer,
     designer_id integer,
     pub_year integer,
-    weight float
+    complexity float
 );
 
 CREATE TABLE game_categories(
