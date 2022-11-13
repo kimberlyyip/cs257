@@ -83,12 +83,12 @@ def get_info_for_game(game_id):
 
     return json.dumps(game_list)
 
-@api.route('/games/<category>')
+@api.route('/games/category/<category>')
 def get_category(category):
-    query = '''SELECT game.game_id, games.name, categories.category, games.avg_rating, game.img_url
+    query = '''SELECT games.game_id, games.name, categories.category, games.avg_rating, games.image_url
                FROM games, categories, game_categories
                WHERE categories.category = %s
-               AND game_categories.game_id = game.game_id
+               AND game_categories.game_id = games.game_id
                AND game_categories.category_id = categories.id
                ORDER BY avg_rating DESC'''
     game_category_list = []
@@ -97,7 +97,7 @@ def get_category(category):
         cursor = connection.cursor()
         cursor.execute(query, (category,))
         for row in cursor:
-            game = {'game_id':row[0], 'name':row[1], 'category': row[2], 'img_url': row[4]}
+            game = {'game_id':row[0], 'name':row[1], 'category': row[2], 'image_url': row[4]}
             game_category_list.append(game)
         cursor.close()
         connection.close()
