@@ -22,7 +22,6 @@ CREATE TABLE games (
     image_url text,
     min_age integer,
     num_owned integer,
-    designer_id integer,
     pub_year integer,
     complexity float
 );
