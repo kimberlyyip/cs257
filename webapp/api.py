@@ -74,7 +74,7 @@ def get_info_for_game(game_id):
         cursor.execute(query, (game_id,))
         print(game_id)
         for row in cursor:
-            game = {'game_id':row[0], 'name':row[1], 'avg_rating':row[8]}
+            game = {'game_id':row[0], 'name':row[1], 'avg_rating':row[2]}
             game_list.append(game)
         cursor.close()
         connection.close()
@@ -85,7 +85,7 @@ def get_info_for_game(game_id):
 
 @api.route('/games/<category>')
 def get_category(category):
-    query = '''SELECT game.game_id, games.name, categories.category, games.avg_rating
+    query = '''SELECT game.game_id, games.name, categories.category, games.avg_rating, game.img_url
                FROM games, categories, game_categories
                WHERE categories.category = %s
                AND game_categories.game_id = game.game_id
@@ -97,7 +97,7 @@ def get_category(category):
         cursor = connection.cursor()
         cursor.execute(query, (category,))
         for row in cursor:
-            game = {'game_id':row[0], 'name':row[1]}
+            game = {'game_id':row[0], 'name':row[1], 'category': row[2], 'img_url': row[4]}
             game_category_list.append(game)
         cursor.close()
         connection.close()
