@@ -35,7 +35,7 @@ def get_games():
         print(cursor.query)
 
         for row in cursor:
-            game = {'game_rank':row[0],
+            game = {'game_id':row[0],
                       'name':row[1],
                       'rank': row[2],
                       'min_player':row[3],
@@ -61,23 +61,44 @@ def get_games():
     return json.dumps(games_list)
 
 
-@api.route('/games/<game_rank>')
-def get_info_for_game(game_rank):
-    query = '''SELECT rank, name, avg_rating
+@api.route('/games/<game_id>')
+def get_info_for_game(game_id):
+    query = '''SELECT game_id, name, avg_rating
                FROM games
-               WHERE games.rank = %s
+               WHERE games.game_id = %s
                ORDER BY games.pub_year DESC'''
     game_list = []
     try:
         connection = get_connection()
         cursor = connection.cursor()
-        cursor.execute(query, (game_rank,))
-        print('gamerank' + game_rank)
-        print(cursor.query)
+        cursor.execute(query, (game_id,))
+        print(game_id)
         for row in cursor:
-            game = {'game_rank':row[2], 'name':row[1]}
+            game = {'game_id':row[0], 'name':row[1], 'avg_rating':row[8]}
             game_list.append(game)
-        print('after for loop')
+        cursor.close()
+        connection.close()
+    except Exception as e:
+        print(e, file=sys.stderr)
+
+    return json.dumps(game_list)
+
+@api.route('/games/<category>')
+def get_info_for_game(genre):
+    query = '''SELECT game.game_id, games.name, categories.category, games.avg_rating
+               FROM games, categories, game_categories
+               WHERE categories.category = %s
+               AND game_categories.game_id = game.game_id
+               AND game_categories.category_id = categories.id
+               ORDER BY avg_rating DESC'''
+    game_list = []
+    try:
+        connection = get_connection()
+        cursor = connection.cursor()
+        cursor.execute(query, (category,))
+        for row in cursor:
+            game = {'game_id':row[0], 'name':row[1], 'avg_rating':row[8]}
+            game_list.append(game)
         cursor.close()
         connection.close()
     except Exception as e:
