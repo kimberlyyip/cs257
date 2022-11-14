@@ -163,7 +163,7 @@ text-align: center;
 
 #img{
     display:flex;
-    justify-content: center;
+    margin-left: 250px;
 }
   
 #game_img {

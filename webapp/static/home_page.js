@@ -31,7 +31,7 @@ function get_category(category) {
     fetch(url, {method: 'get'})
     .then((response) => response.json())
     .then(jsondata => {
-        var games_html = '';
+        var games_html = "<div id = 'img' >";
         for (var i = 0; i < 5; i++)
         {
             games = jsondata[i]
@@ -41,14 +41,14 @@ function get_category(category) {
             image_address = games['image_url']
             alt_text = games['name'] + " image"
             game_url = '/boardgame_site/' + games['name']
-            games_html += "<div id = 'img' >"
-                        + "<div id = game_img>"
+            games_html +="<div id = game_img>"
                         + "<img src='" + image_address + "' alt='" + alt_text + "'>"
                         + "<a href='" + game_url + "'>"
                         + "<p>" + games['name'] + "</p>"
                         + "</a>"
                         + "</div>"
         }
+        games.html = "</div>"
         console.log(game_display)
         if (game_display)
         {
