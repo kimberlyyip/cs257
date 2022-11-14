@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='search_page.css') }}"/>
+    <script type="text/javascript" src="{{ url_for('static', filename='search_page.js') }}" ></script>
     <title>search page</title>
 
     <div class="dropdown">
@@ -85,59 +86,8 @@
     <h3>
       Board games:
     </h3>
-  
-  </div>
-  
-  <div id = "img" >
-    <div id = game_img>
-   <img  src="https://www.rd.com/wp-content/uploads/2021/04/GettyImages-514622028-e1617288074638.jpg" alt="Snow" >
-   <a href="boardgame_site">  
-    <p>Game board Title</p>
-    </a>
-  </div>
-  <div id = game_img>
-    <img  src="https://www.rd.com/wp-content/uploads/2021/04/GettyImages-514622028-e1617288074638.jpg" alt="Snow" >
-    <a href="boardgame_site">  
-      <p>Game board Title</p>
-      </a>
-   </div><div id = game_img>
-    <img  src="https://www.rd.com/wp-content/uploads/2021/04/GettyImages-514622028-e1617288074638.jpg" alt="Snow" >
-    <a href="boardgame_site">  
-      <p>Game board Title</p>
-      </a>
-   </div><div id = game_img>
-    <img  src="https://www.rd.com/wp-content/uploads/2021/04/GettyImages-514622028-e1617288074638.jpg" alt="Snow" >
-    <a href="boardgame_site">  
-      <p>Game board Title</p>
-      </a>
    </div>
-   </div>
-   <div id = "img" >
-    <div id = game_img>
-   <img  src="https://www.rd.com/wp-content/uploads/2021/04/GettyImages-514622028-e1617288074638.jpg" alt="Snow" >
-   <a href="boardgame_site">  
-    <p>Game board Title</p>
-    </a>
-  </div>
-  <div id = game_img>
-    <img  src="https://www.rd.com/wp-content/uploads/2021/04/GettyImages-514622028-e1617288074638.jpg" alt="Snow" >
-    <a href="boardgame_site">  
-      <p>Game board Title</p>
-      </a>
-   </div><div id = game_img>
-    <img  src="https://www.rd.com/wp-content/uploads/2021/04/GettyImages-514622028-e1617288074638.jpg" alt="Snow" >
-    <a href="boardgame_site">  
-      <p>Game board Title</p>
-      </a>
-   </div><div id = game_img>
-    <img  src="https://www.rd.com/wp-content/uploads/2021/04/GettyImages-514622028-e1617288074638.jpg" alt="Snow" >
-    <a href="boardgame_site">  
-      <p>Game board Title</p>
-      </a>
-   </div>
-   </div>
-</div>
-   
+   <div class = "game_display" id ="all_games"></div>
 
 <script>
   /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
