@@ -26,7 +26,7 @@ def get_connection():
 
 @api.route('/games/')
 def get_games():
-    query = '''SELECT * FROM games'''
+    query = '''SELECT * FROM games ORDER BY games.name ASC'''
     games_list = []
     try:
         connection = get_connection()
@@ -48,9 +48,8 @@ def get_games():
                       'image_url':row[10],
                       'min_age':row[11],
                       'num_owned':row[12],
-                      'designer_id':row[13],
-                      'pub_year':row[14],
-                      'weight':row[15]
+                      'pub_year':row[13],
+                      'complexity':row[12]
                       }
             games_list.append(game)
         cursor.close()
