@@ -105,3 +105,18 @@ def get_category(category):
 
     return json.dumps(game_category_list)
 
+
+
+    '''Connects to database and initializes the cursor.'''
+def cursor_init():
+    try:
+      connection = psycopg2.connect(database=config.database,
+                            user=config.user,
+                            password=config.password,
+                            port=config.port)
+      cursor = connection.cursor()
+      return connection, cursor
+    except Exception as e:
+      print(e)
+      exit()
+

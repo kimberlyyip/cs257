@@ -38,20 +38,20 @@
   <div>
 
       <div>
-          <h3><span>#13 Catan</span></h3>
+          <h3><span>#{{ game_data[0] }} {{game_data[1]}}</span></h3>
       </div>
 
       <div class="floatingdiv">
         <div class="floatingdiv2">
-        <p><span>Average rating</span>: 7.15</p>
-        <p><span>Number of players</span>: 3-4</p>
-        <p><span>Play time</span>: 120min</p>
+        <p><span>Average rating</span>: {{game_data[2]}}</p>
+        <p><span>Number of players</span>: {{game_data[3]}}-{{game_data[4]}}</p>
+        <p><span>Play time</span>: {{game_data[5]}}-{{game_data[6]}} minutes</p>
         <p><span>Genre</span>: Family Game, Strategy Game</p>
-        <p><span>Minimum age</span>: 10</p>
-        <p><span>Year published</span>: 1995</p>
-        <p><span>Complexity</span>: 2.32</p>
-        <p><span>Mechanics</span>: Dice Rolling, Hexagon Grid, Income, Modular Board, Network and Route Building, Race, Random Production, Trading, Variable Set-up</p>
-        </div>
+        <p><span>Minimum age</span>: {{game_data[7]}}</p>
+        <p><span>Year published</span>: {{game_data[8]}}</p>
+        <p><span>Complexity</span>: {{game_data[9]}} out of 5</p>
+      </div>
+
 
         <div class="floatingdiv3">
           <p>Write a review:</p>
