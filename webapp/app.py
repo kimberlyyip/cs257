@@ -44,11 +44,6 @@ def mockups5():
     '''route to mockups5'''
     return flask.render_template('search_page.html')
 
-@app.route('/api/search_page') 
-def mockups5_5():
-    '''route to mockups5'''
-    return flask.render_template('search_page.html')
-
 @app.route('/login_page') 
 def mockups6():
     '''route to mockups6'''

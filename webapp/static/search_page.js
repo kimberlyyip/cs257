@@ -11,7 +11,6 @@ function initialize() {
     dropdownbtn();
     get_all_categories();
     get_all_min_age();
-    get_search_string();
 }
 
 // Returns the base URL of the API, onto which endpoint
@@ -102,43 +101,6 @@ function get_all_min_age() {
     });
 }
 
-function get_search_string(){
-    var url = getAPIBaseURL() + "/search_page/"
-    var game_display = document.getElementById("all_games");
-    console.log("all_games");
-    fetch(url, {method: 'get'})
-    .then((response) => response.json())
-    .then(jsondata => {
-        var games_html = '';
-            for (var i = 0; i < 625; i++)
-            {
-                if (i % 4 == 0) {
-                    games_html += "<div id = 'img' >"
-                }
-                games = jsondata[i]
-                image_address = games['image_url']
-                alt_text = games['name'] + " image"
-                game_url = '/game/' + games['name']
-                games_html += "<div id = game_img>"
-                            + "<img src='" + image_address + "' alt='" + alt_text + "'>"
-                            + "<a href='" + game_url + "'>"
-                            + "<p>" + games['name'] + "</p>"
-                            + "</a>"
-                            + "</div>"
-                if ((i + 1) % 4 == 0) {
-                    games_html += "</div>"
-                }
-            }          
-        if (game_display)
-        {
-            game_display.innerHTML += games_html;
-        }
-    })
-    .catch(error => {
-        console.log(error);
-    });
-
-}
 
 function get_all() {
     var url = getAPIBaseURL() + "/games/"
@@ -177,3 +139,44 @@ function get_all() {
     });
 }
 
+function submit_button(){
+    search_string = document.getElementById('text').value
+    alert(search_string)
+    var url = getAPIBaseURL() + "search_page" + search_string
+    var game_display = document.getElementById("all_games");
+
+    console.log("all_games");
+    fetch(url, {method: 'get'})
+
+    .then((response) => response.json())
+    .then(jsondata => {
+        var games_html = '';
+            for (var i = 0; i < 650; i++)
+            {
+                if (i % 4 == 0) {
+                    games_html += "<div id = 'img' >"
+                }
+                games = jsondata[i]
+                image_address = games['image_url']
+                alt_text = games['name'] + " image"
+                game_url = '/game/' + games['name']
+                games_html += "<div id = game_img>"
+                            + "<img src='" + image_address + "' alt='" + alt_text + "'>"
+                            + "<a href='" + game_url + "'>"
+                            + "<p>" + games['name'] + "</p>"
+                            + "</a>"
+                            + "</div>"
+                if ((i + 1) % 4 == 0) {
+                    games_html += "</div>"
+                }
+            }          
+        if (game_display)
+        {
+            game_display.innerHTML += games_html;
+        }
+    })
+
+    .catch(error => {
+        console.log(error);
+    });   
+}
