@@ -7,10 +7,16 @@
 window.onload = initialize;
 
 function initialize() {
+    get_category('Card Game');
+    get_category('Wargame');
+    get_category('Fantasy');
+    get_category('Economic');
+    get_category('Fighting');
     get_all();
     dropdownbtn();
     get_all_categories();
     get_all_min_age();
+    get_category(category);
 }
 
 // Returns the base URL of the API, onto which endpoint
@@ -54,7 +60,7 @@ function get_all_categories() {
                 categories = jsondata[i]
                 category_name = categories['category']
                 sidebar_html += "<div class='form-group'>"
-                              + "<input type='checkbox' class='custom-control-input'>"
+                              + "<input type='checkbox' name='" + category_name + "' class='custom-control-input'>"
                               + "<span class='custom-control-indicator'></span>"
                               + "<span class='custom-control-description'>" + category_name + "</span>"
                               + "</div>"
@@ -136,5 +142,117 @@ function get_all() {
     .catch(error => {
         console.log(error);
     });
+}
+
+function get_category(category) {
+    var url = getAPIBaseURL() + "/games/category/" + category
+    var game_display = document.getElementById("category_" + category);
+    console.log("category_" + category);
+    fetch(url, {method: 'get'})
+    .then((response) => response.json())
+    .then(jsondata => {
+        var games_html = "<div id = 'img' >";
+        for (var i = 0; i < 5; i++)
+        {
+            games = jsondata[i]
+            console.log(jsondata)
+            type_item_class = category + '_item'
+            type_genre_item = category + '_category_item'
+            image_address = games['image_url']
+            alt_text = games['name'] + " image"
+            game_url = '/game/' + games['name']
+            games_html +="<div id = game_img>"
+                        + "<img src='" + image_address + "' alt='" + alt_text + "'>"
+                        + "<a href='" + game_url + "'>"
+                        + "<p>" + games['name'] + "</p>"
+                        + "</a>"
+                        + "</div>"
+        }
+        games.html = "</div>"
+        console.log(game_display)
+        if (game_display)
+        {
+            game_display.innerHTML += games_html;
+        }
+    })
+    .catch(error => {
+        console.log(error);
+    });
+}
+
+function onclick_get_category() {
+    alert("submit");
+    var url = getAPIBaseURL() + "/games/category/"
+    var boxes = document.querySelectorAll(".custom-control-input");
+    var all_checked = []
+    for (var j; j < boxes.length; j++) {
+        if (boxes[j].checked){
+            url += boxes[j]
+        }
+        if (j < boxes.length - 1) {
+            url += "_"
+        } 
+    }
+    fetch(url, {method: 'get'})
+    .then((response) => response.json())
+    .then(jsondata => {
+        var games_html = "<div id = 'img' >";
+        for (var i = 0; i < 5; i++)
+        {
+            games = jsondata[i]
+            console.log(jsondata)
+            type_item_class = category + '_item'
+            type_genre_item = category + '_category_item'
+            image_address = games['image_url']
+            alt_text = games['name'] + " image"
+            game_url = '/game/' + games['name']
+            games_html +="<div id = game_img>"
+                        + "<img src='" + image_address + "' alt='" + alt_text + "'>"
+                        + "<a href='" + game_url + "'>"
+                        + "<p>" + games['name'] + "</p>"
+                        + "</a>"
+                        + "</div>"
+        }
+        games.html = "</div>"
+        console.log(game_display)
+        if (game_display)
+        {
+            game_display.innerHTML += games_html;
+        }
+    })
+    .catch(error => {
+        console.log(error);
+    });
+
+    // fetch(url, {method: 'get'})
+    // .then((response) => response.json())
+    // .then(jsondata => {
+    //     var games_html = "<div id = 'img' >";
+    //     for (var i = 0; i < 5; i++)
+    //     {
+    //         games = jsondata[i]
+    //         console.log(jsondata)
+    //         type_item_class = category + '_item'
+    //         type_genre_item = category + '_category_item'
+    //         image_address = games['image_url']
+    //         alt_text = games['name'] + " image"
+    //         game_url = '/game/' + games['name']
+    //         games_html +="<div id = game_img>"
+    //                     + "<img src='" + image_address + "' alt='" + alt_text + "'>"
+    //                     + "<a href='" + game_url + "'>"
+    //                     + "<p>" + games['name'] + "</p>"
+    //                     + "</a>"
+    //                     + "</div>"
+    //     }
+    //     games.html = "</div>"
+    //     console.log(game_display)
+    //     if (game_display)
+    //     {
+    //         game_display.innerHTML += games_html;
+    //     }
+    // })
+    // .catch(error => {
+    //     console.log(error);
+    // });
 }
 

@@ -142,7 +142,6 @@ def get_category(category):
     return json.dumps(game_category_list)
 
 
-
     '''Connects to database and initializes the cursor.'''
 def cursor_init():
     try:
