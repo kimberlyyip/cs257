@@ -83,10 +83,9 @@ text-align: center;
 
 /* Fixed sidenav, full height */
 .sidenav {
-    margin-top: 200px;
     width: 200px;
-    height: 75%;
-    position: fixed;
+    height: 100vh;
+    position: sticky;
     z-index: 1;
     top: 0;
     left: 0;
@@ -159,6 +158,8 @@ text-align: center;
     margin-top: 25px;
     border: 3px solid black;
     margin-left: 250px;
+    position: relative; 
+    top: -100vh;
   }
 
 #img{
@@ -179,3 +180,8 @@ text-align: center;
 #game_img img {
     width: 200px;
   }
+
+.game_display {
+  position: relative; 
+  top: -100vh;
+}
