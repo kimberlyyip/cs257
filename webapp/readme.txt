@@ -3,11 +3,10 @@ AUTHORS: Kimberly Yip, Sophia Wang, Sydney Nguyen
 DATA: Board Game database 
 
 FEATURES CURRENTLY WORKING:
-- Currently None
-
-FEATURES NOT YET WORKING:
 - List all board games (default alphabetical)
 - All board games have a designated cite 
+
+FEATURES NOT YET WORKING:
 - Sort board games by all types of categories 
 - Search by string
 - Search by attribute  
