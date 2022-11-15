@@ -82,6 +82,42 @@ def get_info_for_game(game_id):
 
     return json.dumps(game_list)
 
+@api.route('/games/sidebar/category')
+def get_all_category():
+    query = '''SELECT * FROM categories ORDER BY categories.category ASC'''
+    category_list = []
+    try:
+        connection = get_connection()
+        cursor = connection.cursor()
+        cursor.execute(query, tuple())
+        for row in cursor:
+            category = {'category_id':row[0], 'category': row[1]}
+            category_list.append(category)
+        cursor.close()
+        connection.close()
+    except Exception as e:
+        print(e, file=sys.stderr)
+
+    return json.dumps(category_list)
+
+@api.route('/games/sidebar/min_age')
+def get_all_minage():
+    query = '''SELECT games.min_age FROM games GROUP BY games.min_age ORDER BY games.min_age ASC'''
+    min_age_list = []
+    try:
+        connection = get_connection()
+        cursor = connection.cursor()
+        cursor.execute(query, tuple())
+        for row in cursor:
+            min_age = {'min_age': row[0]}
+            min_age_list.append(min_age)
+        cursor.close()
+        connection.close()
+    except Exception as e:
+        print(e, file=sys.stderr)
+
+    return json.dumps(min_age_list)
+
 @api.route('/games/category/<category>')
 def get_category(category):
     query = '''SELECT games.game_id, games.name, categories.category, games.avg_rating, games.image_url
