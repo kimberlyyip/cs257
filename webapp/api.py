@@ -120,6 +120,8 @@ def get_all_minage():
 
 @api.route('/games/category/<category>')
 def get_category(category):
+    category = category.split("_")
+    print(category)
     query = '''SELECT games.game_id, games.name, categories.category, games.avg_rating, games.image_url
                FROM games, categories, game_categories
                WHERE categories.category = %s
@@ -128,22 +130,59 @@ def get_category(category):
                ORDER BY avg_rating DESC'''
     game_category_list = []
     try:
-        connection = get_connection()
-        cursor = connection.cursor()
-        cursor.execute(query, (category,))
-        for row in cursor:
-            game = {'game_id':row[0], 'name':row[1], 'category': row[2], 'image_url': row[4]}
-            game_category_list.append(game)
-        cursor.close()
-        connection.close()
+        for item in category:
+            connection = get_connection()
+            cursor = connection.cursor()
+            cursor.execute(query, (item,))
+            for row in cursor:
+                game = {'game_id':row[0], 'name':row[1], 'category': row[2], 'image_url': row[4]}
+                if game not in game_category_list:
+                    game_category_list.append(game)
+            cursor.close()
+            connection.close()
     except Exception as e:
         print(e, file=sys.stderr)
 
     return json.dumps(game_category_list)
 
+<<<<<<< HEAD
 @api.route('/search_page/<search_string>')
 def get_game_string(search_string):
     query = '''SELECT * FROM games WHERE  games.name ILIKE CONCAT('%%', %s, '%%')'''
+=======
+@api.route('/games/min_age/<min_age>')
+def get_min_age(min_age):
+    min_age = min_age.split("_")
+    print(min_age)
+    query = '''SELECT games.game_id, games.name, games.min_age, games.avg_rating, games.image_url
+               FROM games
+               WHERE games.min_age = %s
+               ORDER BY avg_rating DESC'''
+    game_min_age_list = []
+    try:
+        for item in min_age:
+            item = int(item)
+            connection = get_connection()
+            cursor = connection.cursor()
+            cursor.execute(query, (item,))
+            for row in cursor:
+                game = {'game_id':row[0], 'name':row[1], 'min_age': row[2], 'image_url': row[4]}
+                if game not in game_min_age_list:
+                    game_min_age_list.append(game)
+            cursor.close()
+            connection.close()
+    except Exception as e:
+        print(e, file=sys.stderr)
+
+    return json.dumps(game_min_age_list)
+
+@api.route('/search_page')
+def get_game_string():
+    query = '''SELECT name 
+               FROM games
+               WHERE  games.name ILIKE CONCAT('%%', %s, '%%')
+               '''
+>>>>>>> 48d339b14a4c5727e77d279d5a9a9cd4e7b973c0
 
     # search_string = flask.request.args.get('search')           
     games_list = []
@@ -177,7 +216,6 @@ def get_game_string(search_string):
         print(e, file=sys.stderr)
 
     return json.dumps(games_list)
-
 
     '''Connects to database and initializes the cursor.'''
 def cursor_init():
