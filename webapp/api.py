@@ -101,7 +101,7 @@ def get_all_category():
     return json.dumps(category_list)
 
 @api.route('/games/sidebar/min_age')
-def get_all_minage():
+def get_all_min_age():
     query = '''SELECT games.min_age FROM games GROUP BY games.min_age ORDER BY games.min_age ASC'''
     min_age_list = []
     try:
@@ -171,21 +171,17 @@ def get_min_age(min_age):
 
     return json.dumps(game_min_age_list)
 
-@api.route('/search_page')
-def get_game_string():
-    query = '''SELECT name 
-               FROM games
-               WHERE  games.name ILIKE CONCAT('%%', %s, '%%')
-               '''
+@api.route('/search_page/<search>')
+def get_game_string(search):
+    print(search)
+    query = '''SELECT * FROM games WHERE games.name ILIKE CONCAT('%%', %s, '%%')'''
 
     # search_string = flask.request.args.get('search')           
     games_list = []
     try:
         connection = get_connection()
         cursor = connection.cursor()
-        cursor.execute(query, (search_string,))
-        print(cursor.query)
-
+        cursor.execute(query, (search,))
         for row in cursor:
             game = {'game_id':row[0],
                       'name':row[1],
@@ -206,6 +202,7 @@ def get_game_string():
             games_list.append(game)
         cursor.close()
         connection.close()
+        print(games_list)
     except Exception as e:
         print(e, file=sys.stderr)
 
