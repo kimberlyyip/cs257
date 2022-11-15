@@ -141,6 +141,30 @@ def get_category(category):
 
     return json.dumps(game_category_list)
 
+@api.route('/search_page')
+def get_game_string():
+    query = '''SELECT name 
+               FROM games
+               WHERE  games.name ILIKE CONCAT('%%', %s, '%%')
+               '''
+
+    search_string = flask.request.args.get('search')           
+    game_list = []
+    try:
+        connection = get_connection()
+        cursor = connection.cursor()
+        cursor.execute(query, (search_string,))
+        print(cursor.query)
+
+        for row in cursor:
+            game = {'name':row[0]}
+            game_list.append(game)
+        cursor.close()
+        connection.close()
+    except Exception as e:
+        print(e, file=sys.stderr)
+
+    return json.dumps(game_list)
 
 
     '''Connects to database and initializes the cursor.'''
