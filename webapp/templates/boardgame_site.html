@@ -21,7 +21,7 @@
   </div>
   
   <div class="topnav" >
-        <a href="home_page"> 
+        <a href="/home_page"> 
         <img alt = logo src="https://cdn.pixabay.com/photo/2017/08/31/04/01/d20-2699387_960_720.png"/>
         </a>
       
@@ -41,17 +41,31 @@
           <h3><span>#{{ game_data[0] }} {{game_data[1]}}</span></h3>
       </div>
 
-      <div class="floatingdiv">
-        <div class="floatingdiv2">
-        <p><span>Average rating</span>: {{game_data[2]}}</p>
-        <p><span>Number of players</span>: {{game_data[3]}}-{{game_data[4]}}</p>
-        <p><span>Play time</span>: {{game_data[5]}}-{{game_data[6]}} minutes</p>
-        <p><span>Genre</span>: Family Game, Strategy Game</p>
-        <p><span>Minimum age</span>: {{game_data[7]}}</p>
-        <p><span>Year published</span>: {{game_data[8]}}</p>
-        <p><span>Complexity</span>: {{game_data[9]}} out of 5</p>
+      <div>
+        <div class = "game_display">
+        <img src={{game_data[10]}} style="width: 300px;">
+        </div>
       </div>
 
+      <div class="floatingdiv">
+        <div class="floatingdiv2">
+        <p><span>Average rating</span>: {{game_data[2]}} out of 10</p>
+        <p><span>Number of players</span>: {% if game_data[3] == game_data[4] %}
+          {{game_data[3]}}
+          {% else %}
+          {{game_data[3]}}-{{game_data[4]}}
+          {% endif %}</p>
+        <p><span>Play time</span>: {% if game_data[5] == game_data[6] %}
+          {{game_data[5]}}
+          {% else %}
+          {{game_data[5]}}-{{game_data[6]}}
+          {% endif %} minutes</p>
+        <p><span>Complexity</span>: {{game_data[9]}} out of 5</p>
+        <p><span>Categories</span>: {{categories}}</p>
+        <p><span>Designers</span>: {{designers}}</p>
+        <p><span>Minimum age</span>: {{game_data[7]}}</p>
+        <p><span>Year published</span>: {{game_data[8]}}</p>
+      </div>
 
         <div class="floatingdiv3">
           <p>Write a review:</p>

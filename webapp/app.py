@@ -54,34 +54,56 @@ def mockups7():
     '''route to mockups7'''
     return flask.render_template('forgot_password.html')
 
-@app.route('/game/<rank>')
-def gamedata(rank):
+@app.route('/game/<name>')
+def gamedata(name):
     connection, cursor = cursor_init()
 
-    query = "SELECT rank, name, avg_rating, min_player, max_player, min_time, max_time, min_age, pub_year, weight FROM games WHERE games.rank = %s"
-    cursor.execute(query, (rank,))
+    query = "SELECT rank, name, avg_rating, min_player, max_player, min_time, max_time, min_age, pub_year, complexity, image_url FROM games WHERE games.name = %s"
+    cursor.execute(query, (name,))
 
     for row in cursor:
         rank = row[0]
         name = row[1]
-        avg_rating = row[2]
+        avg_rating = round(row[2],2)
         min_players = row[3]
         max_players = row[4]
         min_time = row[5]
         max_time = row[6]
         min_age = row[7]
         pub_year = row[8]
-        complexity = row[9]
+        complexity = round(row[9],2)
+        image_url = row[10]
+
+    game_data =(rank, name, avg_rating, min_players, max_players,min_time,max_time,min_age,pub_year,complexity,image_url)
 
 
-       
+    query = "SELECT category FROM games, game_categories, categories WHERE games.game_id = game_categories.game_id AND categories.id = game_categories.category_id AND games.rank = %s"
+    cursor.execute(query, (rank,))
 
-    game_data =(rank, name, avg_rating, min_players, max_players,min_time,max_time,min_age,pub_year,complexity)
+    categories = ''
+    for row in cursor:
+        categories += str(row).strip('\'(),') 
+        categories += ', '
 
+    categories = categories[:-2]
+
+    query = "SELECT designer FROM games, game_designers, designer WHERE games.game_id = game_designers.game_id AND designer.id = game_designers.designer_id AND games.rank = %s"
+    cursor.execute(query, (rank,))
+
+    designers = ''
+    for row in cursor:
+        designers += str(row).strip('\'(),') 
+        designers += ', '
+
+    designers = designers[:-2]
+
+        
+    cursor.close()
+    connection.close()
 
     #take id, do search, hand back info 
     '''route to mockups7'''
-    return flask.render_template('boardgame_site.html', game_data=game_data)
+    return flask.render_template('boardgame_site.html', game_data=game_data, categories=categories,designers=designers)
 
 
 if __name__ == '__main__':

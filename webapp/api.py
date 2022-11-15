@@ -48,8 +48,8 @@ def get_games():
                       'image_url':row[10],
                       'min_age':row[11],
                       'num_owned':row[12],
-                      'pub_year':row[13],
-                      'complexity':row[12]
+                      'pub_year':row[14],
+                      'complexity':row[15]
                       }
             games_list.append(game)
         cursor.close()
@@ -60,11 +60,11 @@ def get_games():
     return json.dumps(games_list)
 
 
-@api.route('/games/<game_id>')
+@api.route('/games/<game_name>')
 def get_info_for_game(game_id):
     query = '''SELECT game_id, name, avg_rating
                FROM games
-               WHERE games.game_id = %s
+               WHERE games.name = %s
                ORDER BY games.pub_year DESC'''
     game_list = []
     try:
