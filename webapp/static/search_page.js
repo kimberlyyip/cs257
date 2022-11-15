@@ -109,7 +109,7 @@ function get_all_min_age() {
 
 function get_all() {
     var url = getAPIBaseURL() + "/games/"
-    var game_display = document.getElementById("all_games");
+    var game_display = document.getElementById("games");
     console.log("all_games");
     fetch(url, {method: 'get'})
     .then((response) => response.json())
@@ -148,7 +148,7 @@ function submit_button(){
     search_string = document.getElementById('text').value
     alert(search_string)
     var url = getAPIBaseURL() + "search_page" + search_string
-    var game_display = document.getElementById("all_games");
+    var game_display = document.getElementById("games");
 
     console.log("all_games");
     fetch(url, {method: 'get'})
