@@ -44,6 +44,11 @@ def mockups5():
     '''route to mockups5'''
     return flask.render_template('search_page.html')
 
+@app.route('/api/search_page') 
+def mockups5_5():
+    '''route to mockups5'''
+    return flask.render_template('search_page.html')
+
 @app.route('/login_page') 
 def mockups6():
     '''route to mockups6'''
@@ -105,6 +110,29 @@ def gamedata(name):
     '''route to mockups7'''
     return flask.render_template('boardgame_site.html', game_data=game_data, categories=categories,designers=designers)
 
+@app.route('/search_page')
+def get_game_string():
+    query = '''SELECT name FROM games WHERE  games.name ILIKE CONCAT s('%%', %s, '%%')
+               '''
+
+    search_string = flask.request.args.get('search')           
+    game_list = []
+    try:
+        connection = get_connection()
+        cursor = connection.cursor()
+        cursor.execute(query, (search_string,))
+        print(cursor.query)
+
+        for row in cursor:
+            game = {'name':row[0]}
+            game_list.append(game)
+        cursor.close()
+        connection.close()
+    except Exception as e:
+        print(e, file=sys.stderr)
+
+    # return json.dumps(game_list)
+    return flask.render_template('search_page.html', game_list=game_list)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser('A board games application, including API & DB')
