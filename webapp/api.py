@@ -48,8 +48,8 @@ def get_games():
                       'image_url':row[10],
                       'min_age':row[11],
                       'num_owned':row[12],
-                      'pub_year':row[14],
-                      'complexity':row[15]
+                      'pub_year':row[13],
+                      'complexity':row[14]
                       }
             games_list.append(game)
         cursor.close()
