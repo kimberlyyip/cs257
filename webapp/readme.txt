@@ -5,13 +5,12 @@ DATA: Board Game database
 FEATURES CURRENTLY WORKING:
 - List all board games (default alphabetical)
 - All board games have a designated cite 
-
-FEATURES NOT YET WORKING:
-- Sort board games by all types of categories 
-- Search by string
-- Search by attribute  
+- Sort board games by categories 
 - Homepage is working with working links
 - All links work 
+
+FEATURES NOT YET WORKING:
+- Search by string
 - Anoyone is able to post an anyonymous review 
 - Users can create an account
 - Login page is functional 
