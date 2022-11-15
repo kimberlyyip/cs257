@@ -40,7 +40,7 @@ function get_category(category) {
             type_genre_item = category + '_category_item'
             image_address = games['image_url']
             alt_text = games['name'] + " image"
-            game_url = '/boardgame_site/' + games['name']
+            game_url = '/game/' + games['name']
             games_html +="<div id = game_img>"
                         + "<img src='" + image_address + "' alt='" + alt_text + "'>"
                         + "<a href='" + game_url + "'>"
