@@ -145,11 +145,6 @@ def get_category(category):
 
     return json.dumps(game_category_list)
 
-<<<<<<< HEAD
-@api.route('/search_page/<search_string>')
-def get_game_string(search_string):
-    query = '''SELECT * FROM games WHERE  games.name ILIKE CONCAT('%%', %s, '%%')'''
-=======
 @api.route('/games/min_age/<min_age>')
 def get_min_age(min_age):
     min_age = min_age.split("_")
@@ -182,7 +177,6 @@ def get_game_string():
                FROM games
                WHERE  games.name ILIKE CONCAT('%%', %s, '%%')
                '''
->>>>>>> 48d339b14a4c5727e77d279d5a9a9cd4e7b973c0
 
     # search_string = flask.request.args.get('search')           
     games_list = []
