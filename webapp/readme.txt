@@ -17,3 +17,7 @@ FEATURES NOT YET WORKING:
 - User is able to have favorite boardgames 
 - User is able to view favorite boardgames
 - User is able to make a review associated with their account 
+
+
+Note: 
+Users are unable to sort the data by two different types i.e categories and age can not currently be searched at the same time
