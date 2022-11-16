@@ -17,7 +17,7 @@ app.register_blueprint(api.api, url_prefix='/api')
 @app.route('/')
 def home():
     '''route to home'''
-    return flask.render_template('index.html')
+    return flask.render_template('home_page.html')
 
 @app.route('/home_page')
 def mockups1():
@@ -128,6 +128,10 @@ def gamedata(name):
 
 #     # return json.dumps(game_list)
 #     return flask.render_template('search_page.html', game_list=game_list)
+
+@app.route('/api/help')
+def help():
+    return flask.render_template('help.txt')
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser('A board games application, including API & DB')
