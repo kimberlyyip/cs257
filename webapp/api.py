@@ -23,19 +23,40 @@ def get_connection():
                             password=config.password,
                             port=config.port)
 
+def pageable(games_list, page_number):
+    page_number = int(page_number)
+    page_games_list = []
+    remainder = len(games_list)%500
+    if remainder == 0:
+        num_pages = len(games_list)//500
+        start = 500 * (page_number - 1)
+        end = 500 * page_number
+        page_games_list = games_list[start:end]
+    elif remainder < 500:
+        num_pages = len(games_list)//500
+        if num_pages == 0:
+            page_games_list = games_list[0:len(games_list)]
+        else:
+            if page_number <= num_pages:
+                start = 500 * (page_number -1)
+                end = 500 * page_number
+                page_games_list = games_list[start:end]
+            else:
+                start = 500 * (page_number -1)
+                page_games_list = games_list[start:len(games_list)]
+    return page_games_list
+
 
 @api.route('/games/')
 def get_games():
     page_number = flask.request.args.get('page')
     query = '''SELECT * FROM games ORDER BY games.name ASC'''
     games_list = []
-    page_games_list = []
     try:
         connection = get_connection()
         cursor = connection.cursor()
         cursor.execute(query, tuple())
         print(cursor.query)
-
         for row in cursor:
             game = {'game_id':row[0],
                       'name':row[1],
@@ -56,23 +77,11 @@ def get_games():
             games_list.append(game)
         cursor.close()
         connection.close()
-        total_pages = len(games_list)/500
-        if total_pages == 0:
-            page_games_list = games_list[0:len(games_list)]
-        else:
-            i = 0 
-            start = 0
-            end = 500
-            while i < total_pages:
-                page_games_list.append(games_list[start:end])
-                i += 1
-                start += 500
-                end += 500
-            page_games_list.append(games_list[start:len(games_list)])
+        page_games_list = pageable(games_list, page_number)
     except Exception as e:
         print(e, file=sys.stderr)
 
-    return json.dumps(page_games_list[page_number -1])
+    return json.dumps(page_games_list)
 
 
 @api.route('/games/<game_name>')
