@@ -26,8 +26,10 @@ def get_connection():
 
 @api.route('/games/')
 def get_games():
+    page_number = flask.request.args.get('page')
     query = '''SELECT * FROM games ORDER BY games.name ASC'''
     games_list = []
+    page_games_list = []
     try:
         connection = get_connection()
         cursor = connection.cursor()
@@ -54,10 +56,23 @@ def get_games():
             games_list.append(game)
         cursor.close()
         connection.close()
+        total_pages = len(games_list)/500
+        if total_pages == 0:
+            page_games_list = games_list[0:len(games_list)]
+        else:
+            i = 0 
+            start = 0
+            end = 500
+            while i < total_pages:
+                page_games_list.append(games_list[start:end])
+                i += 1
+                start += 500
+                end += 500
+            page_games_list.append(games_list[start:len(games_list)])
     except Exception as e:
         print(e, file=sys.stderr)
 
-    return json.dumps(games_list)
+    return json.dumps(page_games_list[page_number -1])
 
 
 @api.route('/games/<game_name>')

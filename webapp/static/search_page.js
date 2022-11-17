@@ -146,7 +146,7 @@ function get_all() {
     .then((response) => response.json())
     .then(jsondata => {
         var games_html = '';
-            for (var i = 0; i < 625; i++)
+            for (var i = 0; i < jsondata.length; i++)
             {
                 if (i % 4 == 0) {
                     games_html += "<div id = 'img' >"
@@ -342,7 +342,6 @@ function onclick_get_min_age() {
 }
 
 function onclick_get_pub_year() {
-    // this is here
     var url = getAPIBaseURL() + "/games/pub_year/"
     var boxes = document.querySelectorAll(".custom-control-input");
     for (var j = 0; j < boxes.length; j++) {
