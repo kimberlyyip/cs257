@@ -340,4 +340,3 @@ function onclick_get_min_age() {
         console.log(error);
     });
 }
-
