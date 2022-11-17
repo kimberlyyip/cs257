@@ -106,7 +106,6 @@ function get_all_min_age() {
     });
 }
 
-
 function get_all() {
     var url = getAPIBaseURL() + "/games/"
     var game_display = document.getElementById("games");
@@ -309,4 +308,3 @@ function onclick_get_min_age() {
         console.log(error);
     });
 }
-
