@@ -5,6 +5,8 @@
         <meta charset="UTF-8">
         <title>Boardgame Site</title>
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='boardgame_site.css') }}" /> 
+        <script type="text/javascript" src="{{ url_for('static', filename='boardgames.js') }}" ></script>
+
 
 
     </head>
@@ -68,11 +70,10 @@
         <div class="floatingdiv3">
           <p>Write a review:</p>
 
-          <textarea rows="6" cols="50" maxlength="500"></textarea>
+          <textarea id = 'input' rows="6" cols="50" maxlength="500"></textarea>
+          <button  onclick = "submit_review()"> Submit </button>   
+
           <br>
-          <button id="review">
-            Submit
-          </button>
 
         </div>
       </div>

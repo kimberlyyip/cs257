@@ -102,3 +102,12 @@ function onGamesSelectionChanged() {
     });
 }
 
+
+function submit_review(){
+    review_text = document.getElementById('input').value
+    alert(review_text)
+
+    .catch(function(error) {
+        console.log(error);
+    });
+}
