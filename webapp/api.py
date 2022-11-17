@@ -287,14 +287,15 @@ def add_review_text(game_name):
   except Exception as e:
     return json.dumps(False)
     
-#Credit to Quocodile
-@api.route('/games/<game_name>/review')
-def get_all_reviews(game_name):
-   query = "SELECT * FROM game_reviews, games WHERE game_reviews.game_id = games.game_id AND games.name = %s"
-   output = []
-   cursor.execute(query, (games.name,)) 
-   try:
-    connection = get_connection()
-    cursor = connection.cursor()
-    cursor.execute()
+# #Credit to Quocodile
+# @api.route('/games/<game_name>/review')
+# def get_all_reviews(game_name):
+#    query = "SELECT * FROM game_reviews, games WHERE game_reviews.game_id = games.game_id AND games.name = %s"
+#    output = []
+#    cursor.execute(query, (games.name,)) 
+#    try:
+#     connection = get_connection()
+#     cursor = connection.cursor()
+#     cursor.execute()
+#     return 
 
