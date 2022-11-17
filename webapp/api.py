@@ -162,6 +162,7 @@ def get_all_pub_year():
 
 @api.route('/games/category/<category>')
 def get_category(category):
+    page_number = flask.request.args.get('page')
     category = category.split("_")
     print(category)
     query = '''SELECT games.game_id, games.name, categories.category, games.avg_rating, games.image_url
@@ -182,13 +183,15 @@ def get_category(category):
                     game_category_list.append(game)
             cursor.close()
             connection.close()
+            page_games_list = pageable(game_category_list, page_number)
     except Exception as e:
         print(e, file=sys.stderr)
 
-    return json.dumps(game_category_list)
+    return json.dumps(page_games_list)
 
 @api.route('/games/min_age/<min_age>')
 def get_min_age(min_age):
+    page_number = flask.request.args.get('page')
     min_age = min_age.split("_")
     query = '''SELECT games.game_id, games.name, games.min_age, games.avg_rating, games.image_url
                FROM games
@@ -207,13 +210,15 @@ def get_min_age(min_age):
                     game_min_age_list.append(game)
             cursor.close()
             connection.close()
+            page_games_list = pageable(game_min_age_list, page_number)
     except Exception as e:
         print(e, file=sys.stderr)
 
-    return json.dumps(game_min_age_list)
+    return json.dumps(page_games_list)
 
 @api.route('/games/pub_year/<pub_year>')
 def get_pub_year(pub_year):
+    page_number = flask.request.args.get('page')
     pub_year = pub_year.split("_")
     print(pub_year)
     query = '''SELECT games.game_id, games.name, games.min_age, games.avg_rating, games.image_url
@@ -233,6 +238,7 @@ def get_pub_year(pub_year):
                     game_pub_year_list.append(game)
             cursor.close()
             connection.close()
+            page_games_list = pageable(game_pub_year_list, page_number)
     except Exception as e:
         print(e, file=sys.stderr)
 
@@ -240,9 +246,8 @@ def get_pub_year(pub_year):
 
 @api.route('/search_page/<search>')
 def get_game_string(search):
-    print(search)
+    page_number = flask.request.args.get('page')
     query = '''SELECT * FROM games WHERE games.name ILIKE CONCAT('%%', %s, '%%')'''
-
     games_list = []
     try:
         connection = get_connection()
@@ -268,11 +273,11 @@ def get_game_string(search):
             games_list.append(game)
         cursor.close()
         connection.close()
-        print(games_list)
+        page_games_list = pageable(games_list, page_number)
     except Exception as e:
         print(e, file=sys.stderr)
 
-    return json.dumps(games_list)
+    return json.dumps(page_games_list)
 
     '''Connects to database and initializes the cursor.'''
 def cursor_init():
