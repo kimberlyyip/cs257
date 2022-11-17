@@ -278,24 +278,38 @@ def cursor_init():
       print(e)
       exit()
 
-# @api.route('/add/review', methods=['POST'])
-# def add_review_text():
-#   try:
-#     connection, cursor = cursor_init()
-#     review_data = request.json
-#     review_text = review_data['review_text']
-#     game_name = review_data['game_name']
-#     user_id = current_user.id
-#     query = "SELECT DISTINCT * FROM games WHERE games.name = %s LIMIT 1"
-#     cursor.execute(query, (game_name,))
-#     for row in cursor:
-#       game_id = row[0]
-#       break
-#     query = "INSERT INTO reviews (game_id, review_text) VALUES (%s, %s, %s)"
-#     cursor.execute(query, (user_id, game_id, review_text))
-#     connection.commit()
-#     return json.dumps(True) 
-#   except Exception as e:
-#     return json.dumps(False)
+@api.route('/games/<game_name>/add/review', methods=['POST'])
+def add_review_text(game_name):
+  try:
     
-#Credit to Quocodile
+    connection, cursor = cursor_init()
+    review_data = request.json
+    review_text = review_data['review_text']
+    game_name = review_data['game_name']
+    query = "SELECT DISTINCT * FROM games WHERE games.name = %s LIMIT 1"
+    cursor.execute(query, (games.name,))
+    for row in cursor:
+      game_id = row[0]
+      break
+    query = "INSERT INTO game_reviews (game_id, review_text) VALUES (%s, %s)"
+    cursor.execute(query, ( game_id, review_text,))
+    connection.commit()
+    cursor.close()
+    connection.close()
+
+    return json.dumps(True) 
+  except Exception as e:
+    return json.dumps(False)
+    
+# #Credit to Quocodile
+# @api.route('/games/<game_name>/review')
+# def get_all_reviews(game_name):
+#    query = "SELECT * FROM game_reviews, games WHERE game_reviews.game_id = games.game_id AND games.name = %s"
+#    output = []
+#    cursor.execute(query, (games.name,)) 
+#    try:
+#     connection = get_connection()
+#     cursor = connection.cursor()
+#     cursor.execute()
+#     return 
+

@@ -106,6 +106,9 @@ function onGamesSelectionChanged() {
 function submit_review(){
     review_text = document.getElementById('input').value
     alert(review_text)
+    fetch(url, {method: 'POST', body : JSON.stringify({text: review_text})} )
+    .then((response) => response.json())
+    
 
     .catch(function(error) {
         console.log(error);
