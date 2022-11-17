@@ -219,7 +219,6 @@ def get_game_string(search):
     print(search)
     query = '''SELECT * FROM games WHERE games.name ILIKE CONCAT('%%', %s, '%%')'''
 
-    # search_string = flask.request.args.get('search')           
     games_list = []
     try:
         connection = get_connection()
@@ -264,3 +263,24 @@ def cursor_init():
       print(e)
       exit()
 
+# @api.route('/add/review', methods=['POST'])
+# def add_review_text():
+#   try:
+#     connection, cursor = cursor_init()
+#     review_data = request.json
+#     review_text = review_data['review_text']
+#     game_name = review_data['game_name']
+#     user_id = current_user.id
+#     query = "SELECT DISTINCT * FROM games WHERE games.name = %s LIMIT 1"
+#     cursor.execute(query, (game_name,))
+#     for row in cursor:
+#       game_id = row[0]
+#       break
+#     query = "INSERT INTO reviews (game_id, review_text) VALUES (%s, %s, %s)"
+#     cursor.execute(query, (user_id, game_id, review_text))
+#     connection.commit()
+#     return json.dumps(True) 
+#   except Exception as e:
+#     return json.dumps(False)
+    
+#Credit to Quocodile
