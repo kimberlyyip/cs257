@@ -118,6 +118,24 @@ def get_all_min_age():
 
     return json.dumps(min_age_list)
 
+@api.route('/games/sidebar/pub_year')
+def get_all_pub_year():
+    query = '''SELECT games.pub_year FROM games GROUP BY games.pub_year ORDER BY games.pub_year ASC'''
+    pub_year_list = []
+    try:
+        connection = get_connection()
+        cursor = connection.cursor()
+        cursor.execute(query, tuple())
+        for row in cursor:
+            pub_year = {'pub_year': row[0]}
+            pub_year_list.append(pub_year)
+        cursor.close()
+        connection.close()
+    except Exception as e:
+        print(e, file=sys.stderr)
+
+    return json.dumps(pub_year_list)
+
 @api.route('/games/category/<category>')
 def get_category(category):
     category = category.split("_")
@@ -170,6 +188,32 @@ def get_min_age(min_age):
         print(e, file=sys.stderr)
 
     return json.dumps(game_min_age_list)
+
+@api.route('/games/pub_year/<pub_year>')
+def get_pub_year(pub_year):
+    pub_year = pub_year.split("_")
+    print(pub_year)
+    query = '''SELECT games.game_id, games.name, games.min_age, games.avg_rating, games.image_url
+               FROM games
+               WHERE games.pub_year = %s
+               ORDER BY avg_rating DESC'''
+    game_pub_year_list = []
+    try:
+        for item in pub_year:
+            item = int(item)
+            connection = get_connection()
+            cursor = connection.cursor()
+            cursor.execute(query, (item,))
+            for row in cursor:
+                game = {'game_id':row[0], 'name':row[1], 'min_age': row[2], 'image_url': row[4]}
+                if game not in game_pub_year_list:
+                    game_pub_year_list.append(game)
+            cursor.close()
+            connection.close()
+    except Exception as e:
+        print(e, file=sys.stderr)
+
+    return json.dumps(game_pub_year_list)
 
 @api.route('/search_page/<search>')
 def get_game_string(search):

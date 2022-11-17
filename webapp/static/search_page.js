@@ -16,6 +16,7 @@ function initialize() {
     dropdownbtn();
     get_all_categories();
     get_all_min_age();
+    get_all_pub_year();
 }
 
 // Returns the base URL of the API, onto which endpoint
@@ -92,6 +93,36 @@ function get_all_min_age() {
                               + "<input type='checkbox' name='" + min_age_name + "'class='custom-control-input'>"
                               + "<span class='custom-control-indicator'></span>"
                               + "<span class='custom-control-description'>" + min_age_name + "</span>"
+                              + "</div>"
+            }
+        console.log(sidebar_html)
+        console.log(game_display)
+        if (game_display)
+        {
+            game_display.innerHTML += sidebar_html;
+        }       
+    })
+    .catch(error => {
+        console.log(error);
+    });
+}
+
+function get_all_pub_year() {
+    var url = getAPIBaseURL() + "/games/sidebar/pub_year"
+    var game_display = document.getElementById("all_pub_year");
+    console.log("all_pub_year");
+    fetch(url, {method: 'get'})
+    .then((response) => response.json())
+    .then(jsondata => {
+        var sidebar_html = '';
+            for (var i = 1; i < jsondata.length; i++)
+            {
+                pub_year = jsondata[i]
+                pub_year_name = pub_year['pub_year']
+                sidebar_html += "<div class='form-group'>"
+                              + "<input type='checkbox' name='" + pub_year_name + "'class='custom-control-input'>"
+                              + "<span class='custom-control-indicator'></span>"
+                              + "<span class='custom-control-description'>" + pub_year_name + "</span>"
                               + "</div>"
             }
         console.log(sidebar_html)
@@ -310,3 +341,48 @@ function onclick_get_min_age() {
     });
 }
 
+function onclick_get_pub_year() {
+    var url = getAPIBaseURL() + "/games/pub_year/"
+    var boxes = document.querySelectorAll(".custom-control-input");
+    for (var j = 0; j < boxes.length; j++) {
+        if (boxes[j].checked){
+            url += boxes[j].name
+            if (j < boxes.length - 1) {
+                url += "_"
+            } 
+        }
+    }
+    var game_display = document.getElementById("games");
+    fetch(url, {method: 'get'})
+    .then((response) => response.json())
+    .then(jsondata => {
+        var games_html = '';
+        console.log(jsondata)
+            for (var i = 0; i < jsondata.length; i++)
+            {
+                if (i % 4 == 0) {
+                    games_html += "<div id = 'img'>"
+                }
+                games = jsondata[i]
+                image_address = games['image_url']
+                alt_text = games['name'] + " image"
+                game_url = '/game/' + games['name']
+                games_html += "<div id = game_img>"
+                            + "<img src='" + image_address + "' alt='" + alt_text + "'>"
+                            + "<a href='" + game_url + "'>"
+                            + "<p>" + games['name'] + "</p>"
+                            + "</a>"
+                            + "</div>"
+                if ((i + 1) % 4 == 0) {
+                    games_html += "</div>"
+                }
+            }          
+        if (game_display)
+        {
+            game_display.innerHTML = games_html;
+        }
+    })
+    .catch(error => {
+        console.log(error);
+    });
+}
