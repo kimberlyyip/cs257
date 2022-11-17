@@ -296,6 +296,5 @@ def get_all_reviews(game_name):
    try:
     connection = get_connection()
     cursor = connection.cursor()
-    cursor.execute
+    cursor.execute()
 
-  
