@@ -136,7 +136,7 @@ function get_all() {
             }          
         if (game_display)
         {
-            game_display.innerHTML += games_html;
+            game_display.innerHTML = games_html;
         }
     })
     .catch(error => {
@@ -146,16 +146,14 @@ function get_all() {
 
 function submit_button(){
     search_string = document.getElementById('input').value
-    alert(search_string)
     var url = getAPIBaseURL() + "/search_page/" + search_string
     var game_display = document.getElementById("games");
-
-    console.log("games");
     fetch(url, {method: 'get'})
     .then((response) => response.json())
     .then(jsondata => {
+        console.log(jsondata);
         var games_html = '';
-            for (var i = 0; i < 650; i++)
+            for (var i = 0; i < jsondata.length; i++)
             {
                 if (i % 4 == 0) {
                     games_html += "<div id = 'img' >"
@@ -176,7 +174,7 @@ function submit_button(){
             }          
         if (game_display)
         {
-            game_display.innerHTML += games_html;
+            game_display.innerHTML = games_html;
         }
     })
 
@@ -267,7 +265,6 @@ function onclick_get_category() {
 }
 
 function onclick_get_min_age() {
-    alert("submit");
     var url = getAPIBaseURL() + "/games/min_age/"
     var boxes = document.querySelectorAll(".custom-control-input");
     for (var j = 0; j < boxes.length; j++) {
