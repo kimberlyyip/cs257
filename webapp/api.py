@@ -148,7 +148,6 @@ def get_category(category):
 @api.route('/games/min_age/<min_age>')
 def get_min_age(min_age):
     min_age = min_age.split("_")
-    print(min_age)
     query = '''SELECT games.game_id, games.name, games.min_age, games.avg_rating, games.image_url
                FROM games
                WHERE games.min_age = %s
