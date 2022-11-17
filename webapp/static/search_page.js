@@ -16,6 +16,7 @@ function initialize() {
     dropdownbtn();
     get_all_categories();
     get_all_min_age();
+    get_all_pub_year();
 }
 
 // Returns the base URL of the API, onto which endpoint
@@ -105,6 +106,37 @@ function get_all_min_age() {
         console.log(error);
     });
 }
+
+function get_all_pub_year() {
+    var url = getAPIBaseURL() + "/games/sidebar/pub_year"
+    var game_display = document.getElementById("all_pub_year");
+    console.log("all_pub_year");
+    fetch(url, {method: 'get'})
+    .then((response) => response.json())
+    .then(jsondata => {
+        var sidebar_html = '';
+            for (var i = 1; i < jsondata.length; i++)
+            {
+                pub_year = jsondata[i]
+                pub_year_name = pub_year['pub_year']
+                sidebar_html += "<div class='form-group'>"
+                              + "<input type='checkbox' name='" + pub_year_name + "'class='custom-control-input'>"
+                              + "<span class='custom-control-indicator'></span>"
+                              + "<span class='custom-control-description'>" + pub_year_name + "</span>"
+                              + "</div>"
+            }
+        console.log(sidebar_html)
+        console.log(game_display)
+        if (game_display)
+        {
+            game_display.innerHTML += sidebar_html;
+        }       
+    })
+    .catch(error => {
+        console.log(error);
+    });
+}
+
 
 function get_all() {
     var url = getAPIBaseURL() + "/games/"
@@ -308,3 +340,4 @@ function onclick_get_min_age() {
         console.log(error);
     });
 }
+
