@@ -342,6 +342,7 @@ function onclick_get_min_age() {
 }
 
 function onclick_get_pub_year() {
+    // this is here
     var url = getAPIBaseURL() + "/games/pub_year/"
     var boxes = document.querySelectorAll(".custom-control-input");
     for (var j = 0; j < boxes.length; j++) {
