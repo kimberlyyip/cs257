@@ -292,38 +292,40 @@ def cursor_init():
       print(e)
       exit()
 
-@api.route('/games/<game_name>/add/review', methods=['POST'])
-def add_review_text(game_name):
+@api.route('/game/<game_name>/add/<review>', methods=['POST'])
+def add_review_text(game_name, review):
+  game_id = ''
+  game_name = game_name.strip()
   try:
-    
-    connection, cursor = cursor_init()
-    review_data = request.json
-    review_text = review_data['review_text']
-    game_name = review_data['game_name']
-    query = "SELECT DISTINCT * FROM games WHERE games.name = %s LIMIT 1"
-    cursor.execute(query, (games.name,))
+    connection = get_connection()
+    cursor = connection.cursor() 
+    query = "SELECT game_id FROM games WHERE games.name = %s"
+    cursor.execute(query, (game_name,))
     for row in cursor:
       game_id = row[0]
       break
-    query = "INSERT INTO game_reviews (game_id, review_text) VALUES (%s, %s)"
-    cursor.execute(query, ( game_id, review_text,))
+
+    query = "INSERT INTO game_reviews (game_id, review) VALUES (%s, %s)"
+    cursor.execute(query, ( int(game_id), review))
     connection.commit()
     cursor.close()
     connection.close()
-
     return json.dumps(True) 
   except Exception as e:
     return json.dumps(False)
     
-# #Credit to Quocodile
-# @api.route('/games/<game_name>/review')
-# def get_all_reviews(game_name):
-#    query = "SELECT * FROM game_reviews, games WHERE game_reviews.game_id = games.game_id AND games.name = %s"
-#    output = []
-#    cursor.execute(query, (games.name,)) 
-#    try:
-#     connection = get_connection()
-#     cursor = connection.cursor()
-#     cursor.execute()
-#     return 
-
+#Credit to Quocodile
+@api.route('/game/<game_name>/review')
+def get_all_reviews(game_name):
+   query = "SELECT review FROM game_reviews, games WHERE game_reviews.game_id = games.game_id AND games.name = %s"
+   
+   output = []
+   try:
+    connection = get_connection()
+    cursor = connection.cursor()
+    cursor.execute(query,(game_name,))
+    print(cursor.query)
+    for row in cursor:
+        output.append(row[0])
+   except Exception as e:
+    return json.dumps(output)
