@@ -160,6 +160,42 @@ def get_all_pub_year():
 
     return json.dumps(pub_year_list)
 
+@api.route('/games/sidebar/min_player')
+def get_all_min_player():
+    query = '''SELECT games.min_player FROM games GROUP BY games.min_player ORDER BY games.min_player ASC'''
+    min_player_list = []
+    try:
+        connection = get_connection()
+        cursor = connection.cursor()
+        cursor.execute(query, tuple())
+        for row in cursor:
+            min_player = {'min_player': row[0]}
+            min_player_list.append(min_player)
+        cursor.close()
+        connection.close()
+    except Exception as e:
+        print(e, file=sys.stderr)
+
+    return json.dumps(min_player_list)
+
+@api.route('/games/sidebar/max_player')
+def get_all_max_player():
+    query = '''SELECT games.max_player FROM games GROUP BY games.max_player ORDER BY games.max_player ASC'''
+    max_player_list = []
+    try:
+        connection = get_connection()
+        cursor = connection.cursor()
+        cursor.execute(query, tuple())
+        for row in cursor:
+            max_player = {'max_player': row[0]}
+            max_player_list.append(max_player)
+        cursor.close()
+        connection.close()
+    except Exception as e:
+        print(e, file=sys.stderr)
+
+    return json.dumps(max_player_list)
+
 @api.route('/games/category/<category>')
 def get_category(category):
     page_number = flask.request.args.get('page')
@@ -279,19 +315,6 @@ def get_game_string(search):
 
     return json.dumps(page_games_list)
 
-    '''Connects to database and initializes the cursor.'''
-def cursor_init():
-    try:
-      connection = psycopg2.connect(database=config.database,
-                            user=config.user,
-                            password=config.password,
-                            port=config.port)
-      cursor = connection.cursor()
-      return connection, cursor
-    except Exception as e:
-      print(e)
-      exit()
-
 @api.route('/game/<game_name>/add/<review>', methods=['POST'])
 def add_review_text(game_name, review):
   game_id = ''
@@ -329,3 +352,18 @@ def get_all_reviews(game_name):
         output.append(row[0])
    except Exception as e:
     return json.dumps(output)
+
+
+    '''Connects to database and initializes the cursor.'''
+def cursor_init():
+    try:
+      connection = psycopg2.connect(database=config.database,
+                            user=config.user,
+                            password=config.password,
+                            port=config.port)
+      cursor = connection.cursor()
+      return connection, cursor
+    except Exception as e:
+      print(e)
+      exit()
+

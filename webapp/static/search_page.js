@@ -52,7 +52,6 @@ function dropdownbtn(){
 function get_all_categories() {
     var url = getAPIBaseURL() + "/games/sidebar/category"
     var game_display = document.getElementById("all_categories");
-    console.log("all_categories");
     fetch(url, {method: 'get'})
     .then((response) => response.json())
     .then(jsondata => {
@@ -67,8 +66,6 @@ function get_all_categories() {
                               + "<span class='custom-control-description'>" + category_name + "</span>"
                               + "</div>"
             }
-        console.log(sidebar_html)
-        console.log(game_display)
         if (game_display)
         {
             game_display.innerHTML += sidebar_html;
@@ -82,7 +79,6 @@ function get_all_categories() {
 function get_all_min_age() {
     var url = getAPIBaseURL() + "/games/sidebar/min_age"
     var game_display = document.getElementById("all_min_age");
-    console.log("all_min_age");
     fetch(url, {method: 'get'})
     .then((response) => response.json())
     .then(jsondata => {
@@ -97,8 +93,6 @@ function get_all_min_age() {
                               + "<span class='custom-control-description'>" + min_age_name + "</span>"
                               + "</div>"
             }
-        console.log(sidebar_html)
-        console.log(game_display)
         if (game_display)
         {
             game_display.innerHTML += sidebar_html;
@@ -112,7 +106,6 @@ function get_all_min_age() {
 function get_all_pub_year() {
     var url = getAPIBaseURL() + "/games/sidebar/pub_year"
     var game_display = document.getElementById("all_pub_year");
-    console.log("all_pub_year");
     fetch(url, {method: 'get'})
     .then((response) => response.json())
     .then(jsondata => {
@@ -127,8 +120,6 @@ function get_all_pub_year() {
                               + "<span class='custom-control-description'>" + pub_year_name + "</span>"
                               + "</div>"
             }
-        console.log(sidebar_html)
-        console.log(game_display)
         if (game_display)
         {
             game_display.innerHTML += sidebar_html;
@@ -142,7 +133,6 @@ function get_all_pub_year() {
 function get_all_min_player() {
     var url = getAPIBaseURL() + "/games/sidebar/min_player"
     var game_display = document.getElementById("all_min_player");
-    console.log("all_min_player");
     fetch(url, {method: 'get'})
     .then((response) => response.json())
     .then(jsondata => {
@@ -157,8 +147,6 @@ function get_all_min_player() {
                               + "<span class='custom-control-description'>" + min_player_name + "</span>"
                               + "</div>"
             }
-        console.log(sidebar_html)
-        console.log(game_display)
         if (game_display)
         {
             game_display.innerHTML += sidebar_html;
@@ -172,7 +160,6 @@ function get_all_min_player() {
 function get_all_max_player() {
     var url = getAPIBaseURL() + "/games/sidebar/max_player"
     var game_display = document.getElementById("all_max_player");
-    console.log("all_max_player");
     fetch(url, {method: 'get'})
     .then((response) => response.json())
     .then(jsondata => {
@@ -187,8 +174,6 @@ function get_all_max_player() {
                               + "<span class='custom-control-description'>" + max_player_name + "</span>"
                               + "</div>"
             }
-        console.log(sidebar_html)
-        console.log(game_display)
         if (game_display)
         {
             game_display.innerHTML += sidebar_html;
@@ -203,7 +188,6 @@ function get_all_max_player() {
 function get_all() {
     var url = getAPIBaseURL() + "/games/"
     var game_display = document.getElementById("games");
-    console.log("games");
     fetch(url, {method: 'get'})
     .then((response) => response.json())
     .then(jsondata => {
@@ -244,7 +228,6 @@ function submit_button(){
     fetch(url, {method: 'get'})
     .then((response) => response.json())
     .then(jsondata => {
-        console.log(jsondata);
         var games_html = '';
             for (var i = 0; i < jsondata.length; i++)
             {
@@ -279,7 +262,6 @@ function submit_button(){
 function get_category(category) {
     var url = getAPIBaseURL() + "/games/category/" + category
     var game_display = document.getElementById("category_" + category);
-    console.log("category_" + category);
     fetch(url, {method: 'get'})
     .then((response) => response.json())
     .then(jsondata => {
@@ -287,7 +269,6 @@ function get_category(category) {
         for (var i = 0; i < 5; i++)
         {
             games = jsondata[i]
-            console.log(jsondata)
             type_item_class = category + '_item'
             type_genre_item = category + '_category_item'
             image_address = games['image_url']
@@ -301,7 +282,6 @@ function get_category(category) {
                         + "</div>"
         }
         games.html = "</div>"
-        console.log(game_display)
         if (game_display)
         {
             game_display.innerHTML += games_html;
@@ -419,7 +399,6 @@ function onclick_get_pub_year() {
     .then((response) => response.json())
     .then(jsondata => {
         var games_html = '';
-        console.log(jsondata)
             for (var i = 0; i < jsondata.length; i++)
             {
                 if (i % 4 == 0) {
@@ -465,7 +444,6 @@ function onclick_get_min_player() {
     .then((response) => response.json())
     .then(jsondata => {
         var games_html = '';
-        console.log(jsondata)
             for (var i = 0; i < jsondata.length; i++)
             {
                 if (i % 4 == 0) {
@@ -511,7 +489,6 @@ function onclick_get_max_player() {
     .then((response) => response.json())
     .then(jsondata => {
         var games_html = '';
-        console.log(jsondata)
             for (var i = 0; i < jsondata.length; i++)
             {
                 if (i % 4 == 0) {
