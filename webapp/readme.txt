@@ -25,7 +25,7 @@ Copyright info: CC0: Public Domain
 Link for DATA: https://www.kaggle.com/datasets/andrewmvd/board-games
 
 
-FEATURES CURRENTLY WORKING:
+STATUS:
 - List all board games (default alphabetical)
 - All board games have a designated site 
 - Sort board games by categories 
@@ -33,17 +33,11 @@ FEATURES CURRENTLY WORKING:
 - All links work 
 - Search by string in board game name
 - Filter by one board game attribute (genre, year published, min players, etc)
-
-
-FEATURES NOT YET WORKING:
 - Anoyone is able to post an anonymous review 
-- Users can create an account
-- Login page is functional 
-- User is able to have favorite boardgames 
-- User is able to view favorite boardgames
-- User is able to make a review associated with their account 
 
 
 
 Note: 
-Users are unable to sort the data by two different types i.e categories and age can not currently be searched at the same time
+Users are unable to sort the data by two different types i.e categories and age can not currently be searched at the same time.
+We dropped the idea of having a user with username and password due to time constraints.
+Since the data set is so large users are able to sort by alphabet to access all the data.
