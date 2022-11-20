@@ -77,7 +77,7 @@ def gamedata(name):
     game_data =(rank, name, avg_rating, min_players, max_players,min_time,max_time,min_age,pub_year,complexity,image_url)
 
 
-    query = "SELECT category FROM games, game_categories, categories WHERE games.game_id = game_categories.game_id AND categories.id = game_categories.category_id AND games.rank = %s"
+    query = "SELECT DISTINCT category FROM games, game_categories, categories WHERE games.game_id = game_categories.game_id AND categories.id = game_categories.category_id AND games.rank = %s"
     cursor.execute(query, (rank,))
 
     categories = ''
@@ -87,7 +87,7 @@ def gamedata(name):
 
     categories = categories[:-2]
 
-    query = "SELECT designer FROM games, game_designers, designer WHERE games.game_id = game_designers.game_id AND designer.id = game_designers.designer_id AND games.rank = %s"
+    query = "SELECT DISTINCT designer FROM games, game_designers, designer WHERE games.game_id = game_designers.game_id AND designer.id = game_designers.designer_id AND games.rank = %s"
     cursor.execute(query, (rank,))
 
     designers = ''
