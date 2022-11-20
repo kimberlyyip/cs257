@@ -184,15 +184,20 @@ function get_all_max_player() {
     });
 }
 
-
 function get_all() {
-    var url = getAPIBaseURL() + "/games/" + '?page=1'
+    var url = getAPIBaseURL() + "/games/"
     var game_display = document.getElementById("games");
     fetch(url, {method: 'get'})
     .then((response) => response.json())
     .then(jsondata => {
         var games_html = '';
-            for (var i = 0; i < jsondata.length; i++)
+        if (jsondata.length > 500){
+            output = 500
+        }
+        else {
+            output = jsondata.length
+        }
+            for (var i = 0; i < output; i++)
             {
                 if (i % 4 == 0) {
                     games_html += "<div id = 'img' >"
@@ -229,7 +234,13 @@ function submit_button(){
     .then((response) => response.json())
     .then(jsondata => {
         var games_html = '';
-            for (var i = 0; i < jsondata.length; i++)
+        if (jsondata.length > 500){
+            output = 500
+        }
+        else {
+            output = jsondata.length
+        }
+            for (var i = 0; i < output; i++)
             {
                 if (i % 4 == 0) {
                     games_html += "<div id = 'img' >"
@@ -260,7 +271,7 @@ function submit_button(){
 }
 
 function get_category(category) {
-    var url = getAPIBaseURL() + "/games/category/" + category + '?page=1'
+    var url = getAPIBaseURL() + "/games/category/" + category
     var game_display = document.getElementById("category_" + category);
     fetch(url, {method: 'get'})
     .then((response) => response.json())
@@ -303,13 +314,18 @@ function onclick_get_category() {
             } 
         }
     }
-    url += '?page=1'
     var game_display = document.getElementById("games");
     fetch(url, {method: 'get'})
     .then((response) => response.json())
     .then(jsondata => {
         var games_html = '';
-            for (var i = 0; i < jsondata.length; i++)
+        if (jsondata.length > 500){
+            output = 500
+        }
+        else {
+            output = jsondata.length
+        }
+            for (var i = 0; i < output; i++)
             {
                 if (i % 4 == 0) {
                     games_html += "<div id = 'img'>"
@@ -349,14 +365,18 @@ function onclick_get_min_age() {
             } 
         }
     }
-    url += '?page=1'
     var game_display = document.getElementById("games");
     fetch(url, {method: 'get'})
     .then((response) => response.json())
     .then(jsondata => {
         var games_html = '';
-        console.log(jsondata)
-            for (var i = 0; i < jsondata.length; i++)
+        if (jsondata.length > 500){
+            output = 500
+        }
+        else {
+            output = jsondata.length
+        }
+            for (var i = 0; i < output; i++)
             {
                 if (i % 4 == 0) {
                     games_html += "<div id = 'img'>"
@@ -396,13 +416,18 @@ function onclick_get_pub_year() {
             } 
         }
     }
-    url += '?page=1'
     var game_display = document.getElementById("games");
     fetch(url, {method: 'get'})
     .then((response) => response.json())
     .then(jsondata => {
         var games_html = '';
-            for (var i = 0; i < jsondata.length; i++)
+        if (jsondata.length > 500){
+            output = 500
+        }
+        else {
+            output = jsondata.length
+        }
+            for (var i = 0; i < output; i++)
             {
                 if (i % 4 == 0) {
                     games_html += "<div id = 'img'>"
@@ -442,13 +467,18 @@ function onclick_get_min_player() {
             } 
         }
     }
-    url += '?page=1'
     var game_display = document.getElementById("games");
     fetch(url, {method: 'get'})
     .then((response) => response.json())
     .then(jsondata => {
         var games_html = '';
-            for (var i = 0; i < jsondata.length; i++)
+        if (jsondata.length > 500){
+            output = 500
+        }
+        else {
+            output = jsondata.length
+        }
+            for (var i = 0; i < output; i++)
             {
                 if (i % 4 == 0) {
                     games_html += "<div id = 'img'>"
@@ -488,13 +518,18 @@ function onclick_get_max_player() {
             } 
         }
     }
-    url += '?page=1'
     var game_display = document.getElementById("games");
     fetch(url, {method: 'get'})
     .then((response) => response.json())
     .then(jsondata => {
         var games_html = '';
-            for (var i = 0; i < jsondata.length; i++)
+        if (jsondata.length > 500){
+            output = 500
+        }
+        else {
+            output = jsondata.length
+        }
+            for (var i = 0; i < output; i++)
             {
                 if (i % 4 == 0) {
                     games_html += "<div id = 'img'>"
@@ -521,8 +556,4 @@ function onclick_get_max_player() {
     .catch(error => {
         console.log(error);
     });
-}
-
-function page_number(){
-    
 }

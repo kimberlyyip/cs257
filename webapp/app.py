@@ -19,40 +19,15 @@ def home():
     '''route to home'''
     return flask.render_template('home_page.html')
 
-@app.route('/home_page')
+@app.route('/home_page') 
 def mockups1():
     '''route to mockups1'''
     return flask.render_template('home_page.html')
-
-@app.route('/boardgame_site') 
-def mockups2():
-    '''route to mockups2'''
-    return flask.render_template('boardgame_site.html')
-
-@app.route('/create_user') 
-def mockups3():
-    '''route to mockups3'''
-    return flask.render_template('create_user.html')
-
-@app.route('/user_home_page') 
-def mockups4():
-    '''route to mockups4'''
-    return flask.render_template('user_home_page.html')
 
 @app.route('/search_page') 
 def mockups5():
     '''route to mockups5'''
     return flask.render_template('search_page.html')
-
-@app.route('/login_page') 
-def mockups6():
-    '''route to mockups6'''
-    return flask.render_template('login_page.html')
-
-@app.route('/forgot_password_page')
-def mockups7():
-    '''route to mockups7'''
-    return flask.render_template('forgot_password.html')
 
 @app.route('/game/<name>')
 def gamedata(name):
