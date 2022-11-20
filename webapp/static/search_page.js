@@ -522,3 +522,7 @@ function onclick_get_max_player() {
         console.log(error);
     });
 }
+
+function page_number(){
+    
+}
