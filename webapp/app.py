@@ -21,12 +21,12 @@ def home():
 
 @app.route('/home_page')
 def mockups1():
-    '''route to mockups1'''
+    '''route to homepage'''
     return flask.render_template('home_page.html')
 
 @app.route('/boardgame_site') 
 def mockups2():
-    '''route to mockups2'''
+    '''route to individual boardgame site'''
     return flask.render_template('boardgame_site.html')
 
 @app.route('/create_user') 
@@ -97,13 +97,22 @@ def gamedata(name):
 
     designers = designers[:-2]
 
+    query = "SELECT review FROM game_reviews, games WHERE game_reviews.game_id = games.game_id AND games.name ILIKE CONCAT('%%', %s, '%%')"
+    output = []
+    
+    cursor.execute(query,(name,))
+    print(cursor.query)
+    for row in cursor:
+        
+        output.append(row[0])
+
         
     cursor.close()
     connection.close()
 
     #take id, do search, hand back info 
     '''route to mockups7'''
-    return flask.render_template('boardgame_site.html', game_data=game_data, categories=categories,designers=designers)
+    return flask.render_template('boardgame_site.html', game_data=game_data, categories=categories,designers=designers, output=output)
 
 @app.route('/api/help')
 def help():
