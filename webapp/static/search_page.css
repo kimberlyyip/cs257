@@ -101,6 +101,7 @@ text-align: center;
 .sidenav h2{
   margin:10px;
   float:left;
+  margin-right: 100px;
 }
   
   /* Style the sidenav links and the dropdown button */
@@ -183,6 +184,13 @@ text-align: center;
 #game_img img {
     width: 200px;
   }
+
+.alphabetical{
+  margin-left: 10px;
+  float: center;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
 
   /*
 .game_display {

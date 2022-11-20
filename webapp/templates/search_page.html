@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='search_page.css') }}"/>
-    <script type="text/javascript" src="{{ url_for('static', filename='search_page.js') }}" ></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='boardgames.js') }}" ></script>
     <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
 
-    <title>search page</title>
+    <title>Search page</title>
 
     <div class="dropdown">
       <button class="dropbtn">Menu</button>
@@ -36,6 +36,45 @@
 
 <div class="sidenav">
   <h2> Sort by:</h2>
+  <div class = 'alphabetical'>
+    <button onclick = 'onclick_get_alphabetical("#")'> # </button>
+    <button onclick = 'onclick_get_alphabetical("A")'> A </button>
+    <button onclick = 'onclick_get_alphabetical("B")'> B </button>
+    <button onclick = 'onclick_get_alphabetical("C")'> C </button>
+    <button onclick = 'onclick_get_alphabetical("D")'> D </button>
+  </div>
+  <div class = 'alphabetical'>
+    <button onclick = 'onclick_get_alphabetical("E")'> E </button>
+    <button onclick = 'onclick_get_alphabetical("F")'> F </button>
+    <button onclick = 'onclick_get_alphabetical("G")'> G </button>
+    <button onclick = 'onclick_get_alphabetical("H")'> H </button>
+    <button onclick = 'onclick_get_alphabetical("I")'> I </button>
+  </div>
+  <div class = 'alphabetical'>
+    <button onclick = 'onclick_get_alphabetical("J")'> J </button>
+    <button onclick = 'onclick_get_alphabetical("K")'> K </button>
+    <button onclick = 'onclick_get_alphabetical("L")'> L </button>
+    <button onclick = 'onclick_get_alphabetical("M")'> M </button>
+    <button onclick = 'onclick_get_alphabetical("N")'> N </button>
+  </div>
+  <div class = 'alphabetical'>
+    <button onclick = 'onclick_get_alphabetical("O")'> O </button>
+    <button onclick = 'onclick_get_alphabetical("P")'> P </button>
+    <button onclick = 'onclick_get_alphabetical("Q")'> Q </button>
+    <button onclick = 'onclick_get_alphabetical("R")'> R </button>
+    <button onclick = 'onclick_get_alphabetical("S")'> S </button>
+  </div>
+  <div class = 'alphabetical'>
+    <button onclick = 'onclick_get_alphabetical("T")'> T </button>
+    <button onclick = 'onclick_get_alphabetical("U")'> U </button>
+    <button onclick = 'onclick_get_alphabetical("V")'> V </button>
+    <button onclick = 'onclick_get_alphabetical("W")'> W </button>
+    <button onclick = 'onclick_get_alphabetical("X")'> X </button>
+  </div>
+  <div class = 'alphabetical'>
+    <button onclick = 'onclick_get_alphabetical("Y")'> Y </button>
+    <button onclick = 'onclick_get_alphabetical("Z")'> Z </button>
+  </div>
   <button class='dropdown-btn'>Genre
     <i class='fa fa-caret-down'></i>
   </button>
@@ -105,7 +144,7 @@
     </div>
   </div>
 
-  
+</div>
 </div>
 
   <div id = "output" >

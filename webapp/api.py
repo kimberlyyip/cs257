@@ -309,6 +309,44 @@ def get_game_string(search):
 
     return json.dumps(games_list)
 
+@api.route('game/alphabetical/<alpha>')
+def get_alphabetical(alpha):
+    query = '''SELECT * FROM games ORDER BY games.name ASC'''
+    games_list = []
+    try:
+        connection = get_connection()
+        cursor = connection.cursor()
+        cursor.execute(query, tuple())
+        print(cursor.query)
+        for row in cursor:
+            game = {'game_id':row[0],
+                      'name':row[1],
+                      'rank': row[2],
+                      'min_player':row[3],
+                      'max_player':row[4],
+                      'avg_time':row[5],
+                      'min_time':row[6],
+                      'max_time':row[7],
+                      'avg_rating':row[8],
+                      'num_votes':row[9],
+                      'image_url':row[10],
+                      'min_age':row[11],
+                      'num_owned':row[12],
+                      'pub_year':row[13],
+                      'complexity':row[14]
+                      }
+            if alpha.isalpha() and game['name'][0].lower() == alpha.lower():
+                games_list.append(game)
+            elif alpha == '#':
+                if game['name'][0].isalpha() == False:
+                    games_list.append(game)
+        cursor.close()
+        connection.close()
+    except Exception as e:
+        print(e, file=sys.stderr)
+
+    return json.dumps(games_list)
+
 @api.route('/game/<game_name>/add/<review>', methods=['POST'])
 def add_review_text(game_name, review):
   game_id = ''
