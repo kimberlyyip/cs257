@@ -321,7 +321,6 @@ def get_game_string(search):
 
     return json.dumps(games_list)
 
-'''Route that adds a user's review to a game's site'''
 @api.route('game/alphabetical/<alpha>')
 def get_alphabetical(alpha):
     query = '''SELECT * FROM games ORDER BY games.name ASC'''
@@ -360,6 +359,7 @@ def get_alphabetical(alpha):
 
     return json.dumps(games_list)
 
+'''Route that adds a user's review to a game's site'''
 @api.route('/game/<game_name>/add/<review>', methods=['POST'])
 def add_review_text(game_name, review):
   game_id = ''
