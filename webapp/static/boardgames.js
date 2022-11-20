@@ -26,6 +26,7 @@ function submit_review(){
     var baseURL = getAPIBaseURL()
     var game_name = document.getElementById('game_game_name').innerHTML;
     var review_text = document.getElementById('input').value; 
+    review_text = review_text.replace("/", "[]")
 
     var url = baseURL + '/game/' + game_name + '/add/' + review_text;
     fetch (url, {

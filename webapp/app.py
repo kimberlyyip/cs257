@@ -72,7 +72,7 @@ def gamedata(name):
 
     designers = designers[:-2]
 
-    query = "SELECT review FROM game_reviews, games WHERE game_reviews.game_id = games.game_id AND games.name ILIKE CONCAT('%%', %s, '%%')"
+    query = "SELECT DISTINCT review FROM game_reviews, games WHERE game_reviews.game_id = games.game_id AND games.name ILIKE CONCAT('%%', %s, '%%')"
     output = []
     
     cursor.execute(query,(name,))
