@@ -7,12 +7,8 @@
 window.onload = initialize;
 
 function initialize() {
-    loadGamesSelector();
-
-    let element = document.getElementById('game_selector');
-    if (element) {
-        element.onchange = onGamesSelectionChanged;
-    }
+    var submit_review_button = document.getElementById('submit_review'); 
+    submit_review_button.addEventListener('click', submit_review);
 }
 
 // Returns the base URL of the API, onto which endpoint
