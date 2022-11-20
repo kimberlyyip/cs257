@@ -91,7 +91,7 @@ def gamedata(name):
 
 @app.route('/api/help')
 def help():
-    return flask.render_template('help.txt')
+    return flask.render_template('help.html')
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser('A board games application, including API & DB')
