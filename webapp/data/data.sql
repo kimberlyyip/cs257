@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 12.12 (Ubuntu 12.12-0ubuntu0.20.04.1)
--- Dumped by pg_dump version 12.12 (Ubuntu 12.12-0ubuntu0.20.04.1)
+-- Dumped from database version 13.8
+-- Dumped by pg_dump version 13.8
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -23954,28 +23954,6 @@ COPY public.game_designers (game_id, designer_id) FROM stdin;
 --
 
 COPY public.game_reviews (game_id, review) FROM stdin;
-174430	hi
-186751	asasa
-186751	as
-186751	asas
-186751	hello
-186751	hello
-186751	hello
-186751	hello world
-186751	asdwa
-186751	hello.world
-186751	as
-186751	as
-186751	hello
-186751	halllefa
-186751	what
-186751	as
-186751	mnknk
-186751	mnknk
-186751	asd[]
-186751	asd[]
-186751	asd[]
-186751	asd[]
 \.
 
 
