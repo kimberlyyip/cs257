@@ -321,6 +321,7 @@ def get_game_string(search):
 
     return json.dumps(games_list)
 
+'''Route that returns the game search results by filtered alphabet'''
 @api.route('game/alphabetical/<alpha>')
 def get_alphabetical(alpha):
     query = '''SELECT * FROM games ORDER BY games.name ASC'''
@@ -349,7 +350,7 @@ def get_alphabetical(alpha):
                       }
             if alpha.isalpha() and game['name'][0].lower() == alpha.lower():
                 games_list.append(game)
-            elif alpha == '#':
+            elif alpha == '~':
                 if game['name'][0].isalpha() == False:
                     games_list.append(game)
         cursor.close()
