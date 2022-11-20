@@ -279,6 +279,62 @@ def get_pub_year(pub_year):
 
     return json.dumps(page_games_list)
 
+@api.route('/games/min_player/<min_player>')
+def get_min_player(min_player):
+    page_number = flask.request.args.get('page')
+    min_player = min_player.split("_")
+
+    query = '''SELECT games.game_id, games.name, games.min_age, games.avg_rating, games.image_url
+               FROM games
+               WHERE games.min_player = %s
+               ORDER BY avg_rating DESC'''
+    game_min_player_list = []
+    try:
+        for item in min_player:
+            item = int(item)
+            connection = get_connection()
+            cursor = connection.cursor()
+            cursor.execute(query, (item,))
+            for row in cursor:
+                game = {'game_id':row[0], 'name':row[1], 'min_age': row[2], 'image_url': row[4]}
+                if game not in game_min_player_list:
+                    game_min_player_list.append(game)
+            cursor.close()
+            connection.close()
+            page_games_list = pageable(game_min_player_list, page_number)
+    except Exception as e:
+        print(e, file=sys.stderr)
+
+    return json.dumps(page_games_list)
+
+@api.route('/games/max_player/<max_player>')
+def get_max_player(max_player):
+    page_number = flask.request.args.get('page')
+    max_player = max_player.split("_")
+
+    query = '''SELECT games.game_id, games.name, games.min_age, games.avg_rating, games.image_url
+               FROM games
+               WHERE games.max_player = %s
+               ORDER BY avg_rating DESC'''
+    game_max_player_list = []
+    try:
+        for item in max_player:
+            item = int(item)
+            connection = get_connection()
+            cursor = connection.cursor()
+            cursor.execute(query, (item,))
+            for row in cursor:
+                game = {'game_id':row[0], 'name':row[1], 'min_age': row[2], 'image_url': row[4]}
+                if game not in game_max_player_list:
+                    game_max_player_list.append(game)
+            cursor.close()
+            connection.close()
+            page_games_list = pageable(game_max_player_list, page_number)
+    except Exception as e:
+        print(e, file=sys.stderr)
+
+    return json.dumps(page_games_list)
+
 @api.route('/search_page/<search>')
 def get_game_string(search):
     page_number = flask.request.args.get('page')
