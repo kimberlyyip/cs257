@@ -41,3 +41,5 @@ Note:
 Users are unable to sort the data by two different types i.e categories and age can not currently be searched at the same time.
 We dropped the idea of having a user with username and password due to time constraints.
 Since the data set is so large users are able to sort by alphabet to access all the data.
+Note to see the review once a user has posted the page needs to be reloaded!
+
