@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Boardgame Site</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='boardgame_site.css') }}" /> 
+        <script type="text/javascript" src="{{ url_for('static', filename='boardgames.js') }}" ></script>
+        <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+
+
+
+
+    </head>
+
+    <body>
+
+<p>REQUEST: /games/
+RESPONSE: A JSON list of dictionaries. Each dictionary will represent a single board game, alphabetized by board game name.
+Each board game dictionary will have the following fields.
+
+ID -- (int) the id of the board_game
+Name -- (string) the name of the board_game
+Rank -- the database's rank of the game
+Min_player -- (int) the minimum number of players 
+Max_player -- (int) the max number of players 
+Avg_time -- (int) the average time in minutes it takes to play a single game
+Min_time -- (int) the min time in minutes it takes to play a single game
+Max_time -- (int) the max time in minutes it takes to play a single game
+avg_rating -- (int) the board_game’s average rating
+num_votes -- (int) the number of users that have voted on this board_game’s rating
+image url -- (text) the url of the picture of the board_game
+min_age -- (int) minimum age needed to play the game
+num_owned -- (int) how many users own this board_game
+pub_year -- what year the game was published
+complexity -- how difficult the game is to learn
+
+This request can have many optional GET parameters, one for each column in the Board Game table.
+For example: /games/?name=”catan”
+	          
+Currently search can only be done on one attribute at a time</p>
+<p>
+REQUEST: /games/sidebar/category
+RESPONSE: A JSON list of dictionaries where each dictionary consists of a category_id and a category.
+</p>
+<p>
+REQUEST: /games/sidebar/min_age
+RESPONSE: A JSON list of dictionaries where each dictionary consists of a minimum age.
+</p>
+<p>
+REQUEST: /games/sidebar/pub_year
+RESPONSE:A JSON list of dictionaries where each dictionary consists of a year published.
+</p>
+<p>
+REQUEST: /games/sidebar/min_player
+RESPONSE:A JSON list of dictionaries where each dictionary consists of a minimum number of players.
+</p>
+<p>
+REQUEST: /games/sidebar/max_player
+RESPONSE::A JSON list of dictionaries where each dictionary consists of a maximum number of players.
+</p>
+<p>
+REQUEST: /games/category/<category>
+RESPONSE:A JSON list of dictionaries where each dictionary represents a game, consisting of a game_id, a name, a category, and an image_url.
+</p>
+<p>
+REQUEST: /games/min_age/<min_age>
+RESPONSE:A JSON list of dictionaries where each dictionary represents a game, consisting of a game_id, a name, a category, and an image_url, filtered by the desired min_age.
+</p>
+<p>
+REQUEST: /games/pub_year/<pub_year>
+RESPONSE:A JSON list of dictionaries where each dictionary represents a game, consisting of a game_id, a name, a category, and an image_url, filtered by the desired pub_year.
+</p>
+<p>
+REQUEST: /games/min_player/<min_player>
+RESPONSE:A JSON list of dictionaries where each dictionary represents a game, consisting of a game_id, a name, a category, and an image_url, filtered by the desired min_player.
+</p>
+<p>
+REQUEST: /games/max_player/<max_player>
+RESPONSE:A JSON list of dictionaries where each dictionary represents a game, consisting of a game_id, a name, a category, and an image_url, filtered by the desired max_player
+</p>
+<p>
+REQUEST: /search_page/<search>
+RESPONSE: A JSON list of dictionaries where each dictionary represents a game, consisting of the following attributes:
+	ID -- (int) the id of the board_game
+	Name -- (string) the name of the board_game
+	Rank -- the database's rank of the game
+	Min_player -- (int) the minimum number of players 
+	Max_player -- (int) the max number of players 
+	Avg_time -- (int) the average time in minutes it takes to play a single game
+	Min_time -- (int) the min time in minutes it takes to play a single game
+	Max_time -- (int) the max time in minutes it takes to play a single game
+	avg_rating -- (int) the board_game’s average rating
+	num_votes -- (int) the number of users that have voted on this board_game’s rating
+	image url -- (text) the url of the picture of the board_game
+	min_age -- (int) minimum age needed to play the game
+	num_owned -- (int) how many users own this board_game
+	pub_year -- what year the game was published
+	complexity -- how difficult the game is to learn
+
+This endpoint is for our search page and returns results based on a string search of the game's name.
+</p>
+<p>
+REQUEST: /game/<game_name>/add/<review>
+RESPONSE: Posts a user's review into the postgresql database
+</p>
+
+
+
+
+ </body>
+
+
+</html>

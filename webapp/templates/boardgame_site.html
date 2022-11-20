@@ -88,10 +88,13 @@
           <div>
           {% if output %}
             {% for item in output%}
+            <h4>Review #{{loop.index}}</h4>
               <p>{{item}}</p>
               <br></br>
               
             {% endfor%}
+            {% else %}
+            <p>No reviews yet!</p>
           {% endif %}
 
           </div>

@@ -20,17 +20,18 @@ def home():
     return flask.render_template('home_page.html')
 
 @app.route('/home_page') 
-def mockups1():
+def homepage():
     '''route to homepage'''
     return flask.render_template('home_page.html')
 
 @app.route('/search_page') 
-def mockups5():
-    '''route to mockups5'''
+def search_page():
+    '''route to search page'''
     return flask.render_template('search_page.html')
 
 @app.route('/game/<name>')
 def gamedata(name):
+    '''route to individual board game site'''
     connection, cursor = cursor_init()
 
     query = "SELECT rank, name, avg_rating, min_player, max_player, min_time, max_time, min_age, pub_year, complexity, image_url FROM games WHERE games.name = %s"
@@ -72,7 +73,7 @@ def gamedata(name):
 
     designers = designers[:-2]
 
-    query = "SELECT review FROM game_reviews, games WHERE game_reviews.game_id = games.game_id AND games.name ILIKE CONCAT('%%', %s, '%%')"
+    query = "SELECT DISTINCT review FROM game_reviews, games WHERE game_reviews.game_id = games.game_id AND games.name ILIKE CONCAT('%%', %s, '%%')"
     output = []
     
     cursor.execute(query,(name,))
@@ -86,12 +87,12 @@ def gamedata(name):
     connection.close()
 
     #take id, do search, hand back info 
-    '''route to mockups7'''
+
     return flask.render_template('boardgame_site.html', game_data=game_data, categories=categories,designers=designers, output=output)
 
 @app.route('/api/help')
 def help():
-    return flask.render_template('help.txt')
+    return flask.render_template('help.html')
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser('A board games application, including API & DB')

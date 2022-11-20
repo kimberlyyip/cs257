@@ -23,6 +23,7 @@ def get_connection():
                             password=config.password,
                             port=config.port)
 
+''' Route that returns all games in alphabetical order'''
 @api.route('/games/')
 def get_games():
     query = '''SELECT * FROM games ORDER BY games.name ASC'''
@@ -57,6 +58,7 @@ def get_games():
 
     return json.dumps(games_list)
 
+'''Route that returns all the categories'''
 @api.route('/games/sidebar/category')
 def get_all_category():
     query = '''SELECT * FROM categories ORDER BY categories.category ASC'''
@@ -75,6 +77,7 @@ def get_all_category():
 
     return json.dumps(category_list)
 
+'''Route that gets all the discrete minimum ages'''
 @api.route('/games/sidebar/min_age')
 def get_all_min_age():
     query = '''SELECT games.min_age FROM games GROUP BY games.min_age ORDER BY games.min_age ASC'''
@@ -93,6 +96,7 @@ def get_all_min_age():
 
     return json.dumps(min_age_list)
 
+'''Route that gets all the discrete publish years'''
 @api.route('/games/sidebar/pub_year')
 def get_all_pub_year():
     query = '''SELECT games.pub_year FROM games GROUP BY games.pub_year ORDER BY games.pub_year ASC'''
@@ -111,6 +115,7 @@ def get_all_pub_year():
 
     return json.dumps(pub_year_list)
 
+'''Route that gets all the discrete minimum players'''
 @api.route('/games/sidebar/min_player')
 def get_all_min_player():
     query = '''SELECT games.min_player FROM games GROUP BY games.min_player ORDER BY games.min_player ASC'''
@@ -129,6 +134,7 @@ def get_all_min_player():
 
     return json.dumps(min_player_list)
 
+'''Route that gets all the discrete maximum players'''
 @api.route('/games/sidebar/max_player')
 def get_all_max_player():
     query = '''SELECT games.max_player FROM games GROUP BY games.max_player ORDER BY games.max_player ASC'''
@@ -147,6 +153,7 @@ def get_all_max_player():
 
     return json.dumps(max_player_list)
 
+'''Route that returns game search results by filtered category'''
 @api.route('/games/category/<category>')
 def get_category(category):
     category = category.split("_")
@@ -173,6 +180,7 @@ def get_category(category):
 
     return json.dumps(game_category_list)
 
+'''Route that returns game search results by filtered min age'''
 @api.route('/games/min_age/<min_age>')
 def get_min_age(min_age):
     min_age = min_age.split("_")
@@ -198,6 +206,7 @@ def get_min_age(min_age):
 
     return json.dumps(game_min_age_list)
 
+'''Route that returns the game search results by filtered published year'''
 @api.route('/games/pub_year/<pub_year>')
 def get_pub_year(pub_year):
     pub_year = pub_year.split("_")
@@ -224,6 +233,7 @@ def get_pub_year(pub_year):
 
     return json.dumps(game_pub_year_list)
 
+'''Route that returns the game search results by filtered min player'''
 @api.route('/games/min_player/<min_player>')
 def get_min_player(min_player):
     min_player = min_player.split("_")
@@ -250,6 +260,7 @@ def get_min_player(min_player):
 
     return json.dumps(game_min_player_list)
 
+'''Route that returns the game search results by filtered max player'''
 @api.route('/games/max_player/<max_player>')
 def get_max_player(max_player):
     max_player = max_player.split("_")
@@ -276,6 +287,7 @@ def get_max_player(max_player):
 
     return json.dumps(game_max_player_list)
 
+'''Route that returns the game search results by filtered search string in game name'''
 @api.route('/search_page/<search>')
 def get_game_string(search):
     query = '''SELECT * FROM games WHERE games.name ILIKE CONCAT('%%', %s, '%%')'''
@@ -309,6 +321,7 @@ def get_game_string(search):
 
     return json.dumps(games_list)
 
+'''Route that adds a user's review to a game's site'''
 @api.route('game/alphabetical/<alpha>')
 def get_alphabetical(alpha):
     query = '''SELECT * FROM games ORDER BY games.name ASC'''
@@ -370,23 +383,9 @@ def add_review_text(game_name, review):
     return json.dumps(False)
     
 #Credit to Quocodile
-@api.route('/game/<game_name>/review')
-def get_all_reviews(game_name):
-   query = "SELECT review FROM game_reviews, games WHERE game_reviews.game_id = games.game_id AND games.name = %s"
-   
-   output = []
-   try:
-    connection = get_connection()
-    cursor = connection.cursor()
-    cursor.execute(query,(game_name,))
-    print(cursor.query)
-    for row in cursor:
-        output.append(row[0])
-   except Exception as e:
-    return json.dumps(output)
 
 
-    '''Connects to database and initializes the cursor.'''
+'''Connects to database and initializes the cursor.'''
 def cursor_init():
     try:
       connection = psycopg2.connect(database=config.database,
