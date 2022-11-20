@@ -49,6 +49,9 @@ function dropdownbtn(){
   }
 }
 
+/* Gets all categories that games can be sorted by
+and puts them on the sidebar
+*/
 function get_all_categories() {
     var url = getAPIBaseURL() + "/games/sidebar/category"
     var game_display = document.getElementById("all_categories");
@@ -76,6 +79,7 @@ function get_all_categories() {
     });
 }
 
+//Gets all the options for min age and puts them into dropdown
 function get_all_min_age() {
     var url = getAPIBaseURL() + "/games/sidebar/min_age"
     var game_display = document.getElementById("all_min_age");
@@ -103,6 +107,7 @@ function get_all_min_age() {
     });
 }
 
+//Gets all options for year published and puts them into dropdown
 function get_all_pub_year() {
     var url = getAPIBaseURL() + "/games/sidebar/pub_year"
     var game_display = document.getElementById("all_pub_year");
@@ -130,6 +135,7 @@ function get_all_pub_year() {
     });
 }
 
+//Gets all options for min player and puts them into dropdown
 function get_all_min_player() {
     var url = getAPIBaseURL() + "/games/sidebar/min_player"
     var game_display = document.getElementById("all_min_player");
@@ -157,6 +163,7 @@ function get_all_min_player() {
     });
 }
 
+//Gets all options for max player and puts them into dropdown
 function get_all_max_player() {
     var url = getAPIBaseURL() + "/games/sidebar/max_player"
     var game_display = document.getElementById("all_max_player");
@@ -184,6 +191,7 @@ function get_all_max_player() {
     });
 }
 
+//Gets all results of filter and displays them on search page
 function get_all() {
     var url = getAPIBaseURL() + "/games/"
     var game_display = document.getElementById("games");
@@ -226,6 +234,7 @@ function get_all() {
     });
 }
 
+//changes which games show up on clicking submit
 function submit_button(){
     search_string = document.getElementById('input').value
     var url = getAPIBaseURL() + "/search_page/" + search_string
@@ -269,6 +278,7 @@ function submit_button(){
         console.log(error);
     });
 }
+
 
 function get_category(category) {
     var url = getAPIBaseURL() + "/games/category/" + category
@@ -354,6 +364,7 @@ function onclick_get_category() {
     });
 }
 
+//gets and displays games based on min_age filter
 function onclick_get_min_age() {
     var url = getAPIBaseURL() + "/games/min_age/"
     var boxes = document.querySelectorAll(".custom-control-input");
@@ -405,6 +416,7 @@ function onclick_get_min_age() {
     });
 }
 
+//gets and displays games based on pub_year filter
 function onclick_get_pub_year() {
     var url = getAPIBaseURL() + "/games/pub_year/"
     var boxes = document.querySelectorAll(".custom-control-input");
@@ -456,6 +468,7 @@ function onclick_get_pub_year() {
     });
 }
 
+//gets and displays games based on min_player filter
 function onclick_get_min_player() {
     var url = getAPIBaseURL() + "/games/min_player/"
     var boxes = document.querySelectorAll(".custom-control-input");
@@ -507,6 +520,7 @@ function onclick_get_min_player() {
     });
 }
 
+//gets and displays games based on max_player filter
 function onclick_get_max_player() {
     var url = getAPIBaseURL() + "/games/max_player/"
     var boxes = document.querySelectorAll(".custom-control-input");

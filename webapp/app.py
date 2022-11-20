@@ -21,7 +21,7 @@ def home():
 
 @app.route('/home_page') 
 def mockups1():
-    '''route to mockups1'''
+    '''route to homepage'''
     return flask.render_template('home_page.html')
 
 @app.route('/search_page') 
@@ -52,7 +52,7 @@ def gamedata(name):
     game_data =(rank, name, avg_rating, min_players, max_players,min_time,max_time,min_age,pub_year,complexity,image_url)
 
 
-    query = "SELECT category FROM games, game_categories, categories WHERE games.game_id = game_categories.game_id AND categories.id = game_categories.category_id AND games.rank = %s"
+    query = "SELECT DISTINCT category FROM games, game_categories, categories WHERE games.game_id = game_categories.game_id AND categories.id = game_categories.category_id AND games.rank = %s"
     cursor.execute(query, (rank,))
 
     categories = ''
@@ -62,7 +62,7 @@ def gamedata(name):
 
     categories = categories[:-2]
 
-    query = "SELECT designer FROM games, game_designers, designer WHERE games.game_id = game_designers.game_id AND designer.id = game_designers.designer_id AND games.rank = %s"
+    query = "SELECT DISTINCT designer FROM games, game_designers, designer WHERE games.game_id = game_designers.game_id AND designer.id = game_designers.designer_id AND games.rank = %s"
     cursor.execute(query, (rank,))
 
     designers = ''
@@ -72,13 +72,22 @@ def gamedata(name):
 
     designers = designers[:-2]
 
+    query = "SELECT review FROM game_reviews, games WHERE game_reviews.game_id = games.game_id AND games.name ILIKE CONCAT('%%', %s, '%%')"
+    output = []
+    
+    cursor.execute(query,(name,))
+    print(cursor.query)
+    for row in cursor:
+        
+        output.append(row[0])
+
         
     cursor.close()
     connection.close()
 
     #take id, do search, hand back info 
     '''route to mockups7'''
-    return flask.render_template('boardgame_site.html', game_data=game_data, categories=categories,designers=designers)
+    return flask.render_template('boardgame_site.html', game_data=game_data, categories=categories,designers=designers, output=output)
 
 @app.route('/api/help')
 def help():

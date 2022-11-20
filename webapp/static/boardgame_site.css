@@ -150,18 +150,16 @@ padding: 25px;
 
 .floatingdiv2 p span{
   font-weight:bold;
+  
 }
 
 .floatingdiv3{
   width:500px;
-  float:left;
+  float:right;
   border:2px black solid;
+
 }
 
-.favorites{
-  float:left;
-  margin-right:200px;
-}
 textarea{
   resize: none;
   padding:20px

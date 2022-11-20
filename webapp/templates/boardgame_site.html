@@ -87,6 +87,18 @@
         <div class="review">
           <h3>Reviews</h3>
           <div class = 'reference' id = 'reference'></div>
+
+          <div>
+          {% if output %}
+            {% for item in output%}
+              <p>{{item}}</p>
+              <br></br>
+              
+            {% endfor%}
+          {% endif %}
+
+          </div>
+
             
       </div>
 

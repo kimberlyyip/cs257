@@ -24,6 +24,9 @@ function getAPIBaseURL() {
     return baseURL;
 }
 
+//Gets top 5 games of each category from the endpoint and 
+//then turns it into a list of game dictionaries, then puts it
+//into the html
 function get_category(category) {
     var url = getAPIBaseURL() + "/games/category/" + category
     var game_display = document.getElementById("category_" + category);
