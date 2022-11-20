@@ -20,17 +20,18 @@ def home():
     return flask.render_template('home_page.html')
 
 @app.route('/home_page') 
-def mockups1():
+def homepage():
     '''route to homepage'''
     return flask.render_template('home_page.html')
 
 @app.route('/search_page') 
-def mockups5():
-    '''route to mockups5'''
+def search_page():
+    '''route to search page'''
     return flask.render_template('search_page.html')
 
 @app.route('/game/<name>')
 def gamedata(name):
+    '''route to individual board game site'''
     connection, cursor = cursor_init()
 
     query = "SELECT rank, name, avg_rating, min_player, max_player, min_time, max_time, min_age, pub_year, complexity, image_url FROM games WHERE games.name = %s"
