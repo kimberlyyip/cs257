@@ -19,8 +19,67 @@ pub_year -- what year the game was published
 complexity -- how difficult the game is to learn
 
 This request can have many optional GET parameters, one for each column in the Board Game table.
-For example: /games/?min_rating=4&name=”catan”
-	          /games/?designer = ***** & titlecontains = “**”
-	          /games/?designer   * sorts by designer alphabetically
+For example: /games/?name=”catan”
+	          
+Currently search can only be done on one attribute at a time
 
-Currently search is not rendering and can't do searches on any attribute except name of game
+REQUEST: /games/sidebar/category
+RESPONSE: A JSON list of dictionaries where each dictionary consists of a category_id and a category.
+
+REQUEST: /games/sidebar/min_age
+RESPONSE: A JSON list of dictionaries where each dictionary consists of a minimum age.
+
+REQUEST: /games/sidebar/pub_year
+RESPONSE:A JSON list of dictionaries where each dictionary consists of a year published.
+
+REQUEST: /games/sidebar/min_player
+RESPONSE:A JSON list of dictionaries where each dictionary consists of a minimum number of players.
+
+REQUEST: /games/sidebar/max_player
+RESPONSE::A JSON list of dictionaries where each dictionary consists of a maximum number of players.
+
+REQUEST: /games/category/<category>
+RESPONSE:A JSON list of dictionaries where each dictionary represents a game, consisting of a game_id, a name, a category, and an image_url.
+
+REQUEST: /games/min_age/<min_age>
+RESPONSE:A JSON list of dictionaries where each dictionary represents a game, consisting of a game_id, a name, a category, and an image_url, filtered by the desired min_age.
+
+REQUEST: /games/pub_year/<pub_year>
+RESPONSE:A JSON list of dictionaries where each dictionary represents a game, consisting of a game_id, a name, a category, and an image_url, filtered by the desired pub_year.
+
+REQUEST: /games/min_player/<min_player>
+RESPONSE:A JSON list of dictionaries where each dictionary represents a game, consisting of a game_id, a name, a category, and an image_url, filtered by the desired min_player.
+
+
+REQUEST: /games/max_player/<max_player>
+RESPONSE:A JSON list of dictionaries where each dictionary represents a game, consisting of a game_id, a name, a category, and an image_url, filtered by the desired max_player
+
+REQUEST: /search_page/<search>
+RESPONSE: A JSON list of dictionaries where each dictionary represents a game, consisting of the following attributes:
+	ID -- (int) the id of the board_game
+	Name -- (string) the name of the board_game
+	Rank -- the database's rank of the game
+	Min_player -- (int) the minimum number of players 
+	Max_player -- (int) the max number of players 
+	Avg_time -- (int) the average time in minutes it takes to play a single game
+	Min_time -- (int) the min time in minutes it takes to play a single game
+	Max_time -- (int) the max time in minutes it takes to play a single game
+	avg_rating -- (int) the board_game’s average rating
+	num_votes -- (int) the number of users that have voted on this board_game’s rating
+	image url -- (text) the url of the picture of the board_game
+	min_age -- (int) minimum age needed to play the game
+	num_owned -- (int) how many users own this board_game
+	pub_year -- what year the game was published
+	complexity -- how difficult the game is to learn
+
+This endpoint is for our search page and returns results based on a string search of the game's name.
+
+REQUEST: /game/<game_name>/add/<review>
+RESPONSE: Posts a user's review into the postgresql database
+
+REQUEST: /game/<game_name>/review
+RESPONSE: A list of JSON dictionaries consisting of the reviews for each game
+
+
+
+
