@@ -186,7 +186,7 @@ function get_all_max_player() {
 
 
 function get_all() {
-    var url = getAPIBaseURL() + "/games/"
+    var url = getAPIBaseURL() + "/games/" + '?page=1'
     var game_display = document.getElementById("games");
     fetch(url, {method: 'get'})
     .then((response) => response.json())
@@ -260,7 +260,7 @@ function submit_button(){
 }
 
 function get_category(category) {
-    var url = getAPIBaseURL() + "/games/category/" + category
+    var url = getAPIBaseURL() + "/games/category/" + category + '?page=1'
     var game_display = document.getElementById("category_" + category);
     fetch(url, {method: 'get'})
     .then((response) => response.json())
@@ -303,6 +303,7 @@ function onclick_get_category() {
             } 
         }
     }
+    url += '?page=1'
     var game_display = document.getElementById("games");
     fetch(url, {method: 'get'})
     .then((response) => response.json())
@@ -348,6 +349,7 @@ function onclick_get_min_age() {
             } 
         }
     }
+    url += '?page=1'
     var game_display = document.getElementById("games");
     fetch(url, {method: 'get'})
     .then((response) => response.json())
@@ -394,6 +396,7 @@ function onclick_get_pub_year() {
             } 
         }
     }
+    url += '?page=1'
     var game_display = document.getElementById("games");
     fetch(url, {method: 'get'})
     .then((response) => response.json())
@@ -439,6 +442,7 @@ function onclick_get_min_player() {
             } 
         }
     }
+    url += '?page=1'
     var game_display = document.getElementById("games");
     fetch(url, {method: 'get'})
     .then((response) => response.json())
@@ -484,6 +488,7 @@ function onclick_get_max_player() {
             } 
         }
     }
+    url += '?page=1'
     var game_display = document.getElementById("games");
     fetch(url, {method: 'get'})
     .then((response) => response.json())

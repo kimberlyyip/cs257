@@ -200,7 +200,6 @@ def get_all_max_player():
 def get_category(category):
     page_number = flask.request.args.get('page')
     category = category.split("_")
-    print(category)
     query = '''SELECT games.game_id, games.name, categories.category, games.avg_rating, games.image_url
                FROM games, categories, game_categories
                WHERE categories.category = %s
@@ -278,7 +277,7 @@ def get_pub_year(pub_year):
     except Exception as e:
         print(e, file=sys.stderr)
 
-    return json.dumps(game_pub_year_list)
+    return json.dumps(page_games_list)
 
 @api.route('/search_page/<search>')
 def get_game_string(search):
