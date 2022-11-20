@@ -52,8 +52,11 @@ function all_reviews(){
     .then (jsondata => {
         var games_html = '';
         for( var i = 0; i < jsondata.length; i++){
-            review = jsondata[i]
-            games_html += '<h3>Reviews</h3> <h4>Review' + str(i+1) + ': </h4> <p>' + review + '</p>'
+            review = jsondata
+            games_html += '<h4>Review' + str(i+1) 
+                + ': </h4> <p>' 
+                + review 
+                + '</p>'
         }
    
 
