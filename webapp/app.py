@@ -87,7 +87,7 @@ def gamedata(name):
     connection.close()
 
     #take id, do search, hand back info 
-    '''route to mockups7'''
+
     return flask.render_template('boardgame_site.html', game_data=game_data, categories=categories,designers=designers, output=output)
 
 @app.route('/api/help')
